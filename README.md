@@ -109,6 +109,17 @@ See [`docs/architecture.md`](docs/architecture.md) for the decision flow, [`docs
 - A fixture run proves deterministic orchestration and rules, not connectivity to a production DataHub instance.
 - Live use requires the operator to have lawful access to the target DataHub deployment and its metadata.
 
+## MicroStudio evidence-led services
+
+For small, fixed-scope technical work, MicroStudio publishes the acceptance
+boundary and a synthetic proof before any project data is exchanged:
+
+- [PDF to Excel audit](https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/) - typed workbook, source order, page reconciliation, formulas, and an issues register.
+- [PDF layout block extraction](https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/) - per-page blocks, article grouping, bbox and map-area coordinates, and a JSON contract.
+- [Excel automation](https://heyhengl.github.io/lineageproof/studio/excel-automation/) - controlled inputs, formula-backed reporting, native charts, and a reusable handoff.
+
+[Open a public project inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=project-inquiry.yml) only with synthetic or sanitized details. A public issue is not an order and does not authorize payment; scope, acceptance criteria, price, delivery terms, and any payment action remain separate.
+
 ## License
 
 Apache-2.0. See `LICENSE`.

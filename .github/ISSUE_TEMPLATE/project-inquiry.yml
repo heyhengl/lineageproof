@@ -11,11 +11,19 @@ body:
         synthetic or sanitized example. Posting an inquiry does not create an
         order or authorize payment; scope, acceptance criteria, price, and terms
         must be agreed separately before paid work begins.
+
+        Evidence-led service pages:
+        - PDF to Excel audit: https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/
+        - PDF layout block extraction: https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/
+        - Excel automation: https://heyhengl.github.io/lineageproof/studio/excel-automation/
   - type: dropdown
     id: service-lane
     attributes:
       label: Service lane
       options:
+        - PDF to Excel audit
+        - PDF layout block extraction
+        - Excel automation and dashboards
         - Excel and spreadsheet repair
         - Data cleanup and validation
         - Code repair and automation
