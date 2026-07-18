@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="LineageProof public demo: deterministic schema-change review with privacy-safe synthetic evidence."
+    />
+    <title>LineageProof — Public demo</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./player.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <h1 class="identity">LineageProof</h1>
+      </header>
+
+      <section class="stage" aria-labelledby="headline">
+        <div class="intro">
+          <h2 id="headline">See every downstream consequence <span class="accent">before</span> a schema change ships.</h2>
+          <p class="summary">
+            LineageProof traces schema impact end-to-end. Diff once. Understand everything.
+          </p>
+          <a class="source-link" href="https://github.com/heyhengl/lineageproof">View source on GitHub</a>
+        </div>
+
+        <div class="player-frame" id="demo">
+          <video
+            controls
+            preload="metadata"
+            playsinline
+            poster="./media/LineageProof_Poster.png"
+            data-captions="./media/LineageProof_Demo_en.srt"
+          >
+            <source src="./media/LineageProof_Demo_1080p_en.mp4" type="video/mp4" />
+            Your browser does not support HTML video. Download the MP4 below.
+          </video>
+        </div>
+      </section>
+
+      <section class="facts" aria-label="Demo facts">
+        <div class="fact">177.832 s</div>
+        <div class="fact">Deterministic demo</div>
+        <div class="fact">Synthetic data only</div>
+      </section>
+
+      <footer class="foot">
+        <div class="downloads">
+          <a href="./media/LineageProof_Demo_1080p_en.mp4" download>MP4</a>
+          <a href="./media/LineageProof_Demo_en.srt" download>Transcript (.srt)</a>
+        </div>
+        <p class="disclosure">
+          Built with public source and privacy-safe synthetic evidence. No production metadata, customer data,
+          credentials, or private strategies are present. AI coding and writing assistance, code-generated visuals,
+          and synthetic narration were used and reviewed against the repository evidence.
+        </p>
+      </footer>
+    </main>
+    <script src="./player.js"></script>
+  </body>
+</html>
