@@ -110,7 +110,7 @@ Python, DataHub, DataHub MCP Server, MCP Python SDK, SARIF, uv, pytest, Ruff.
 ## Public links
 
 - Source code: `https://github.com/heyhengl/lineageproof`
-- Demo video: `{PUBLIC_VIDEO_URL}`
+- Demo video: `https://heyhengl.github.io/lineageproof/`
 - Project/testing URL: `https://github.com/heyhengl/lineageproof`
 
 The repository is the unrestricted testing surface: it contains Apache-2.0 source, complete setup
@@ -119,15 +119,15 @@ paid service, or private test credential is required.
 
 ## Truth-boundary checklist before submission
 
-- [x] Public repository exists and commit `445ed51d9456ce4eb8a5d4ad1f1cdba0367f933c` is recorded.
+- [x] Public repository exists and public-site commit `3bf07f23d7d9016ac2df093ef223f98ed98736ee` is recorded.
 - [ ] Challenge category is `Agents That Do Real Work` in the live form.
 - [x] Apache-2.0 license is visible in the public repository.
-- [ ] Public video opens in a signed-out browser and is under three minutes.
+- [x] Public video opens in a signed-out browser and is under three minutes.
 - [x] Project/testing URL opens without login or payment and matches the public repository URL.
 - [x] `examples/expected-output/` is present and readable in the public repository.
-- [ ] The submission states that the project was created during the submission period.
-- [ ] AI coding assistance, code-generated visuals, and synthetic narration are disclosed truthfully.
-- [ ] Every visual shown in the video exists in the public repository or generated demo output.
-- [ ] No claim says a live DataHub connection or verified external write-back occurred unless new evidence proves it.
+- [x] The submission states that the project was created during the submission period.
+- [x] AI coding assistance, code-generated visuals, and synthetic narration are disclosed truthfully.
+- [x] Every visual shown in the video exists in the public repository or generated demo output.
+- [x] No claim says a live DataHub connection or verified external write-back occurred unless new evidence proves it.
 - [ ] The Devpost preview contains no private identity, account, credential, or customer data.
 - [ ] Final submit action is free and creates no financial movement.

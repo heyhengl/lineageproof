@@ -45,9 +45,9 @@ This is the evidence ledger for a public hackathon release. A checked box must c
 - [x] Generate 30 sentence-level English subtitle cues with a 54-character line limit.
 - [x] Verify the final decoded cover frame has no rotation or crop error.
 - [x] Scan the MP4 for local path, username, and email-like strings with zero findings.
-- [ ] Publish with public or unlisted judge-accessible visibility.
-- [ ] Verify playback and captions in a signed-out browser.
-- [ ] Add the video URL to the Devpost draft.
+- [x] Publish at `https://heyhengl.github.io/lineageproof/` with public judge-accessible visibility.
+- [x] Verify playback and captions in a signed-out browser.
+- [x] Add the video URL to the Devpost draft.
 
 ## Devpost
 
