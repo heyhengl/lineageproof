@@ -1,6 +1,6 @@
 # LineageProof — Devpost submission draft
 
-> Draft status: technically verified, not yet submitted. Replace every `[pending]` field with a public URL only after the corresponding asset is actually published.
+> Draft status: technically verified, not yet submitted. The repository URL is published and anonymously verified; the video and Devpost project URLs remain pending.
 
 ## Project name
 
@@ -109,9 +109,9 @@ Python, DataHub, DataHub MCP Server, MCP Python SDK, SARIF, uv, pytest, Ruff.
 
 ## Public links
 
-- Source code: `{PUBLIC_GITHUB_REPOSITORY_URL}`
+- Source code: `https://github.com/heyhengl/lineageproof`
 - Demo video: `{PUBLIC_VIDEO_URL}`
-- Project/testing URL: `{PUBLIC_GITHUB_REPOSITORY_URL}`
+- Project/testing URL: `https://github.com/heyhengl/lineageproof`
 
 The repository is the unrestricted testing surface: it contains Apache-2.0 source, complete setup
 instructions, credential-free fixtures, expected outputs, and a deterministic local demo. No login,
@@ -119,12 +119,12 @@ paid service, or private test credential is required.
 
 ## Truth-boundary checklist before submission
 
-- [ ] Public repository exists and its commit hash is recorded.
+- [x] Public repository exists and commit `445ed51d9456ce4eb8a5d4ad1f1cdba0367f933c` is recorded.
 - [ ] Challenge category is `Agents That Do Real Work` in the live form.
-- [ ] Apache-2.0 license is visible in the public repository.
+- [x] Apache-2.0 license is visible in the public repository.
 - [ ] Public video opens in a signed-out browser and is under three minutes.
-- [ ] Project/testing URL opens without login or payment and matches the public repository URL.
-- [ ] `examples/expected-output/` is present and readable in the public repository.
+- [x] Project/testing URL opens without login or payment and matches the public repository URL.
+- [x] `examples/expected-output/` is present and readable in the public repository.
 - [ ] The submission states that the project was created during the submission period.
 - [ ] AI coding assistance, code-generated visuals, and synthetic narration are disclosed truthfully.
 - [ ] Every visual shown in the video exists in the public repository or generated demo output.

@@ -31,12 +31,12 @@ This is the evidence ledger for a public hackathon release. A checked box must c
 
 ## Public release
 
-- [ ] Create a public repository.
-- [ ] Verify Apache-2.0 license is visible.
-- [ ] Record the public commit hash.
-- [ ] Open the repository in a signed-out browser.
-- [ ] Confirm no credential, personal data, customer data, or private strategy content is present.
-- [ ] Add the public repository URL to the Devpost draft.
+- [x] Create public repository `https://github.com/heyhengl/lineageproof`.
+- [x] Verify Apache-2.0 license is visible.
+- [x] Record public commit `445ed51d9456ce4eb8a5d4ad1f1cdba0367f933c`.
+- [x] Open the repository in a signed-out browser.
+- [x] Confirm no credential, personal data, customer data, or private strategy content is present.
+- [x] Add the public repository URL to the Devpost draft.
 
 ## Demo
 
@@ -53,8 +53,8 @@ This is the evidence ledger for a public hackathon release. A checked box must c
 
 - [ ] Confirm account eligibility and current rules on the submission date.
 - [ ] Select `Agents That Do Real Work` and confirm the live category label is unchanged.
-- [ ] Confirm the project/testing URL opens without login or payment.
-- [ ] Confirm the public repository contains `examples/expected-output/` and full setup instructions.
+- [x] Confirm the project/testing URL opens without login or payment.
+- [x] Confirm the public repository contains `examples/expected-output/` and full setup instructions.
 - [ ] Disclose submission-period creation, AI coding assistance, code-generated visuals, and synthetic narration.
 - [ ] Confirm every required field from the live submission form.
 - [ ] Confirm the final submission creates no charge, deposit, purchase, or financial movement.
