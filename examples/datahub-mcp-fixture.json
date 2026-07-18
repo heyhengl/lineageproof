@@ -1,0 +1,370 @@
+{
+  "fixture_type": "synthetic-datahub-mcp",
+  "generated_at": "2026-07-18T16:30:00+08:00",
+  "responses": [
+    {
+      "match": {
+        "urns": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "result": {
+        "name": "orders",
+        "ownership": {
+          "owners": [
+            {
+              "owner": {
+                "displayName": "Data Platform",
+                "urn": "urn:li:corpGroup:data-platform"
+              },
+              "type": "TECHNICAL_OWNER"
+            }
+          ]
+        },
+        "platform": {
+          "name": "Snowflake"
+        },
+        "properties": {
+          "description": "Synthetic order facts used for the LineageProof fixture."
+        },
+        "type": "DATASET",
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "tool": "get_entities"
+    },
+    {
+      "match": {
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "result": {
+        "fields": [
+          {
+            "fieldPath": "order_id",
+            "nativeDataType": "BIGINT",
+            "nullable": false
+          },
+          {
+            "fieldPath": "order_total",
+            "nativeDataType": "DECIMAL(12,2)",
+            "nullable": false,
+            "tags": {
+              "tags": [
+                {
+                  "tag": {
+                    "urn": "urn:li:tag:Financial"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "fieldPath": "status",
+            "nativeDataType": "STRING",
+            "nullable": false
+          },
+          {
+            "fieldPath": "shipping_address",
+            "nativeDataType": "STRING",
+            "nullable": true,
+            "tags": {
+              "tags": [
+                {
+                  "tag": {
+                    "urn": "urn:li:tag:PII"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "matchingCount": null,
+        "offset": 0,
+        "remainingCount": 0,
+        "returned": 4,
+        "totalFields": 4,
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "tool": "list_schema_fields"
+    },
+    {
+      "match": {
+        "column": "order_total",
+        "upstream": false
+      },
+      "result": {
+        "downstreams": {
+          "hasMore": false,
+          "returned": 3,
+          "searchResults": [
+            {
+              "degree": 1,
+              "entity": {
+                "name": "revenue.daily",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DATASET",
+                "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.revenue.daily,PROD)"
+              },
+              "lineageColumns": [
+                {
+                  "downstreamColumn": "order_total",
+                  "upstreamColumn": "order_total"
+                }
+              ]
+            },
+            {
+              "degree": 2,
+              "entity": {
+                "name": "executive.revenue",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DASHBOARD",
+                "urn": "urn:li:dashboard:(looker,executive.revenue)"
+              }
+            },
+            {
+              "degree": 2,
+              "entity": {
+                "name": "finance.kpi_pack",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DASHBOARD",
+                "urn": "urn:li:dashboard:(looker,finance.kpi_pack)"
+              }
+            }
+          ],
+          "total": 3
+        },
+        "upstreams": {
+          "searchResults": [],
+          "total": 0
+        }
+      },
+      "tool": "get_lineage"
+    },
+    {
+      "match": {
+        "column": "order_total"
+      },
+      "result": {
+        "count": 2,
+        "queries": [
+          {
+            "properties": {
+              "source": "SYSTEM",
+              "statement": {
+                "language": "SQL",
+                "value": "SELECT SUM(CAST(order_total AS DECIMAL(12,2))) FROM analytics.warehouse.orders GROUP BY order_date"
+              }
+            },
+            "urn": "urn:li:query:synthetic-order-total-1"
+          },
+          {
+            "properties": {
+              "source": "MANUAL",
+              "statement": {
+                "language": "SQL",
+                "value": "SELECT order_total FROM analytics.warehouse.orders WHERE order_total > 1000"
+              }
+            },
+            "urn": "urn:li:query:synthetic-order-total-2"
+          }
+        ],
+        "start": 0,
+        "total": 2
+      },
+      "tool": "get_dataset_queries"
+    },
+    {
+      "match": {
+        "column": "status",
+        "upstream": false
+      },
+      "result": {
+        "downstreams": {
+          "hasMore": false,
+          "returned": 2,
+          "searchResults": [
+            {
+              "degree": 1,
+              "entity": {
+                "name": "ops.order_funnel",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DASHBOARD",
+                "urn": "urn:li:dashboard:(looker,ops.order_funnel)"
+              }
+            },
+            {
+              "degree": 1,
+              "entity": {
+                "name": "mart.order_status_daily",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DATASET",
+                "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.mart.order_status_daily,PROD)"
+              }
+            }
+          ],
+          "total": 2
+        },
+        "upstreams": {
+          "searchResults": [],
+          "total": 0
+        }
+      },
+      "tool": "get_lineage"
+    },
+    {
+      "match": {
+        "column": "status"
+      },
+      "result": {
+        "count": 1,
+        "queries": [
+          {
+            "properties": {
+              "source": "SYSTEM",
+              "statement": {
+                "language": "SQL",
+                "value": "SELECT status, COUNT(*) FROM analytics.warehouse.orders GROUP BY status"
+              }
+            },
+            "urn": "urn:li:query:synthetic-status-1"
+          }
+        ],
+        "start": 0,
+        "total": 1
+      },
+      "tool": "get_dataset_queries"
+    },
+    {
+      "match": {
+        "column": "shipping_address",
+        "upstream": false
+      },
+      "result": {
+        "downstreams": {
+          "hasMore": false,
+          "returned": 6,
+          "searchResults": [
+            {
+              "degree": 1,
+              "entity": {
+                "name": "mart.orders_enriched",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DATASET",
+                "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.mart.orders_enriched,PROD)"
+              }
+            },
+            {
+              "degree": 1,
+              "entity": {
+                "name": "int.order_fulfillment",
+                "tags": {
+                  "tags": [
+                    {
+                      "tag": {
+                        "urn": "urn:li:tag:PII"
+                      }
+                    }
+                  ]
+                },
+                "type": "DATASET",
+                "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.int.order_fulfillment,PROD)"
+              }
+            },
+            {
+              "degree": 2,
+              "entity": {
+                "name": "stg.shipment_events",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DATASET",
+                "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.stg.shipment_events,PROD)"
+              }
+            },
+            {
+              "degree": 2,
+              "entity": {
+                "name": "dq.orders_address_fk",
+                "tags": {
+                  "tags": []
+                },
+                "type": "ASSERTION",
+                "urn": "urn:li:assertion:dq.orders_address_fk"
+              }
+            },
+            {
+              "degree": 2,
+              "entity": {
+                "name": "feat.customer_order_feat",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DATASET",
+                "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.feat.customer_order_feat,PROD)"
+              }
+            },
+            {
+              "degree": 2,
+              "entity": {
+                "name": "dash.delivery_performance",
+                "tags": {
+                  "tags": []
+                },
+                "type": "DASHBOARD",
+                "urn": "urn:li:dashboard:(looker,dash.delivery_performance)"
+              }
+            }
+          ],
+          "total": 6
+        },
+        "upstreams": {
+          "searchResults": [],
+          "total": 0
+        }
+      },
+      "tool": "get_lineage"
+    },
+    {
+      "match": {
+        "column": "shipping_address"
+      },
+      "result": {
+        "count": 2,
+        "queries": [
+          {
+            "properties": {
+              "source": "SYSTEM",
+              "statement": {
+                "language": "SQL",
+                "value": "SELECT shipping_address FROM analytics.warehouse.orders WHERE status = 'shipped'"
+              }
+            },
+            "urn": "urn:li:query:synthetic-shipping-address-1"
+          },
+          {
+            "properties": {
+              "source": "MANUAL",
+              "statement": {
+                "language": "SQL",
+                "value": "SELECT order_id, shipping_address FROM analytics.warehouse.orders"
+              }
+            },
+            "urn": "urn:li:query:synthetic-shipping-address-2"
+          }
+        ],
+        "start": 0,
+        "total": 2
+      },
+      "tool": "get_dataset_queries"
+    }
+  ]
+}

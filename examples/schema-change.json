@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-07-18T16:30:00+08:00",
+  "change_id": "scm_2026_07_18_0012",
+  "changes": [
+    {
+      "after": {
+        "field": "order_total",
+        "native_type": "DECIMAL(14,2)",
+        "nullable": false,
+        "tags": ["urn:li:tag:Financial"]
+      },
+      "before": {
+        "field": "order_total",
+        "native_type": "DECIMAL(12,2)",
+        "nullable": false,
+        "tags": ["urn:li:tag:Financial"]
+      },
+      "kind": "type_change",
+      "rationale": "Support larger enterprise orders without changing scale."
+    },
+    {
+      "after": {
+        "field": "status",
+        "native_type": "STRING",
+        "nullable": true,
+        "tags": []
+      },
+      "before": {
+        "field": "status",
+        "native_type": "STRING",
+        "nullable": false,
+        "tags": []
+      },
+      "kind": "nullability_change",
+      "rationale": "Allow historical backfills before status mapping is complete."
+    },
+    {
+      "after": {
+        "field": "shipping_address_id",
+        "native_type": "BIGINT",
+        "nullable": false,
+        "tags": ["urn:li:tag:PII"]
+      },
+      "before": {
+        "field": "shipping_address",
+        "native_type": "STRING",
+        "nullable": true,
+        "tags": ["urn:li:tag:PII"]
+      },
+      "kind": "rename",
+      "rationale": "Normalize addresses into the shared address dimension."
+    }
+  ],
+  "dataset_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+  "environment": "PROD"
+}

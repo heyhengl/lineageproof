@@ -1,0 +1,25 @@
+{
+  "fixture_type": "synthetic-datahub-mcp",
+  "responses": [
+    {
+      "tool": "add_tags",
+      "match": {
+        "entity_urns": [
+          "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+        ]
+      },
+      "result": {
+        "status": "synthetic_success"
+      }
+    },
+    {
+      "tool": "update_description",
+      "match": {
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "result": {
+        "status": "synthetic_success"
+      }
+    }
+  ]
+}
