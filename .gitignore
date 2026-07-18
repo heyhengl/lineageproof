@@ -1,0 +1,10 @@
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+*.py[cod]
+dist/
+
+# Internal visual explorations remain private until the user selects a direction.
+design/
