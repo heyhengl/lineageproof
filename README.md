@@ -110,6 +110,12 @@ The GitHub Pages player is a public preview, not the final hackathon video host.
 rules require the submitted video URL to be publicly visible on YouTube, Vimeo, or Youku; that
 separate upload must be verified before submission.
 
+The verified assets, paste-ready public metadata, chapters, captions, disclosure fields, and
+financial stop conditions for YouTube are in
+[`submission/YOUTUBE_PUBLICATION_PACKET.md`](submission/YOUTUBE_PUBLICATION_PACKET.md). The
+equivalent localized Youku checklist is in
+[`submission/YOUKU_PUBLICATION_PACKET_zh.md`](submission/YOUKU_PUBLICATION_PACKET_zh.md).
+
 See [`docs/architecture.md`](docs/architecture.md) for the decision flow, [`docs/mcp-contract.md`](docs/mcp-contract.md) for the official DataHub MCP calls used by the agent, and [`docs/auditable-mutation-rfc.md`](docs/auditable-mutation-rfc.md) for a clearly labeled proposal covering idempotent, expected-state-bound, read-back-verifiable mutations.
 
 ## Safety and truth boundaries

@@ -17,7 +17,7 @@ This is the evidence ledger for a public hackathon release. A checked box must c
 - [x] Write-back plan is bound to the exact audit-report SHA-256.
 - [x] Synthetic write-back requires `--apply` and an exact change-ID acknowledgement.
 - [x] Synthetic write-back receipt records five mutation calls and `external_metadata_modified: false`.
-- [x] Privacy scan reports zero findings across 34 release text files.
+- [x] Privacy scan reports zero findings across 35 release text files.
 - [x] Deterministic source archive uses a public-file allowlist and excludes `design/`.
 - [x] Source archive manifest records every included file's byte length and SHA-256.
 
@@ -34,7 +34,7 @@ This is the evidence ledger for a public hackathon release. A checked box must c
 - [x] Create public repository `https://github.com/heyhengl/lineageproof`.
 - [x] Verify Apache-2.0 license is visible.
 - [x] Record public commit `445ed51d9456ce4eb8a5d4ad1f1cdba0367f933c`.
-- [x] Verify the public submission-evidence repair chain through `9af966a97c6267124c1f91f0ca0f94586124d7a2`.
+- [x] Verify the public submission-evidence recovery chain through `46418786ac01980d70a71271c31a60516cc8a0d5`.
 - [x] Open the repository in a signed-out browser.
 - [x] Confirm no credential, personal data, customer data, or private strategy content is present.
 - [x] Add the public repository URL to the Devpost draft.
@@ -48,6 +48,8 @@ This is the evidence ledger for a public hackathon release. A checked box must c
 - [x] Scan the MP4 for local path, username, and email-like strings with zero findings.
 - [x] Publish a public preview at `https://heyhengl.github.io/lineageproof/`.
 - [x] Verify preview playback and captions in a signed-out browser.
+- [x] Prepare paste-ready YouTube and Youku publication packets with verified hashes, captions,
+  disclosure fields, public-visibility checks, and financial stop conditions.
 - [ ] Upload the final video publicly to YouTube, Vimeo, or Youku; GitHub Pages is not on the
   official host allowlist.
 - [ ] Verify the allowed-host playback, duration, visibility, AI/synthetic disclosure, and captions
