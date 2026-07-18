@@ -1,0 +1,62 @@
+{
+  "audit_report_sha256": "83aee8cc996ec1e4f6b7af985e5bce24916ac517657dfd66067da1969e458365",
+  "calls": [
+    {
+      "arguments": {
+        "entity_urns": [
+          "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+        ],
+        "tag_urns": [
+          "urn:li:tag:LineageProofNeedsRemediation"
+        ]
+      },
+      "reason": "Expose the unresolved audit state to later people and agents.",
+      "tool": "add_tags"
+    },
+    {
+      "arguments": {
+        "column_path": "order_total",
+        "description": "\n\nLineageProof LP-001 (high): Type change conflicts with observed usage. Recommended action: Run contract tests against representative downstream queries and document the accepted type range.",
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+        "operation": "append"
+      },
+      "reason": "Attach the evidence-backed remediation note for order_total.",
+      "tool": "update_description"
+    },
+    {
+      "arguments": {
+        "column_path": "status",
+        "description": "\n\nLineageProof LP-002 (high): Nullable field is used without a migration guard. Recommended action: Define null semantics, backfill existing rows, and update downstream queries with an explicit guard.",
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+        "operation": "append"
+      },
+      "reason": "Attach the evidence-backed remediation note for status.",
+      "tool": "update_description"
+    },
+    {
+      "arguments": {
+        "column_path": "shipping_address",
+        "description": "\n\nLineageProof LP-003 (critical): Field identity change reaches downstream assets. Recommended action: Add a compatibility field or versioned migration, notify owners, and verify each contract before removal.",
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+        "operation": "append"
+      },
+      "reason": "Attach the evidence-backed remediation note for shipping_address.",
+      "tool": "update_description"
+    },
+    {
+      "arguments": {
+        "column_path": "shipping_address",
+        "description": "\n\nLineageProof LP-004 (high): PII lineage reaches unclassified downstream assets. Recommended action: Confirm classification with asset owners and propagate the approved DataHub tag before deployment.",
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+        "operation": "append"
+      },
+      "reason": "Attach the evidence-backed remediation note for shipping_address.",
+      "tool": "update_description"
+    }
+  ],
+  "change_id": "scm_2026_07_18_0012",
+  "dry_run": true,
+  "mutation_tools_invoked": false,
+  "preview_version": "1.1",
+  "truth_boundary": "This file is a plan only; no DataHub metadata was modified."
+}

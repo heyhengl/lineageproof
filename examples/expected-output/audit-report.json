@@ -1,0 +1,194 @@
+{
+  "as_of": "2026-07-18T16:30:00+08:00",
+  "change_id": "scm_2026_07_18_0012",
+  "dataset_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+  "decision": "request_remediation",
+  "environment": "PROD",
+  "evidence": [
+    {
+      "arguments": {
+        "urns": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "response_sha256": "ccdc8d0b52924d5f942574c9f0a4d5911de9ada08c0712002644ea06eb2a57cb",
+      "sequence": 1,
+      "tool": "get_entities"
+    },
+    {
+      "arguments": {
+        "limit": 100,
+        "offset": 0,
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "response_sha256": "20eb2de686b5b07013402af88cd9542b2fb23b03193c0f52bb703529423fbe3e",
+      "sequence": 2,
+      "tool": "list_schema_fields"
+    },
+    {
+      "arguments": {
+        "column": "order_total",
+        "max_hops": 3,
+        "max_results": 100,
+        "offset": 0,
+        "upstream": false,
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "response_sha256": "70f0e7b19d04d0469341974b926d633f6b9455b6b0a3e776b20a89e2cf94a47a",
+      "sequence": 3,
+      "tool": "get_lineage"
+    },
+    {
+      "arguments": {
+        "column": "order_total",
+        "count": 10,
+        "start": 0,
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "response_sha256": "256b1891dca10ae6d311982f2528f023aa0e4e7f248f7372bb187063bb6658c0",
+      "sequence": 4,
+      "tool": "get_dataset_queries"
+    },
+    {
+      "arguments": {
+        "column": "status",
+        "max_hops": 3,
+        "max_results": 100,
+        "offset": 0,
+        "upstream": false,
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "response_sha256": "e6fe0c4b631473de75b82bd935fe2f2503e662636215887521517e3396fc9e77",
+      "sequence": 5,
+      "tool": "get_lineage"
+    },
+    {
+      "arguments": {
+        "column": "status",
+        "count": 10,
+        "start": 0,
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "response_sha256": "32e647741a6b63505c182f7a70ad0d36a27277dabfcc6336f76def373fbc3630",
+      "sequence": 6,
+      "tool": "get_dataset_queries"
+    },
+    {
+      "arguments": {
+        "column": "shipping_address",
+        "max_hops": 3,
+        "max_results": 100,
+        "offset": 0,
+        "upstream": false,
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "response_sha256": "5dc8cfd06381f700120b8018202b031aec395bcc6685fc376c058e2b6a410ac5",
+      "sequence": 7,
+      "tool": "get_lineage"
+    },
+    {
+      "arguments": {
+        "column": "shipping_address",
+        "count": 10,
+        "start": 0,
+        "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      },
+      "response_sha256": "a12961ad18881fe07f867a40ec80cfa7b0d4d2726cff84e7a61d47c920ccbf8d",
+      "sequence": 8,
+      "tool": "get_dataset_queries"
+    }
+  ],
+  "issues": [
+    {
+      "downstream_assets": [
+        "urn:li:dashboard:(looker,executive.revenue)",
+        "urn:li:dashboard:(looker,finance.kpi_pack)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.revenue.daily,PROD)"
+      ],
+      "evidence_receipts": [
+        3,
+        4
+      ],
+      "explanation": "order_total changes from DECIMAL(12,2) to DECIMAL(14,2); 2 production query examples were inspected.",
+      "field": "order_total",
+      "issue_id": "LP-001",
+      "recommended_action": "Run contract tests against representative downstream queries and document the accepted type range.",
+      "rule_id": "LP_TYPE_CONTRACT",
+      "severity": "high",
+      "title": "Type change conflicts with observed usage"
+    },
+    {
+      "downstream_assets": [
+        "urn:li:dashboard:(looker,ops.order_funnel)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.mart.order_status_daily,PROD)"
+      ],
+      "evidence_receipts": [
+        5,
+        6
+      ],
+      "explanation": "status becomes nullable; 1 of 1 observed queries use it in a sensitive operation.",
+      "field": "status",
+      "issue_id": "LP-002",
+      "recommended_action": "Define null semantics, backfill existing rows, and update downstream queries with an explicit guard.",
+      "rule_id": "LP_NULLABILITY_USAGE",
+      "severity": "high",
+      "title": "Nullable field is used without a migration guard"
+    },
+    {
+      "downstream_assets": [
+        "urn:li:assertion:dq.orders_address_fk",
+        "urn:li:dashboard:(looker,dash.delivery_performance)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.feat.customer_order_feat,PROD)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.int.order_fulfillment,PROD)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.mart.orders_enriched,PROD)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.stg.shipment_events,PROD)"
+      ],
+      "evidence_receipts": [
+        7,
+        8
+      ],
+      "explanation": "shipping_address changes to shipping_address_id while 6 downstream assets are recorded.",
+      "field": "shipping_address",
+      "issue_id": "LP-003",
+      "recommended_action": "Add a compatibility field or versioned migration, notify owners, and verify each contract before removal.",
+      "rule_id": "LP_BREAKING_FIELD_IDENTITY",
+      "severity": "critical",
+      "title": "Field identity change reaches downstream assets"
+    },
+    {
+      "downstream_assets": [
+        "urn:li:assertion:dq.orders_address_fk",
+        "urn:li:dashboard:(looker,dash.delivery_performance)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.feat.customer_order_feat,PROD)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.mart.orders_enriched,PROD)",
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.stg.shipment_events,PROD)"
+      ],
+      "evidence_receipts": [
+        7,
+        8
+      ],
+      "explanation": "shipping_address is tagged PII, but 5 downstream assets lack the PII tag in the retrieved context.",
+      "field": "shipping_address",
+      "issue_id": "LP-004",
+      "recommended_action": "Confirm classification with asset owners and propagate the approved DataHub tag before deployment.",
+      "rule_id": "LP_PII_PROPAGATION",
+      "severity": "high",
+      "title": "PII lineage reaches unclassified downstream assets"
+    }
+  ],
+  "limitations": [
+    "The report evaluates only metadata returned by the selected DataHub MCP context.",
+    "Fixture mode does not prove production DataHub connectivity or production query behavior.",
+    "The write-back artifact is a dry-run preview and is not evidence of a metadata mutation."
+  ],
+  "metrics": {
+    "changed_fields": 3,
+    "issues": 4,
+    "tool_calls": 8
+  },
+  "report_version": "1.0",
+  "risk_counts": {
+    "critical": 1,
+    "high": 3,
+    "low": 0,
+    "medium": 0
+  }
+}

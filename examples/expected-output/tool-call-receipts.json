@@ -1,0 +1,92 @@
+[
+  {
+    "arguments": {
+      "urns": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+    },
+    "response_sha256": "ccdc8d0b52924d5f942574c9f0a4d5911de9ada08c0712002644ea06eb2a57cb",
+    "sequence": 1,
+    "tool": "get_entities"
+  },
+  {
+    "arguments": {
+      "limit": 100,
+      "offset": 0,
+      "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+    },
+    "response_sha256": "20eb2de686b5b07013402af88cd9542b2fb23b03193c0f52bb703529423fbe3e",
+    "sequence": 2,
+    "tool": "list_schema_fields"
+  },
+  {
+    "arguments": {
+      "column": "order_total",
+      "max_hops": 3,
+      "max_results": 100,
+      "offset": 0,
+      "upstream": false,
+      "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+    },
+    "response_sha256": "70f0e7b19d04d0469341974b926d633f6b9455b6b0a3e776b20a89e2cf94a47a",
+    "sequence": 3,
+    "tool": "get_lineage"
+  },
+  {
+    "arguments": {
+      "column": "order_total",
+      "count": 10,
+      "start": 0,
+      "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+    },
+    "response_sha256": "256b1891dca10ae6d311982f2528f023aa0e4e7f248f7372bb187063bb6658c0",
+    "sequence": 4,
+    "tool": "get_dataset_queries"
+  },
+  {
+    "arguments": {
+      "column": "status",
+      "max_hops": 3,
+      "max_results": 100,
+      "offset": 0,
+      "upstream": false,
+      "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+    },
+    "response_sha256": "e6fe0c4b631473de75b82bd935fe2f2503e662636215887521517e3396fc9e77",
+    "sequence": 5,
+    "tool": "get_lineage"
+  },
+  {
+    "arguments": {
+      "column": "status",
+      "count": 10,
+      "start": 0,
+      "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+    },
+    "response_sha256": "32e647741a6b63505c182f7a70ad0d36a27277dabfcc6336f76def373fbc3630",
+    "sequence": 6,
+    "tool": "get_dataset_queries"
+  },
+  {
+    "arguments": {
+      "column": "shipping_address",
+      "max_hops": 3,
+      "max_results": 100,
+      "offset": 0,
+      "upstream": false,
+      "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+    },
+    "response_sha256": "5dc8cfd06381f700120b8018202b031aec395bcc6685fc376c058e2b6a410ac5",
+    "sequence": 7,
+    "tool": "get_lineage"
+  },
+  {
+    "arguments": {
+      "column": "shipping_address",
+      "count": 10,
+      "start": 0,
+      "urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+    },
+    "response_sha256": "a12961ad18881fe07f867a40ec80cfa7b0d4d2726cff84e7a61d47c920ccbf8d",
+    "sequence": 8,
+    "tool": "get_dataset_queries"
+  }
+]

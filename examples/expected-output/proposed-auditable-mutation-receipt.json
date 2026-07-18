@@ -1,0 +1,44 @@
+{
+  "contract_version": "1",
+  "execution_mode": "proposal_fixture",
+  "external_metadata_modified": false,
+  "idempotency_key_sha256": "e539be6a41be13b4b9cb9f881d923fe883bf71f84a808fdcb7a3c47cdad700d8",
+  "operation_id": "proposal-fixture-op-001",
+  "operation": {
+    "name": "add_tags",
+    "normalized_arguments": {
+      "entity_urns": [
+        "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+      ],
+      "tag_urns": [
+        "urn:li:tag:LineageProofNeedsRemediation"
+      ]
+    }
+  },
+  "status": "changed",
+  "target": {
+    "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+  },
+  "before": {
+    "aspect_version": 41,
+    "normalized_sha256": "b35b1ec1c0c72c4bbd16bd9d6c2cbcac8224272cd7e6ecf504a78f2c7e989b2a"
+  },
+  "after": {
+    "aspect_version": 42,
+    "normalized_sha256": "0c0f17c006dc9a9ee074964c626c8c7e008fa803aa6d86e9d74ed142b151dca2"
+  },
+  "readback": {
+    "normalized_sha256": "0c0f17c006dc9a9ee074964c626c8c7e008fa803aa6d86e9d74ed142b151dca2",
+    "tool": "get_entities",
+    "verification": "synthetic_match"
+  },
+  "warnings": [],
+  "privacy": {
+    "credentials_retained": false,
+    "full_metadata_retained": false,
+    "idempotency_key_retained": false
+  },
+  "proposal_status": "not_an_implemented_datahub_api",
+  "truth_boundary": "This credential-free example demonstrates the proposed receipt shape against normalized synthetic states. It does not claim a live DataHub mutation."
+}
+

@@ -1,0 +1,71 @@
+{
+  "apply_requested": true,
+  "audit_report_sha256": "83aee8cc996ec1e4f6b7af985e5bce24916ac517657dfd66067da1969e458365",
+  "change_id": "scm_2026_07_18_0012",
+  "completed_calls": [
+    {
+      "arguments": {
+        "entity_urns": [
+          "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)"
+        ],
+        "tag_urns": [
+          "urn:li:tag:LineageProofNeedsRemediation"
+        ]
+      },
+      "response_sha256": "d724b498ff9a3378c54e6d2b8b103af730d2742ea86452f08e59b7c8ba378e29",
+      "sequence": 1,
+      "tool": "add_tags"
+    },
+    {
+      "arguments": {
+        "column_path": "order_total",
+        "description": "\n\nLineageProof LP-001 (high): Type change conflicts with observed usage. Recommended action: Run contract tests against representative downstream queries and document the accepted type range.",
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+        "operation": "append"
+      },
+      "response_sha256": "d724b498ff9a3378c54e6d2b8b103af730d2742ea86452f08e59b7c8ba378e29",
+      "sequence": 2,
+      "tool": "update_description"
+    },
+    {
+      "arguments": {
+        "column_path": "status",
+        "description": "\n\nLineageProof LP-002 (high): Nullable field is used without a migration guard. Recommended action: Define null semantics, backfill existing rows, and update downstream queries with an explicit guard.",
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+        "operation": "append"
+      },
+      "response_sha256": "d724b498ff9a3378c54e6d2b8b103af730d2742ea86452f08e59b7c8ba378e29",
+      "sequence": 3,
+      "tool": "update_description"
+    },
+    {
+      "arguments": {
+        "column_path": "shipping_address",
+        "description": "\n\nLineageProof LP-003 (critical): Field identity change reaches downstream assets. Recommended action: Add a compatibility field or versioned migration, notify owners, and verify each contract before removal.",
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+        "operation": "append"
+      },
+      "response_sha256": "d724b498ff9a3378c54e6d2b8b103af730d2742ea86452f08e59b7c8ba378e29",
+      "sequence": 4,
+      "tool": "update_description"
+    },
+    {
+      "arguments": {
+        "column_path": "shipping_address",
+        "description": "\n\nLineageProof LP-004 (high): PII lineage reaches unclassified downstream assets. Recommended action: Confirm classification with asset owners and propagate the approved DataHub tag before deployment.",
+        "entity_urn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,analytics.warehouse.orders,PROD)",
+        "operation": "append"
+      },
+      "response_sha256": "d724b498ff9a3378c54e6d2b8b103af730d2742ea86452f08e59b7c8ba378e29",
+      "sequence": 5,
+      "tool": "update_description"
+    }
+  ],
+  "execution_mode": "synthetic_fixture",
+  "external_metadata_modified": false,
+  "mutation_tools_invoked": true,
+  "receipt_version": "1.0",
+  "status": "pass",
+  "truth_boundary": "Mutation tools were exercised against a synthetic fixture; no external DataHub metadata was modified.",
+  "writeback_plan_sha256": "ddc00695e3901676701025e66ea19e6b69f45822921b04bfece61f13156fda5e"
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "level": "error",
+          "message": {
+            "text": "order_total: order_total changes from DECIMAL(12,2) to DECIMAL(14,2); 2 production query examples were inspected."
+          },
+          "properties": {
+            "evidenceReceipts": [
+              3,
+              4
+            ],
+            "field": "order_total",
+            "issueId": "LP-001"
+          },
+          "ruleId": "LP_TYPE_CONTRACT"
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "status: status becomes nullable; 1 of 1 observed queries use it in a sensitive operation."
+          },
+          "properties": {
+            "evidenceReceipts": [
+              5,
+              6
+            ],
+            "field": "status",
+            "issueId": "LP-002"
+          },
+          "ruleId": "LP_NULLABILITY_USAGE"
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "shipping_address: shipping_address changes to shipping_address_id while 6 downstream assets are recorded."
+          },
+          "properties": {
+            "evidenceReceipts": [
+              7,
+              8
+            ],
+            "field": "shipping_address",
+            "issueId": "LP-003"
+          },
+          "ruleId": "LP_BREAKING_FIELD_IDENTITY"
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "shipping_address: shipping_address is tagged PII, but 5 downstream assets lack the PII tag in the retrieved context."
+          },
+          "properties": {
+            "evidenceReceipts": [
+              7,
+              8
+            ],
+            "field": "shipping_address",
+            "issueId": "LP-004"
+          },
+          "ruleId": "LP_PII_PROPAGATION"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "LineageProof",
+          "rules": [
+            {
+              "id": "LP_TYPE_CONTRACT",
+              "name": "LP_TYPE_CONTRACT",
+              "shortDescription": {
+                "text": "Type change conflicts with observed usage"
+              }
+            },
+            {
+              "id": "LP_NULLABILITY_USAGE",
+              "name": "LP_NULLABILITY_USAGE",
+              "shortDescription": {
+                "text": "Nullable field is used without a migration guard"
+              }
+            },
+            {
+              "id": "LP_BREAKING_FIELD_IDENTITY",
+              "name": "LP_BREAKING_FIELD_IDENTITY",
+              "shortDescription": {
+                "text": "Field identity change reaches downstream assets"
+              }
+            },
+            {
+              "id": "LP_PII_PROPAGATION",
+              "name": "LP_PII_PROPAGATION",
+              "shortDescription": {
+                "text": "PII lineage reaches unclassified downstream assets"
+              }
+            }
+          ],
+          "version": "1.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}
