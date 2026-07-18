@@ -1,0 +1,57 @@
+name: MicroStudio project inquiry
+description: Request a fixed-scope paid sample using sanitized project details.
+title: "[Project inquiry] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Do not include credentials, personal identifiers,
+        payment details, private client data, or live-account access. Use a
+        synthetic or sanitized example. Posting an inquiry does not create an
+        order or authorize payment; scope, acceptance criteria, price, and terms
+        must be agreed separately before paid work begins.
+  - type: dropdown
+    id: service-lane
+    attributes:
+      label: Service lane
+      options:
+        - Excel and spreadsheet repair
+        - Data cleanup and validation
+        - Code repair and automation
+        - Localization and technical copy
+        - Document extraction and evidence
+        - MT5 or MQL5 engineering
+    validations:
+      required: true
+  - type: textarea
+    id: desired-output
+    attributes:
+      label: Desired output
+      description: Describe one concrete result, file, or behavior.
+      placeholder: Repair one reproducible export defect and return a tested patch.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-checklist
+    attributes:
+      label: Acceptance checklist
+      description: List the checks that will show the sample is complete.
+      placeholder: |
+        1. Reproduce the defect with a sanitized fixture.
+        2. Add a regression test.
+        3. Return the patch and change log.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Target deadline
+      placeholder: Flexible, or a date and timezone
+  - type: checkboxes
+    id: privacy-confirmation
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed credentials, personal identifiers, payment details, and unnecessary client data.
+          required: true
