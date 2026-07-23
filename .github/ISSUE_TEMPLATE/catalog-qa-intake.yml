@@ -1,0 +1,88 @@
+name: Catalog QA structured intake
+description: Metadata-only preflight for one redacted supplier-catalog CSV.
+title: "[Catalog QA intake]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is a scope preflight, not an order or payment request.
+        Do not paste personal data, customer rows, contact details, links, files, credentials, bank data, or store access.
+        The parser accepts only the fixed choices below and returns `accepted`, `needs_correction`, or `out_of_scope`.
+  - type: dropdown
+    id: requested_tier
+    attributes:
+      label: Requested tier
+      description: Prices remain draft_not_offer and require separate written acceptance.
+      options:
+        - self_serve
+        - fixed_scope_pilot
+        - workflow_deployment
+    validations:
+      required: true
+  - type: dropdown
+    id: quote_currency
+    attributes:
+      label: Quote currency
+      description: Self-serve is USD only; other tiers may use CNY or USD.
+      options:
+        - USD
+        - CNY
+    validations:
+      required: true
+  - type: dropdown
+    id: maximum_rows
+    attributes:
+      label: Maximum rows in the single CSV
+      description: Fixed-scope and workflow tiers support up to 200 rows; self-serve supports up to 10000.
+      options:
+        - "50"
+        - "100"
+        - "200"
+        - "500"
+        - "1000"
+        - "5000"
+        - "10000"
+    validations:
+      required: true
+  - type: dropdown
+    id: destination_systems
+    attributes:
+      label: Destination systems
+      description: Choose 0 for self-serve or fixed-scope pilot, and 1 for workflow deployment.
+      options:
+        - "0"
+        - "1"
+    validations:
+      required: true
+  - type: checkboxes
+    id: data_confirmations
+    attributes:
+      label: Data and authorization confirmations
+      description: Every confirmation is required. The issue must contain metadata only.
+      options:
+        - label: I confirm that all future inputs will be redacted before upload.
+          required: true
+        - label: I confirm that I am authorized to use the future input data.
+          required: true
+        - label: I confirm that the future input contains no personal or regulated data.
+          required: true
+        - label: I confirm that the future input contains no credentials, cookies, tokens, secrets, or account login.
+          required: true
+        - label: I confirm that the future input contains no bank or payment data.
+          required: true
+  - type: checkboxes
+    id: scope_confirmations
+    attributes:
+      label: Scope and communication confirmations
+      description: These constraints keep the preflight deterministic and low-contact.
+      options:
+        - label: I confirm the client, payer, organizer, sponsor, evaluator, and project are entirely private and have no government, public-institution, state-media, official-association, or official-contest relationship.
+          required: true
+        - label: I confirm one CSV file from exactly one input system.
+          required: true
+        - label: I do not require OCR, free-form documents, production writes, store login, accounting or tax judgment, custom UI, or historical backfill.
+          required: true
+        - label: I accept one consolidated written batch of questions.
+          required: true
+        - label: I accept a maximum of one revision for a fixed-scope pilot.
+          required: true
