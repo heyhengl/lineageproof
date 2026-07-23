@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.1",
+  "updated_at": "2026-07-24",
+  "name": "MicroStudio service catalog",
+  "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
+  "description": "Fixed-scope technical delivery with synthetic proof, explicit acceptance criteria and privacy-safe public inquiry briefs.",
+  "inquiry": {
+    "method": "public GitHub issue",
+    "url": "https://github.com/heyhengl/lineageproof/issues/new",
+    "notice": "An inquiry is not an order. Scope, amount, fees, payment, acceptance, revisions, cancellation and rights must be confirmed in writing before work starts."
+  },
+  "eligibility": {
+    "private_sector_only": true,
+    "government_or_official_projects": "excluded",
+    "relationship_unknown": "ineligible until organizer, client, sponsor, evaluator and payer are reliably confirmed private and non-official"
+  },
+  "privacy": "Use synthetic or sanitized samples. Do not send credentials, cookies, API keys, identity or payment records, live-account access, or unnecessary customer data.",
+  "technical_previews": [
+    {
+      "id": "catalog-qa-offline-agency-kit",
+      "name": "Catalog QA Offline Agency Kit",
+      "url": "https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/",
+      "status": "technical_preview_not_for_sale",
+      "owned_input": "Authorized supplier CSV or XLSX",
+      "decision_ready_output": "Shopify draft import, quarantine, field map and deterministic reconciliation receipt",
+      "different_from": [
+        "public storefront scraper",
+        "Shopify Admin importer"
+      ],
+      "evidence": "Private synthetic Cloud smoke plus local SDK proof",
+      "commercial_state": {
+        "price": null,
+        "checkout": false,
+        "customer_upload": false,
+        "public_actor": false
+      }
+    },
+    {
+      "id": "commerce-reconciliation",
+      "name": "Commerce Reconciliation",
+      "url": "https://heyhengl.github.io/lineageproof/studio/commerce-reconciliation/",
+      "status": "technical_preview_not_for_sale",
+      "owned_input": "Sanitized orders, fulfillments, optional refunds and inventory exports",
+      "decision_ready_output": "Deterministic four-ledger exception evidence, control counts, hashes and receipt",
+      "different_from": [
+        "generic CSV joiner",
+        "live inventory connector",
+        "accounting application"
+      ],
+      "evidence": "Two local synthetic fixtures with deterministic invariants and zero network calls",
+      "commercial_state": {
+        "price": null,
+        "checkout": false,
+        "customer_upload": false,
+        "public_actor": false
+      }
+    }
+  ],
+  "offers": [
+    {
+      "id": "replay-safe-webhook-audit",
+      "name": "Replay-safe webhook audit and repair",
+      "url": "https://heyhengl.github.io/lineageproof/studio/replay-safe-webhook-audit/",
+      "opening_scope": { "currency": "USD", "amount_from": 349 },
+      "localized_offer": {
+        "language": "zh-CN",
+        "url": "https://heyhengl.github.io/lineageproof/studio/zh/replay-safe-webhook-audit/",
+        "currency": "CNY",
+        "amount_from": 2499
+      },
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Webhook_Reliability_Proof.zip"
+    },
+    {
+      "id": "evidence-contract-data-interface",
+      "name": "Evidence contract and AI output QA",
+      "url": "https://heyhengl.github.io/lineageproof/studio/evidence-contract-data-interface/",
+      "opening_scope": { "currency": "USD", "amount_from": 199 },
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Evidence_Contract_Prototype_Proof.zip"
+    },
+    {
+      "id": "pdf-to-excel-audit",
+      "name": "Auditable PDF-to-Excel conversion",
+      "url": "https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/",
+      "opening_scope": { "currency": "USD", "amount_from": 45 },
+      "localized_offer": {
+        "language": "zh-CN",
+        "url": "https://heyhengl.github.io/lineageproof/studio/zh/pdf-to-excel-audit/",
+        "currency": "CNY",
+        "amount_from": 399
+      },
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/PDF_to_Excel_Auditable_Proof.zip"
+    },
+    {
+      "id": "pdf-layout-extraction",
+      "name": "PDF layout block extraction",
+      "url": "https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/",
+      "opening_scope": { "currency": "USD", "amount_from": 149 },
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/PDF_Layout_Block_Extraction_Proof.zip"
+    },
+    {
+      "id": "excel-automation",
+      "name": "Inspectable Excel automation",
+      "url": "https://heyhengl.github.io/lineageproof/studio/excel-automation/",
+      "opening_scope": { "currency": "USD", "amount_from": 69 },
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Referral_Tracker_Dashboard_Portfolio.xlsx"
+    }
+  ]
+}
