@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://heyhengl.github.io/lineageproof/studio/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/replay-safe-webhook-audit/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/zh/replay-safe-webhook-audit/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/evidence-contract-data-interface/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/zh/pdf-to-excel-audit/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/excel-automation/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/notes/replay-safe-webhooks/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/zh/notes/webhook-idempotency-reconciliation/</loc></url>
 </urlset>

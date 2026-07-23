@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "updated_at": "2026-07-24",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -68,6 +68,26 @@
         "accounts-payable approval or ERP writeback"
       ],
       "evidence": "Two local synthetic document packs with deterministic invariants and zero network or OCR calls",
+      "commercial_state": {
+        "price": null,
+        "checkout": false,
+        "customer_upload": false,
+        "public_actor": false
+      }
+    },
+    {
+      "id": "amazon-settlement-v2-reconciliation",
+      "name": "Amazon Settlement V2 Reconciliation",
+      "url": "https://heyhengl.github.io/lineageproof/studio/amazon-settlement-v2-reconciliation/",
+      "status": "technical_preview_not_for_sale",
+      "owned_input": "One seller-authorized, sanitized Amazon Flat File V2 settlement export plus an optional three-column expected-payout control",
+      "decision_ready_output": "Aggregate settlement summaries, amount controls, stable exceptions, field mapping, source-row evidence and deterministic receipt",
+      "different_from": [
+        "public Amazon product, seller, review, price or ranking scraper",
+        "Seller Central or SP-API integration",
+        "bank, bookkeeping or payout automation"
+      ],
+      "evidence": "Two local synthetic fixtures, 24 of 24 product tests and cached Actor integration verification with zero external calls",
       "commercial_state": {
         "price": null,
         "checkout": false,
