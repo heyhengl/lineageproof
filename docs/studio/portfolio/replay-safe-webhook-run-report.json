@@ -1,0 +1,28 @@
+{
+  "proof": "synthetic_webhook_reliability",
+  "generated_at": "2026-07-17T00:05:00.000Z",
+  "external_calls": 0,
+  "input_attempts": 6,
+  "outcomes": {
+    "processed": 4,
+    "duplicate": 1,
+    "rejected": 1
+  },
+  "reconciliation_ok": true,
+  "accepted_events": 4,
+  "rejected_events": 1,
+  "calls": {
+    "total": 3,
+    "matched": 2,
+    "unmatched": 1
+  },
+  "open_unmatched": 1,
+  "notifications_staged": 1,
+  "notifications_sent": 0,
+  "boundaries": [
+    "Fictional data only",
+    "No VOIPline or ERP access",
+    "No messages sent",
+    "Production PHP/MySQL mapping requires funded discovery"
+  ]
+}

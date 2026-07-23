@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>MicroStudio engineering notes</title>
+    <link>https://heyhengl.github.io/lineageproof/studio/</link>
+    <description>Practical, evidence-led notes about narrow technical controls, built with synthetic or public information and explicit scope boundaries.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Jul 2026 02:50:00 +0800</lastBuildDate>
+    <atom:link href="https://heyhengl.github.io/lineageproof/studio/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazon Settlement V2: five controls before the file changes.</title>
+      <link>https://heyhengl.github.io/lineageproof/studio/notes/amazon-settlement-v2-controls/</link>
+      <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/notes/amazon-settlement-v2-controls/</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0800</pubDate>
+      <dc:language>en</dc:language>
+      <description>A practical control note for Amazon's 2026 Settlement V2 migration: field mapping, settlement totals, amount breakdowns, timing checks and deterministic exception evidence.</description>
+    </item>
+    <item>
+      <title>A webhook needs three records, not one success log.</title>
+      <link>https://heyhengl.github.io/lineageproof/studio/notes/replay-safe-webhooks/</link>
+      <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/notes/replay-safe-webhooks/</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0800</pubDate>
+      <dc:language>en</dc:language>
+      <description>A runnable, synthetic Node.js proof for signed webhook ingestion, idempotent replay handling, visible exceptions and transactional side effects.</description>
+    </item>
+    <item>
+      <title>Webhook 返回 200，为什么仍可能重复下单？</title>
+      <link>https://heyhengl.github.io/lineageproof/studio/zh/notes/webhook-idempotency-reconciliation/</link>
+      <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/zh/notes/webhook-idempotency-reconciliation/</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0800</pubDate>
+      <dc:language>zh-CN</dc:language>
+      <description>用可运行的合成 Node.js 证明解释 Webhook 原始报文验签、数据库幂等、异常队列、事务型 outbox 与逐次对账。</description>
+    </item>
+  </channel>
+</rss>
