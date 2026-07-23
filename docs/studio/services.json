@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated_at": "2026-07-24",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -48,6 +48,26 @@
         "accounting application"
       ],
       "evidence": "Two local synthetic fixtures with deterministic invariants and zero network calls",
+      "commercial_state": {
+        "price": null,
+        "checkout": false,
+        "customer_upload": false,
+        "public_actor": false
+      }
+    },
+    {
+      "id": "procurement-document-reconciliation",
+      "name": "Procurement Document Reconciliation",
+      "url": "https://heyhengl.github.io/lineageproof/studio/procurement-document-reconciliation/",
+      "status": "technical_preview_not_for_sale",
+      "owned_input": "One redacted, fixed-template purchase order, commercial invoice and packing list",
+      "decision_ready_output": "Traceable ERP staging rows, stable cross-document exceptions, source lines, control totals and receipt",
+      "different_from": [
+        "general invoice or receipt OCR",
+        "single-interchange EDI parser",
+        "accounts-payable approval or ERP writeback"
+      ],
+      "evidence": "Two local synthetic document packs with deterministic invariants and zero network or OCR calls",
       "commercial_state": {
         "price": null,
         "checkout": false,
