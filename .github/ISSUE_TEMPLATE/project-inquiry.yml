@@ -16,6 +16,8 @@ body:
         - PDF to Excel audit: https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/
         - PDF layout block extraction: https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/
         - Excel automation: https://heyhengl.github.io/lineageproof/studio/excel-automation/
+        - Intake automation readiness audit: https://heyhengl.github.io/lineageproof/studio/intake-automation-readiness-audit/
+        - Release readiness QA audit: https://heyhengl.github.io/lineageproof/studio/release-readiness-qa-audit/
   - type: dropdown
     id: service-lane
     attributes:
@@ -27,6 +29,8 @@ body:
         - Excel and spreadsheet repair
         - Data cleanup and validation
         - Code repair and automation
+        - Intake automation readiness audit
+        - Release readiness QA audit
         - Localization and technical copy
         - Document extraction and evidence
         - MT5 or MQL5 engineering
@@ -62,4 +66,13 @@ body:
       label: Privacy confirmation
       options:
         - label: I removed credentials, personal identifiers, payment details, and unnecessary client data.
+          required: true
+        - label: I am authorized to share this sanitized description and will not attach project files until scope and handling are agreed separately.
+          required: true
+  - type: checkboxes
+    id: private-project-confirmation
+    attributes:
+      label: Private project confirmation
+      options:
+        - label: I confirm the client, payer, organizer, sponsor, evaluator, and project are entirely private and have no government, public-institution, state-media, official-association, or official-contest relationship.
           required: true

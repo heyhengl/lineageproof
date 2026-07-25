@@ -137,6 +137,8 @@ boundary and a synthetic proof before any project data is exchanged:
 - [PDF to Excel audit](https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/) - typed workbook, source order, page reconciliation, formulas, and an issues register.
 - [PDF layout block extraction](https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/) - per-page blocks, article grouping, bbox and map-area coordinates, and a JSON contract.
 - [Excel automation](https://heyhengl.github.io/lineageproof/studio/excel-automation/) - controlled inputs, formula-backed reporting, native charts, and a reusable handoff.
+- [Intake automation readiness audit](https://heyhengl.github.io/lineageproof/studio/intake-automation-readiness-audit/) - a bounded synthetic evidence pack for intake, routing, retry, deduplication, and handoff checks.
+- [Release readiness QA audit](https://heyhengl.github.io/lineageproof/studio/release-readiness-qa-audit/) - six synthetic cases covering acceptance evidence, regression checks, and a concise release decision.
 
 [Open a public project inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=project-inquiry.yml) only with synthetic or sanitized details. A public issue is not an order and does not authorize payment; scope, acceptance criteria, price, delivery terms, and any payment action remain separate.
 
