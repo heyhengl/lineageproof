@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.3",
-  "updated_at": "2026-07-24",
+  "schema_version": "1.5",
+  "updated_at": "2026-07-26",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
   "description": "Fixed-scope technical delivery with synthetic proof, explicit acceptance criteria and privacy-safe public inquiry briefs.",
@@ -118,6 +118,23 @@
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Evidence_Contract_Prototype_Proof.zip"
     },
     {
+      "id": "intake-automation-readiness-audit",
+      "name": "Auditable intake automation readiness audit",
+      "url": "https://heyhengl.github.io/lineageproof/studio/intake-automation-readiness-audit/",
+      "opening_scope": null,
+      "scope_note": "Scope and fee are confirmed in writing before paid work begins.",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Evidence_Contract_Prototype_Proof.zip"
+    },
+    {
+      "id": "release-readiness-qa-audit",
+      "name": "Release readiness QA audit",
+      "url": "https://heyhengl.github.io/lineageproof/studio/release-readiness-qa-audit/",
+      "opening_scope": null,
+      "scope_note": "Scope and fee are confirmed in writing before paid work begins.",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Release_Readiness_QA_Proof.zip",
+      "run_report": "https://heyhengl.github.io/lineageproof/studio/portfolio/release-readiness-qa-run-report.json"
+    },
+    {
       "id": "pdf-to-excel-audit",
       "name": "Auditable PDF-to-Excel conversion",
       "url": "https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/",
@@ -142,7 +159,19 @@
       "name": "Inspectable Excel automation",
       "url": "https://heyhengl.github.io/lineageproof/studio/excel-automation/",
       "opening_scope": { "currency": "USD", "amount_from": 69 },
-      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Referral_Tracker_Dashboard_Portfolio.xlsx"
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Referral_Tracker_Dashboard_Portfolio.xlsx",
+      "evidence_items": [
+        {
+          "name": "Referral tracker dashboard workbook",
+          "url": "https://heyhengl.github.io/lineageproof/studio/portfolio/Referral_Tracker_Dashboard_Portfolio.xlsx",
+          "disclosure": "Synthetic data; no client case or performance claim."
+        },
+        {
+          "name": "Inventory and batch tracking workbook",
+          "url": "https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/portfolio/Synthetic_Inventory_Batch_Tracking_Workbook.xlsx",
+          "disclosure": "Synthetic data; no macros, external links or client material."
+        }
+      ]
     }
   ]
 }

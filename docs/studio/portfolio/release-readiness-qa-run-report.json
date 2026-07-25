@@ -1,0 +1,12 @@
+{
+  "proof_version": "1.0.0",
+  "fixture_id": "synthetic-scheduling-release-v1",
+  "test_cases": 6,
+  "pass": 5,
+  "review": 1,
+  "fail": 0,
+  "open_issues": 1,
+  "release_state": "REVIEW",
+  "external_calls": 0,
+  "customer_data": false
+}
