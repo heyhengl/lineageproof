@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="用可运行的合成 Node.js 证明解释 Webhook 原始报文验签、数据库幂等、异常队列、事务型 outbox 与逐次对账。" />
+    <meta name="description" content="A four-export reconciliation control for orders, fulfillments, refunds and inventory, with stable exceptions, source evidence and three cross-output invariants." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://heyhengl.github.io/lineageproof/studio/zh/notes/webhook-idempotency-reconciliation/" />
-    <meta property="og:title" content="Webhook 返回 200，为什么仍可能重复下单？ | MicroStudio" />
-    <meta property="og:description" content="用可运行的合成 Node.js 证明解释 Webhook 原始报文验签、数据库幂等、异常队列、事务型 outbox 与逐次对账。" />
-    <meta property="og:image" content="https://heyhengl.github.io/lineageproof/studio/portfolio/replay-safe-webhooks-og.png" />
+    <meta property="og:url" content="https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/commerce-order-refund-inventory-controls/" />
+    <meta property="og:title" content="Orders, refunds and inventory: twelve controls before the ledger closes. | MicroStudio" />
+    <meta property="og:description" content="A four-export reconciliation control for orders, fulfillments, refunds and inventory, with stable exceptions, source evidence and three cross-output invariants." />
+    <meta property="og:image" content="https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/portfolio/commerce-reconciliation-controls-og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Webhook 返回 200，为什么仍可能重复下单？ | MicroStudio" />
-    <meta name="twitter:description" content="用可运行的合成 Node.js 证明解释 Webhook 原始报文验签、数据库幂等、异常队列、事务型 outbox 与逐次对账。" />
-    <meta name="twitter:image" content="https://heyhengl.github.io/lineageproof/studio/portfolio/replay-safe-webhooks-og.png" />
-    <link rel="icon" type="image/svg+xml" href="../../../favicon.svg" />
-    <link rel="canonical" href="https://heyhengl.github.io/lineageproof/studio/zh/notes/webhook-idempotency-reconciliation/" />
+    <meta name="twitter:title" content="Orders, refunds and inventory: twelve controls before the ledger closes. | MicroStudio" />
+    <meta name="twitter:description" content="A four-export reconciliation control for orders, fulfillments, refunds and inventory, with stable exceptions, source evidence and three cross-output invariants." />
+    <meta name="twitter:image" content="https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/portfolio/commerce-reconciliation-controls-og.png" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="canonical" href="https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/commerce-order-refund-inventory-controls/" />
     <link rel="alternate" type="application/rss+xml" title="MicroStudio engineering notes" href="https://heyhengl.github.io/lineageproof/studio/feed.xml" />
     <link rel="alternate" type="application/json" title="MicroStudio service catalog" href="https://heyhengl.github.io/lineageproof/studio/services.json" />
     <script id="root-catalog-json-ld" type="application/ld+json">
@@ -50,10 +50,10 @@
         ]
       }
     </script>
-    <title>Webhook 返回 200，为什么仍可能重复下单？ | MicroStudio</title>
-    <script type="module" crossorigin src="../../../assets/index-DtD1WyFt.js"></script>
-    <link rel="stylesheet" crossorigin href="../../../assets/index-CM-7686x.css">
-      <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Webhook 返回 200，为什么仍可能重复下单？","description":"用可运行的合成 Node.js 证明解释 Webhook 原始报文验签、数据库幂等、异常队列、事务型 outbox 与逐次对账。","datePublished":"2026-07-20","dateModified":"2026-07-20","author":{"@type":"Organization","name":"MicroStudio"},"publisher":{"@type":"Organization","name":"MicroStudio","url":"https://heyhengl.github.io/lineageproof/studio"},"mainEntityOfPage":"https://heyhengl.github.io/lineageproof/studio/zh/notes/webhook-idempotency-reconciliation/","image":"https://heyhengl.github.io/lineageproof/studio/portfolio/replay-safe-webhooks-og.png","inLanguage":"zh-CN"}</script>
+    <title>Orders, refunds and inventory: twelve controls before the ledger closes. | MicroStudio</title>
+    <script type="module" crossorigin src="../../assets/index-DtD1WyFt.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-CM-7686x.css">
+      <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Orders, refunds and inventory: twelve controls before the ledger closes.","description":"A four-export reconciliation control for orders, fulfillments, refunds and inventory, with stable exceptions, source evidence and three cross-output invariants.","datePublished":"2026-07-26","dateModified":"2026-07-26","author":{"@type":"Organization","name":"MicroStudio"},"publisher":{"@type":"Organization","name":"MicroStudio","url":"https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site"},"mainEntityOfPage":"https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/commerce-order-refund-inventory-controls/","image":"https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/portfolio/commerce-reconciliation-controls-og.png","inLanguage":"en"}</script>
   </head>
   <body>
     <div id="root"></div>
