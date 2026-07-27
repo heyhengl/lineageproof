@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "product_id": "release-qa-evidence-kit",
+  "version": "1.0.0-DRAFT",
+  "status": "ready_not_active",
+  "full_draft": {
+    "publicly_distributed": false,
+    "members": 24,
+    "sha256": "0b1ca1ec2b6c9fa752875d550321863daf2a14fac3a8661d1c61dd00122f5d68"
+  },
+  "public_evaluation": {
+    "url": "https://heyhengl.github.io/lineageproof/studio/portfolio/release-qa-evidence-kit-evaluation-1.0.0.zip.b64",
+    "encoding": "base64",
+    "decoded_filename": "release-qa-evidence-kit-evaluation-1.0.0.zip",
+    "members": 15,
+    "sha256": "ec83a39015bb95187cb13f2e4302aabaa95db9893c0a1fb2b3aa299d957f72b1"
+  },
+  "synthetic_example": {
+    "test_cases": 6,
+    "pass": 5,
+    "review": 1,
+    "blocked": 0,
+    "skipped": 0,
+    "open_issues": 1,
+    "retests": 1,
+    "release_state": "REVIEW",
+    "external_calls": 0,
+    "customer_data": false,
+    "production_access": false
+  },
+  "commercial_gates": {
+    "commercial_license_approved": false,
+    "price_approved": false,
+    "checkout_active": false,
+    "payment_collection_active": false,
+    "payout_connected": false,
+    "tax_setup_complete": false,
+    "sale_allowed": false
+  },
+  "disclosure": "Owned synthetic evaluation only. The full kit remains a local commercial draft. No customer engagement, checkout, payment, sale, settlement or revenue is claimed."
+}

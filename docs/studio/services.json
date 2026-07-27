@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.6",
+  "schema_version": "1.7",
   "updated_at": "2026-07-27",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -143,6 +143,23 @@
         "intentional_contract_exceptions": 4,
         "external_calls": 0,
         "disclosure": "Owned fictional fixture only; manual download, no browser-side execution, customer data, credentials, external account, production access or paid dependency."
+      }
+    },
+    {
+      "id": "release-qa-evidence-kit",
+      "name": "Offline Release QA Evidence Kit",
+      "url": "https://heyhengl.github.io/lineageproof/studio/release-qa-evidence-kit/",
+      "opening_scope": null,
+      "scope_note": "The full kit is ready offline; price, license, checkout and paid-scope acceptance must be confirmed in writing before activation.",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/release-qa-evidence-kit-evaluation-1.0.0.zip.b64",
+      "summary_receipt": "https://heyhengl.github.io/lineageproof/studio/portfolio/release-qa-evidence-kit-summary.json",
+      "full_draft_publicly_distributed": false,
+      "public_evaluation_sha256": "ec83a39015bb95187cb13f2e4302aabaa95db9893c0a1fb2b3aa299d957f72b1",
+      "commercial_state": {
+        "price_approved": false,
+        "checkout": false,
+        "payment_collection": false,
+        "sale_allowed": false
       }
     },
     {
