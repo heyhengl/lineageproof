@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "proof_id": "owned-synthetic-source-archive-release-qa",
+  "interpretation": "documented commands passed; intentional archive-contract exceptions retained",
+  "documented_commands": 3,
+  "commands_passed": 3,
+  "archive_files": 7,
+  "intentional_contract_exceptions": 4,
+  "external_calls": 0,
+  "customer_data": false,
+  "credentials": false,
+  "production_access": false,
+  "paid_dependencies": false,
+  "receipt_sha256": {
+    "command_receipt": "7357021dc515100ee838abfd81d8a4fa0a5b828999b27e438bcc5d70b66dfe66",
+    "exception_log": "41393d025c1f6595b64daf4ddf3978e96e432862d73be31014c2db5713f33f0c",
+    "inventory": "2ade7246e39167f3398618a68f8cfffc4a91055cad6266e68e7321218b074717"
+  },
+  "proof_bundle_sha256": "6b194c23744fcedf93fdde63f8ccf4864a1ba00c21550f57aca7069bc235eca7"
+}

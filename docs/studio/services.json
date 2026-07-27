@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.5",
-  "updated_at": "2026-07-26",
+  "schema_version": "1.6",
+  "updated_at": "2026-07-27",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
   "description": "Fixed-scope technical delivery with synthetic proof, explicit acceptance criteria and privacy-safe public inquiry briefs.",
@@ -132,7 +132,18 @@
       "opening_scope": null,
       "scope_note": "Scope and fee are confirmed in writing before paid work begins.",
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Release_Readiness_QA_Proof.zip",
-      "run_report": "https://heyhengl.github.io/lineageproof/studio/portfolio/release-readiness-qa-run-report.json"
+      "run_report": "https://heyhengl.github.io/lineageproof/studio/portfolio/release-readiness-qa-run-report.json",
+      "adjacent_method_proof": {
+        "name": "Owned synthetic source-archive release QA",
+        "url": "https://heyhengl.github.io/lineageproof/studio/portfolio/source-archive-release-qa-synthetic-proof-1.0.zip.b64",
+        "summary_receipt": "https://heyhengl.github.io/lineageproof/studio/portfolio/source-archive-release-qa-summary.json",
+        "sha256": "6b194c23744fcedf93fdde63f8ccf4864a1ba00c21550f57aca7069bc235eca7",
+        "documented_commands": 3,
+        "commands_passed": 3,
+        "intentional_contract_exceptions": 4,
+        "external_calls": 0,
+        "disclosure": "Owned fictional fixture only; manual download, no browser-side execution, customer data, credentials, external account, production access or paid dependency."
+      }
     },
     {
       "id": "pdf-to-excel-audit",
