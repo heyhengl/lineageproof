@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.1.0",
+  "source_file": "synthetic_supplier.csv",
+  "source_sha256": "76a6e5b0462846097e719c671be5543120a1a4c2ebd6fc41ebd1bd7c5cef2dcc",
+  "shopify_reference": "https://help.shopify.com/en/manual/products/import-export/using-csv",
+  "shopify_sku_reference": "https://help.shopify.com/en/manual/products/details/sku",
+  "shopify_contract": {
+    "id": "shopify-product-csv-current-2026-07-23",
+    "verified_as_of": "2026-07-23",
+    "mode": "new_product_draft_import",
+    "current_case_sensitive_headers": true,
+    "shopify_admin_import_tested": false
+  },
+  "safe_defaults": {
+    "status": "draft",
+    "published_on_online_store": false,
+    "continue_selling_when_out_of_stock": "deny"
+  },
+  "rows": {
+    "input": 5,
+    "accepted": 2,
+    "quarantined": 3,
+    "shopify_output": 2,
+    "blank_rows_skipped": 0
+  },
+  "errors_by_code": {
+    "DUPLICATE_SKU": 1,
+    "FORMULA_LIKE_TEXT": 1,
+    "TITLE_REQUIRED": 1
+  },
+  "unmapped_headers": [],
+  "invariants": {
+    "row_count_reconciled": true,
+    "accepted_equals_shopify_output": true,
+    "all_products_draft_and_unpublished": true,
+    "all_variant_rows_include_option1_dependency": true,
+    "all_image_urls_https": true,
+    "all_image_alt_text_within_recommended_length": true
+  },
+  "status": "pass_with_quarantine",
+  "notes": [
+    "Synthetic or authorized supplier data only.",
+    "Inventory quantity output assumes a single Shopify location; multi-location inventory needs the inventory CSV or API.",
+    "SKU case is preserved because Shopify SKU matching is case-sensitive.",
+    "Current Shopify headers and dependencies are pinned in shopify_csv_contract.json; no Shopify Admin import has been performed.",
+    "Review the generated CSV in a development store before any production import."
+  ]
+}

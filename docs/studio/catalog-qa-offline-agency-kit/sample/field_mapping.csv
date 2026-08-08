@@ -1,0 +1,10 @@
+source_header,canonical_field,status
+SKU,sku,mapped
+Product Name,title,mapped
+Description,description,mapped
+Sale Price,price,mapped
+Stock,inventory,mapped
+Image URL,image_url,mapped
+Brand,vendor,mapped
+Product Type,product_type,mapped
+Tags,tags,mapped

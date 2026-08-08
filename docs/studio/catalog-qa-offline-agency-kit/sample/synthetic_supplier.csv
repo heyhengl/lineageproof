@@ -1,0 +1,6 @@
+SKU,Product Name,Description,Sale Price,Stock,Image URL,Brand,Product Type,Tags
+SAMPLE-100,Alpine Travel Mug,Double-wall stainless travel mug,29.90,18,https://images.example.invalid/sample-100.jpg,Northstar Demo,Drinkware,"travel;steel"
+SAMPLE-100,Duplicate Travel Mug,Deliberate duplicate SKU for quarantine,31.00,6,https://images.example.invalid/sample-100-duplicate.jpg,Northstar Demo,Drinkware,"duplicate;review"
+SAMPLE-200,,Deliberate missing title for quarantine,42.00,9,https://images.example.invalid/sample-200.jpg,Northstar Demo,Bags,"missing-title;review"
+SAMPLE-300,"+SUM(1,1)",Deliberate formula-like title for quarantine,35.50,14,https://images.example.invalid/sample-300.jpg,Northstar Demo,Lighting,"formula;review"
+SAMPLE-400,Packable Day Bag,Lightweight recycled-nylon day bag,46.00,11,https://images.example.invalid/sample-400.jpg,Northstar Demo,Bags,"outdoor;recycled"

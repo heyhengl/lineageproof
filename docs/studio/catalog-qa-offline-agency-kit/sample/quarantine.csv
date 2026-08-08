@@ -1,0 +1,4 @@
+source_row,sku,title,price,inventory,error_codes,error_messages
+3,SAMPLE-100,Duplicate Travel Mug,31.00,6,DUPLICATE_SKU,SKU duplicates source row 2
+4,SAMPLE-200,,42.00,9,TITLE_REQUIRED,title is required
+5,SAMPLE-300,"+SUM(1,1)",35.50,14,FORMULA_LIKE_TEXT,title begins with a spreadsheet formula marker
