@@ -237,6 +237,19 @@
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/PDF_Layout_Block_Extraction_Proof.zip"
     },
     {
+      "id": "sales-data-cleaning",
+      "name": "Sales data cleaning and analysis",
+      "url": "https://heyhengl.github.io/lineageproof/studio/sales-data-cleaning/",
+      "inquiry_url": "https://github.com/heyhengl/lineageproof/issues/new?template=sales-data-cleaning-intake.yml",
+      "opening_scope": {
+        "currency": "USD",
+        "amount_from": 149
+      },
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Sales_Insight_Audit_Proof.zip",
+      "case_study": "https://heyhengl.github.io/lineageproof/studio/portfolio/Sales_Insight_Audit_Case_Study.pdf",
+      "disclosure": "Synthetic fixture only; no customer project, production result or predictive claim."
+    },
+    {
       "id": "excel-automation",
       "name": "Inspectable Excel automation",
       "url": "https://heyhengl.github.io/lineageproof/studio/excel-automation/",

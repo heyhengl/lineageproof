@@ -1,0 +1,104 @@
+name: Sales data cleaning fixed-sample inquiry
+description: Metadata-only inquiry for one USD 149 sales-data cleaning sample.
+title: "[Sales data intake]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The opening sample is USD 149 for one sanitized CSV or XLSX dataset, up to 10,000 rows, one schema and one correction round. This form is an inquiry, not an order or payment request.
+        Keep the title generic. Do not paste, attach or link a dataset, field names, customer or personal data, company or person names, credentials, private URLs, account details, payment data or confidential files.
+  - type: dropdown
+    id: requested_tier
+    attributes:
+      label: Requested tier
+      description: This public inquiry covers only the fixed opening sample.
+      options:
+        - fixed_sample_usd_149
+    validations:
+      required: true
+  - type: dropdown
+    id: file_format
+    attributes:
+      label: Sanitized file format
+      description: Select the format that would be used only after private scope confirmation.
+      options:
+        - CSV
+        - XLSX
+    validations:
+      required: true
+  - type: dropdown
+    id: approximate_rows
+    attributes:
+      label: Approximate row count
+      description: The fixed sample supports no more than 10,000 rows.
+      options:
+        - 1_to_1000
+        - 1001_to_5000
+        - 5001_to_10000
+    validations:
+      required: true
+  - type: dropdown
+    id: primary_need
+    attributes:
+      label: Primary cleaning need
+      description: Choose the single most important outcome to review first.
+      options:
+        - typed_and_normalized_fields
+        - rejected_row_controls
+        - duplicate_detection_and_log
+        - row_and_total_reconciliation
+        - descriptive_summary_controls
+    validations:
+      required: true
+  - type: dropdown
+    id: requested_output
+    attributes:
+      label: Preferred output
+      options:
+        - cleaned_dataset_plus_issue_logs
+        - cleaned_dataset_logs_plus_descriptive_summaries
+    validations:
+      required: true
+  - type: dropdown
+    id: target_timing
+    attributes:
+      label: Target timing
+      description: Final timing is confirmed privately after scope review.
+      options:
+        - within_5_business_days
+        - within_10_business_days
+        - flexible
+    validations:
+      required: true
+  - type: checkboxes
+    id: data_confirmations
+    attributes:
+      label: Data and privacy confirmations
+      description: Every confirmation is required before a private scope review.
+      options:
+        - label: I confirm I am authorized to use the future input data.
+          required: true
+        - label: I confirm future input can use sanitized identifiers and contains no names, emails, phone numbers, addresses, payment data or other personal or regulated data.
+          required: true
+        - label: I confirm future input contains no credentials, cookies, tokens, account login, private URLs or confidential notes.
+          required: true
+        - label: I will not paste, attach or link the dataset, field names, customer data or files in this public issue.
+          required: true
+  - type: checkboxes
+    id: scope_confirmations
+    attributes:
+      label: Scope and commercial confirmations
+      description: These boundaries keep the inquiry private-sector, bounded and reviewable.
+      options:
+        - label: I confirm the buyer, payer, project and intended use are entirely private and have no government, public-institution, state-media, official-association or official-contest relationship.
+          required: true
+        - label: I confirm the dataset is not for health, finance, crypto, security, identity, surveillance or another regulated or high-risk use.
+          required: true
+        - label: I confirm one CSV or XLSX dataset, one schema, at most 10,000 rows and one correction round.
+          required: true
+        - label: I need descriptive cleaning and summaries only, not forecasting, valuation, accounting approval, tax judgment or financial advice.
+          required: true
+        - label: I do not require live CRM access, credentials, production writes, deployment, a paid connector or an SLA in this sample.
+          required: true
+        - label: I understand scope, payer, payment protection, acceptance, revisions, cancellation and rights must be confirmed privately before work begins.
+          required: true
