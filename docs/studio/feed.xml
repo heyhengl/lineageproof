@@ -5,7 +5,7 @@
     <link>https://heyhengl.github.io/lineageproof/studio/</link>
     <description>Practical, evidence-led notes about narrow technical controls, built with synthetic or public information and explicit scope boundaries.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Aug 2026 18:42:24 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 18:20:00 +0800</lastBuildDate>
     <atom:link href="https://heyhengl.github.io/lineageproof/studio/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A clean MQL5 compile is a receipt, not a trading result.</title>
@@ -13,20 +13,20 @@
       <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/</guid>
       <pubDate>Sat, 08 Aug 2026 00:00:00 +0800</pubDate>
       <dc:language>en</dc:language>
-      <description>A practical acceptance boundary for MQL5 source, safe defaults, execution isolation, environment review and claims that compilation cannot support.</description>
+      <description>A practical MQL5 delivery note about zero-warning compile evidence, default-off execution, module boundaries, deterministic review gates and explicit broker assumptions.</description>
     </item>
     <item>
       <title>Orders, refunds and inventory: twelve controls before the ledger closes.</title>
-      <link>https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/commerce-order-refund-inventory-controls/</link>
-      <guid isPermaLink="true">https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/commerce-order-refund-inventory-controls/</guid>
+      <link>https://heyhengl.github.io/lineageproof/studio/notes/commerce-order-refund-inventory-controls/</link>
+      <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/notes/commerce-order-refund-inventory-controls/</guid>
       <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
       <dc:language>en</dc:language>
       <description>A four-export reconciliation control for orders, fulfillments, refunds and inventory, with stable exceptions, source evidence and three cross-output invariants.</description>
     </item>
     <item>
       <title>PO, invoice and packing list: fourteen checks before ERP entry.</title>
-      <link>https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/po-invoice-packing-list-controls/</link>
-      <guid isPermaLink="true">https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/po-invoice-packing-list-controls/</guid>
+      <link>https://heyhengl.github.io/lineageproof/studio/notes/po-invoice-packing-list-controls/</link>
+      <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/notes/po-invoice-packing-list-controls/</guid>
       <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
       <dc:language>en</dc:language>
       <description>A practical three-document reconciliation control: compare purchase commitments, supplier charges and packing evidence with stable exceptions and source-line traceability.</description>

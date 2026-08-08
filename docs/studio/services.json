@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.15",
+  "schema_version": "1.16",
   "updated_at": "2026-08-08",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -268,7 +268,7 @@
         },
         {
           "name": "Inventory and batch tracking workbook",
-          "url": "https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/portfolio/Synthetic_Inventory_Batch_Tracking_Workbook.xlsx",
+          "url": "https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Inventory_Batch_Tracking_Workbook.xlsx",
           "disclosure": "Synthetic data; no macros, external links or client material."
         }
       ]

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://heyhengl.github.io/lineageproof/studio/</loc></url>
-  <url><loc>https://heyhengl.github.io/lineageproof/studio/mt5-indicator-dashboard-audit/</loc></url>
-  <url><loc>https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/replay-safe-webhook-audit/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/n8n-workflow-reliability-review/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/zh/replay-safe-webhook-audit/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/evidence-contract-data-interface/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/intake-automation-readiness-audit/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/mt5-indicator-dashboard-audit/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/release-readiness-qa-audit/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/release-qa-evidence-kit/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/</loc></url>
@@ -15,11 +14,11 @@
   <url><loc>https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/sales-data-cleaning/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/excel-automation/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/notes/replay-safe-webhooks/</loc></url>
-  <url><loc>https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/po-invoice-packing-list-controls/</loc></url>
-  <url><loc>https://microstudio-evidence-2026.jiajasonjasx.chatgpt.site/notes/commerce-order-refund-inventory-controls/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/notes/po-invoice-packing-list-controls/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/notes/commerce-order-refund-inventory-controls/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/notes/amazon-settlement-v2-controls/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/zh/notes/webhook-idempotency-reconciliation/</loc></url>
-  <url><loc>https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/</loc></url>
-  <url><loc>https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/sample/</loc></url>
 </urlset>
