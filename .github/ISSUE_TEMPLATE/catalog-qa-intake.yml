@@ -12,46 +12,38 @@ body:
     id: requested_tier
     attributes:
       label: Requested tier
-      description: The USD 249 price applies only to the fixed-scope pilot. Other tiers remain unavailable unless separately quoted in writing.
+      description: This public inquiry is only for the USD 249 fixed-scope pilot.
       options:
-        - self_serve
         - fixed_scope_pilot
-        - workflow_deployment
     validations:
       required: true
   - type: dropdown
     id: quote_currency
     attributes:
       label: Quote currency
-      description: Self-serve is USD only; other tiers may use CNY or USD.
+      description: The published fixed-pilot price is denominated in USD.
       options:
         - USD
-        - CNY
     validations:
       required: true
   - type: dropdown
     id: maximum_rows
     attributes:
       label: Maximum rows in the single CSV
-      description: Fixed-scope and workflow tiers support up to 200 rows; self-serve supports up to 10000.
+      description: Choose the smallest ceiling that covers the file. The fixed pilot supports at most 200 rows.
       options:
         - "50"
         - "100"
         - "200"
-        - "500"
-        - "1000"
-        - "5000"
-        - "10000"
     validations:
       required: true
   - type: dropdown
     id: destination_systems
     attributes:
       label: Destination systems
-      description: Choose 0 for self-serve or fixed-scope pilot, and 1 for workflow deployment.
+      description: The pilot returns files only and never writes to Shopify or another destination system.
       options:
         - "0"
-        - "1"
     validations:
       required: true
   - type: checkboxes

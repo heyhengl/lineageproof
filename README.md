@@ -134,7 +134,7 @@ See [`docs/architecture.md`](docs/architecture.md) for the decision flow, [`docs
 For small, fixed-scope technical work, MicroStudio publishes the acceptance
 boundary and a synthetic proof before any project data is exchanged:
 
-- [Supplier catalog QA and Shopify import prep](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/) - a USD 249 fixed pilot for one authorized CSV or simple XLSX, with explicit field mapping, quarantined exceptions, Shopify draft-import output, and a reconciliation receipt. [Inspect the seven-file public synthetic sample](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/sample/).
+- [Supplier catalog QA and Shopify import prep](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/) - a USD 249 fixed pilot for one authorized CSV or simple XLSX, with explicit field mapping, quarantined exceptions, Shopify draft-import output, and a reconciliation receipt. [Inspect the seven-file public synthetic sample](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/sample/) or [open a sanitized Catalog QA inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-intake.yml).
 - [PDF to Excel audit](https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/) - typed workbook, source order, page reconciliation, formulas, and an issues register.
 - [PDF layout block extraction](https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/) - per-page blocks, article grouping, bbox and map-area coordinates, and a JSON contract.
 - [Excel automation](https://heyhengl.github.io/lineageproof/studio/excel-automation/) - controlled inputs, formula-backed reporting, native charts, and a reusable handoff.
