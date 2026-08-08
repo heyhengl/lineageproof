@@ -123,6 +123,12 @@
         "revision_rounds": 1
       },
       "scope_note": "One authorized supplier CSV or simple XLSX becomes a draft Shopify import, correction queue, field map and reconciliation receipt. No store access or production import.",
+      "localized_offer": {
+        "language": "zh-CN",
+        "url": "https://heyhengl.github.io/lineageproof/studio/zh/catalog-qa-offline-agency-kit/",
+        "currency": "USD",
+        "amount": 249
+      },
       "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-intake.yml",
       "evidence": null,
       "evidence_summary": "Private synthetic Cloud smoke plus local SDK proof; no public download is claimed.",
