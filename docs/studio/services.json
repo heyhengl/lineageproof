@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.9",
+  "schema_version": "1.10",
   "updated_at": "2026-08-08",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -136,6 +136,23 @@
         "amount_from": 2499
       },
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Webhook_Reliability_Proof.zip"
+    },
+    {
+      "id": "n8n-workflow-reliability-review",
+      "name": "n8n workflow reliability review and repair",
+      "url": "https://heyhengl.github.io/lineageproof/studio/n8n-workflow-reliability-review/",
+      "opening_scope": {
+        "currency": "USD",
+        "amount_from": 249,
+        "maximum_nodes": 25,
+        "workflow_count": 1,
+        "trigger_count": 1,
+        "revision_rounds": 1
+      },
+      "scope_note": "One inactive exported workflow plus sanitized fixture shapes; no production credentials, tenant access, live execution, deployment, paid connector or SLA.",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/N8N_Workflow_Reliability_Proof.zip",
+      "evidence_sha256": "f132ff63aa5b57d40fa0a9704ecf16263136cf026f46ed4b4f8483e72c0d3415",
+      "disclosure": "Owned synthetic inactive export only; no client work, customer data, credentials, private URLs, production access, live execution, external action or paid dependency."
     },
     {
       "id": "evidence-contract-data-interface",
