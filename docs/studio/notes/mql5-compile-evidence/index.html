@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Why a zero-warning MQL5 compile is a reproducibility receipt—not proof of intended rules, broker compatibility, production readiness or trading performance." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/" />
+    <meta property="og:title" content="A clean MQL5 compile is a receipt, not a trading result. | MicroStudio" />
+    <meta property="og:description" content="A practical acceptance boundary for MQL5 source, safe defaults, execution isolation and environment review." />
+    <meta property="og:image" content="https://heyhengl.github.io/lineageproof/studio/portfolio/mt5-architecture.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A clean MQL5 compile is a receipt, not a trading result. | MicroStudio" />
+    <meta name="twitter:description" content="A practical acceptance boundary for MQL5 source, safe defaults, execution isolation and environment review." />
+    <meta name="twitter:image" content="https://heyhengl.github.io/lineageproof/studio/portfolio/mt5-architecture.png" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="canonical" href="https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/" />
+    <link rel="alternate" type="application/rss+xml" title="MicroStudio engineering notes" href="https://heyhengl.github.io/lineageproof/studio/feed.xml" />
+    <link rel="stylesheet" crossorigin href="../../assets/index-Vs6YQDNy.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"A clean MQL5 compile is a receipt, not a trading result.","description":"Why a zero-warning MQL5 compile is a reproducibility receipt—not proof of intended rules, broker compatibility, production readiness or trading performance.","datePublished":"2026-08-08","dateModified":"2026-08-08","author":{"@type":"Organization","name":"MicroStudio"},"publisher":{"@type":"Organization","name":"MicroStudio","url":"https://heyhengl.github.io/lineageproof/studio/"},"mainEntityOfPage":"https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/","image":"https://heyhengl.github.io/lineageproof/studio/portfolio/mt5-architecture.png","inLanguage":"en"}</script>
+    <title>A clean MQL5 compile is a receipt, not a trading result. | MicroStudio</title>
+  </head>
+  <body>
+    <div class="product-preview-page">
+      <a class="skip-link" href="#note-main">Skip to main content</a>
+      <header class="site-header product-preview-header">
+        <a class="brand" href="../../" aria-label="MicroStudio home">MicroStudio</a>
+        <nav aria-label="MQL5 note navigation"><a href="#receipt">Receipt</a><a href="#safety">Safety</a><a href="#review">Review gates</a><a href="#scope">Scope</a></nav>
+        <a class="button button-secondary product-inquiry-action" href="../../mt5-indicator-dashboard-audit/">MT5 service</a>
+      </header>
+
+      <main id="note-main">
+        <section class="product-preview-hero">
+          <div class="product-preview-copy">
+            <p class="product-kicker">Engineering note · 8 August 2026 · Owned synthetic proof</p>
+            <h1>A clean MQL5 compile is a receipt, not a trading result.</h1>
+            <p class="product-deck">A zero-warning compiler result matters, but it answers only one question. A reviewable delivery also needs safe defaults, isolated execution, deterministic state checks and an explicit list of environment assumptions.</p>
+            <div class="product-preview-actions"><a class="button button-primary" href="../../mt5-indicator-dashboard-audit/">Scope an MT5 sample</a><a class="button button-secondary" href="#review">Read the five gates</a></div>
+          </div>
+          <aside class="product-launch-rail" aria-label="Published MQL5 proof summary">
+            <p>Frozen compile receipt</p><strong>0 errors / 0 warnings</strong>
+            <dl><div><dt>Static checks</dt><dd>11 / 11</dd></div><div><dt>Manifest entries</dt><dd>15</dd></div><div><dt>Execution gateway</dt><dd>1</dd></div><div><dt>Credentials</dt><dd>0</dd></div><div><dt>Profit claims</dt><dd>0</dd></div></dl>
+            <p class="product-rail-note">This receipt describes one owned synthetic package. It is not customer work, a live-account test, broker certification or profitability evidence.</p>
+          </aside>
+        </section>
+
+        <section class="product-difference-section" id="receipt" aria-labelledby="receipt-title">
+          <div class="product-difference-copy"><p class="product-kicker">Freeze the receipt first</p><h2 id="receipt-title">Compilation proves reproducibility—not intent.</h2><p>The compiler can show that one exact source tree produced one binary under one recorded environment. A manifest can fingerprint the source, preset, binary, log and checks. Neither can prove that the implemented rules are the buyer's intended rules or that a strategy will make money.</p></div>
+          <div class="product-difference-table" role="table" aria-label="What compile evidence proves and does not prove">
+            <div class="product-difference-head" role="row"><span role="columnheader">Question</span><span role="columnheader">Compile receipt</span><span role="columnheader">Separate review</span></div><div role="row"><strong role="cell">Source builds</strong><span role="cell">Yes, for the recorded environment</span><span role="cell">No</span></div><div role="row"><strong role="cell">Rules match intent</strong><span role="cell">No</span><span role="cell">Written rule matrix</span></div><div role="row"><strong role="cell">Broker compatibility</strong><span role="cell">No</span><span role="cell">Exact symbols, fills and tester data</span></div><div role="row"><strong role="cell">Trading performance</strong><span role="cell">No</span><span role="cell">Not claimed</span></div>
+          </div>
+        </section>
+
+        <section class="product-workflow-section" id="safety">
+          <article><p class="product-kicker">Containment before execution</p><h2>A safe default must exist twice.</h2><p class="product-section-deck">The source declares trading disabled, and the supplied preset repeats the same default. The audit checks both so installation and state inspection do not automatically authorize an order path.</p><ol class="product-workflow-list"><li><span>01</span><div><strong>Source gate</strong><p>Keep execution disabled unless one explicit input is enabled.</p></div></li><li><span>02</span><div><strong>Preset gate</strong><p>Ship the review preset with the same default-off state.</p></div></li><li><span>03</span><div><strong>Gateway</strong><p>Confine direct trade calls to one reviewable executor module.</p></div></li><li><span>04</span><div><strong>Receipt</strong><p>Reconcile the exact source, preset, binary, compiler log and hashes.</p></div></li></ol></article>
+          <aside class="product-contract-rail" aria-label="Safe-default boundary"><p>Safe-default boundary</p><dl><div><dt>Attach to chart</dt><dd>Observe only</dd></div><div><dt>Qualified state</dt><dd>Visible</dd></div><div><dt>Order permission</dt><dd>Explicitly separate</dd></div><div><dt>Live account</dt><dd>Excluded</dd></div></dl><p class="product-contract-note">Default-off is a containment layer, not a substitute for manual rule, broker and environment review.</p></aside>
+        </section>
+
+        <section class="product-proof-section" id="review">
+          <div class="product-proof-copy"><p class="product-kicker">Five gates after compile</p><h2>A clean build still leaves five acceptance decisions.</h2><ul><li><strong>Rule gate:</strong> indicators, timeframes, closed-bar rules, thresholds, precedence and refresh triggers.</li><li><strong>Environment gate:</strong> terminal build, MetaEditor build, symbol suffixes and tester-data coverage.</li><li><strong>State gate:</strong> initialization, missing data, partial history, changed symbols and unchanged-bar refresh.</li><li><strong>Execution gate:</strong> permission, volume normalization, stops, fill modes and failure responses.</li><li><strong>Handoff gate:</strong> source, preset, binary, logs, hashes, installation notes and unresolved REVIEW items.</li></ul></div>
+          <div class="product-proof-receipt" aria-label="MQL5 review-gate summary"><div><span>rule gate</span><strong>REVIEW</strong></div><div><span>environment gate</span><strong>REVIEW</strong></div><div><span>state gate</span><strong class="is-pass">TEST</strong></div><div><span>execution gate</span><strong>DEFAULT OFF</strong></div><div><span>handoff gate</span><strong class="is-pass">RECONCILE</strong></div><p>A dashboard or indicator with no order path may stop before execution review. A bounded EA slice needs all five gates. A profit claim is not one of the gates.</p></div>
+        </section>
+
+        <section class="product-gates-section" id="scope">
+          <div class="product-gates-copy"><p class="product-kicker">Bounded paid sample</p><h2>One module with a written acceptance boundary.</h2><p>The opening scope can cover one indicator, dashboard, risk-control module or bounded EA slice. Inputs must be owned source or a written specification plus synthetic or sanitized examples.</p></div>
+          <div class="product-gate-table" role="table" aria-label="Bounded MQL5 sample scope"><div class="product-gate-head" role="row"><span role="columnheader">Included</span><span role="columnheader">Excluded</span></div><div role="row"><strong role="cell">Focused MQ5 or MQH source</strong><span role="cell">Private strategy publication</span></div><div role="row"><strong role="cell">Compile receipt when compatible tooling is available</strong><span role="cell">Broker certification</span></div><div role="row"><strong role="cell">Acceptance matrix, hashes and installation notes</strong><span role="cell">Live deployment or account operation</span></div><div role="row"><strong role="cell">One bounded correction round</strong><span role="cell">Financial advice or profit promise</span></div></div>
+        </section>
+
+        <section class="product-preview-closing"><div><p>Need one MT5 module made reviewable?</p><h2>Freeze the rules, then freeze the receipt.</h2></div><a class="button product-closing-action" href="../../mt5-indicator-dashboard-audit/">Scope an MT5 sample</a></section>
+      </main>
+
+      <footer class="site-footer product-preview-footer"><div><strong>MicroStudio</strong><p>Evidence-led MT5 engineering with explicit boundaries.</p></div><nav aria-label="Footer navigation"><a href="../../">All services</a><a href="#receipt">Receipt</a><a href="#review">Review gates</a></nav><p class="footer-boundary">AI-assisted note checked against owned synthetic evidence. No customer work, live account, broker result, profit result or revenue is claimed.</p></footer>
+    </div>
+  </body>
+</html>

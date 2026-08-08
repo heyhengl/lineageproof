@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.8",
+  "schema_version": "1.9",
   "updated_at": "2026-08-08",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -78,6 +78,28 @@
     }
   ],
   "offers": [
+    {
+      "id": "mt5-indicator-dashboard-audit",
+      "name": "MT5 indicator and dashboard engineering",
+      "url": "https://heyhengl.github.io/lineageproof/studio/mt5-indicator-dashboard-audit/",
+      "opening_scope": {
+        "currency": "USD",
+        "amount_from": 50,
+        "module_count": 1,
+        "revision_rounds": 1
+      },
+      "scope_note": "One indicator, dashboard, risk-control module, bounded EA slice or existing-source audit with written rules, default-off execution, compile evidence and an acceptance matrix. No live account, account operation or performance promise.",
+      "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=mt5-build-intake.yml",
+      "engineering_note": "https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/mt5-architecture.png",
+      "evidence_summary": "Owned synthetic strategy-neutral architecture plus a frozen local compile receipt with 0 errors, 0 warnings and 11 of 11 declared static checks; not customer work, broker certification or profitability evidence.",
+      "commercial_state": {
+        "checkout": false,
+        "customer_upload": false,
+        "live_account": false,
+        "written_scope_required": true
+      }
+    },
     {
       "id": "catalog-qa-offline-agency-kit",
       "name": "Supplier catalog QA and Shopify import prep",
@@ -220,4 +242,3 @@
     }
   ]
 }
-

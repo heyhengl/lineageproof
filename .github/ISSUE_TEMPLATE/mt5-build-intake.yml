@@ -1,0 +1,74 @@
+name: MT5 bounded-build inquiry
+description: Metadata-only inquiry for one private, non-official MT5 module.
+title: "[MT5 intake]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This public form is a free inquiry, not an order or payment request. The opening paid sample starts at USD 50; exact scope and terms are confirmed privately in writing before work starts.
+        Do not paste strategy rules, source code, files, links, credentials, account identifiers, broker login details, customer data, identity records, payment data, or live-account access.
+  - type: dropdown
+    id: module_type
+    attributes:
+      label: Module type
+      description: Choose the smallest bounded module that describes the inquiry.
+      options:
+        - indicator
+        - dashboard
+        - risk_control_module
+        - bounded_ea_slice
+        - existing_source_audit
+    validations:
+      required: true
+  - type: dropdown
+    id: source_state
+    attributes:
+      label: Starting point
+      description: Do not attach or paste source in this public issue.
+      options:
+        - written_specification_only
+        - owned_source_available_privately_after_scope
+    validations:
+      required: true
+  - type: dropdown
+    id: terminal_build_known
+    attributes:
+      label: Exact MetaTrader and MetaEditor builds known
+      options:
+        - "yes"
+        - "no_review_required"
+    validations:
+      required: true
+  - type: dropdown
+    id: order_path
+    attributes:
+      label: Order path in the requested slice
+      description: Any order path must remain disabled by default during the bounded sample.
+      options:
+        - none
+        - present_but_default_off
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety_confirmations
+    attributes:
+      label: Safety and privacy confirmations
+      description: Every confirmation is required before the inquiry can be reviewed.
+      options:
+        - label: I will use only owned, synthetic, or irreversibly sanitized material after a written scope is agreed.
+          required: true
+        - label: I will not place strategy rules, source, files, credentials, cookies, tokens, account identifiers, broker login details, or live-account access in this public issue.
+          required: true
+        - label: I am not requesting account operation, signal sales, financial advice, broker certification, or a profit, return, or win-rate guarantee.
+          required: true
+        - label: I understand that a clean compile does not prove rule intent, broker compatibility, production readiness, or trading performance.
+          required: true
+  - type: checkboxes
+    id: eligibility_confirmations
+    attributes:
+      label: Project eligibility confirmations
+      options:
+        - label: I confirm that the client, payer, organizer, sponsor, evaluator, and project are entirely private and have no government, public-institution, state-media, official-association, official-contest, political, military, surveillance, security, cryptocurrency, health, or regulated-financial relationship.
+          required: true
+        - label: I accept that exact scope, timing, acceptance, fees, payment route, cancellation, revisions, rights, tax, and expected net amount must be confirmed in writing before paid work starts.
+          required: true

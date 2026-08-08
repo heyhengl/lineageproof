@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://heyhengl.github.io/lineageproof/studio/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/mt5-indicator-dashboard-audit/</loc></url>
+  <url><loc>https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/replay-safe-webhook-audit/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/zh/replay-safe-webhook-audit/</loc></url>
   <url><loc>https://heyhengl.github.io/lineageproof/studio/evidence-contract-data-interface/</loc></url>
