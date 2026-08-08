@@ -128,7 +128,8 @@
         "url": "https://heyhengl.github.io/lineageproof/studio/zh/catalog-qa-offline-agency-kit/",
         "currency": "USD",
         "amount": 249,
-        "sample": "https://heyhengl.github.io/lineageproof/studio/zh/catalog-qa-offline-agency-kit/sample/"
+        "sample": "https://heyhengl.github.io/lineageproof/studio/zh/catalog-qa-offline-agency-kit/sample/",
+        "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-zh-intake.yml"
       },
       "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-intake.yml",
       "evidence": "https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/sample/",

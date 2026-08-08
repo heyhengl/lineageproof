@@ -1,0 +1,63 @@
+name: Catalog QA 中文固定试点询价
+description: 只用非敏感元数据判断一份供应商商品表是否符合 USD 249 固定试点。
+title: "[Catalog QA 中文询价]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这是免费询价，不是订单或付款请求。请勿在公开 Issue 中粘贴或上传真实文件、商品行、客户资料、联系人、链接、凭据、付款数据或店铺权限。
+        这里只选择固定选项；确认适配后，范围、验收、时间与受保护付款路线仍需另行书面确认。
+  - type: dropdown
+    id: maximum_rows
+    attributes:
+      label: 单个文件最多有多少个 SKU？
+      description: 请选择能覆盖文件的最小上限；固定试点最多处理 200 个 SKU。
+      options:
+        - "50"
+        - "100"
+        - "200"
+    validations:
+      required: true
+  - type: dropdown
+    id: input_format
+    attributes:
+      label: 输入文件格式
+      description: 固定试点只处理一份已获授权的 CSV 或简单 XLSX。
+      options:
+        - CSV
+        - XLSX
+    validations:
+      required: true
+  - type: dropdown
+    id: primary_problem
+    attributes:
+      label: 最接近的主要问题
+      description: 这里只选问题类别，不要公开填写真实字段名或商品内容。
+      options:
+        - duplicate_sku
+        - missing_required_field
+        - formula_like_text
+        - source_to_shopify_mapping
+        - other_metadata_only
+    validations:
+      required: true
+  - type: checkboxes
+    id: authority_confirmations
+    attributes:
+      label: 项目与数据确认
+      options:
+        - label: 我确认客户、付款方、组织者、评审方和项目均为私营非官方主体，不涉及政府、公共机构、国有或官方媒体、官方协会或官方竞赛。
+          required: true
+        - label: 我确认有权使用未来文件；文件会先脱敏，并且不含个人、受监管、凭据或付款数据。
+          required: true
+  - type: checkboxes
+    id: handling_confirmations
+    attributes:
+      label: 处理边界确认
+      options:
+        - label: 我不会在公开 Issue 中上传文件或粘贴商品行，只提交这些固定元数据。
+          required: true
+        - label: 范围是一份文件、最多 200 个 SKU，不需要店铺登录、生产写入、OCR、税务判断或历史回填。
+          required: true
+        - label: 我理解询价不是订单；开工前仍需书面确认范围、验收、时间、一次集中修改和受保护付款路线。
+          required: true
