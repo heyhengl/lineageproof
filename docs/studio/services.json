@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.10",
+  "schema_version": "1.15",
   "updated_at": "2026-08-08",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -241,6 +241,7 @@
       "id": "sales-data-cleaning",
       "name": "Sales data cleaning and analysis",
       "url": "https://heyhengl.github.io/lineageproof/studio/sales-data-cleaning/",
+      "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=sales-data-cleaning-intake.yml",
       "inquiry_url": "https://github.com/heyhengl/lineageproof/issues/new?template=sales-data-cleaning-intake.yml",
       "opening_scope": {
         "currency": "USD",

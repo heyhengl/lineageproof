@@ -29,12 +29,22 @@ body:
   - type: dropdown
     id: maximum_rows
     attributes:
-      label: Maximum rows in the single CSV
-      description: Choose the smallest ceiling that covers the file. The fixed pilot supports at most 200 rows.
+      label: Maximum rows in the single file
+      description: Choose the smallest ceiling that covers the file. The fixed pilot supports at most 200 SKUs.
       options:
         - "50"
         - "100"
         - "200"
+    validations:
+      required: true
+  - type: dropdown
+    id: input_format
+    attributes:
+      label: Input format
+      description: Choose the one authorized input file format for this fixed-scope pilot.
+      options:
+        - CSV
+        - XLSX
     validations:
       required: true
   - type: dropdown
@@ -70,7 +80,7 @@ body:
       options:
         - label: I confirm the client, payer, organizer, sponsor, evaluator, and project are entirely private and have no government, public-institution, state-media, official-association, or official-contest relationship.
           required: true
-        - label: I confirm one CSV file from exactly one input system.
+        - label: I confirm one CSV or simple XLSX file from exactly one input system.
           required: true
         - label: I do not require OCR, free-form documents, production writes, store login, accounting or tax judgment, custom UI, or historical backfill.
           required: true
