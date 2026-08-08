@@ -22,6 +22,7 @@
     <link rel="alternate" type="application/json" title="MicroStudio service catalog" href="https://heyhengl.github.io/lineageproof/studio/services.json" />
     <link rel="stylesheet" crossorigin href="../../assets/index-Vs6YQDNy.css" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"供应商商品表质检与 Shopify 导入准备","description":"固定价 249 美元试点：把一份已获授权的供应商 CSV 或简单 XLSX 整理为 Shopify 草稿导入表、异常队列、字段映射与核对回执。","provider":{"@type":"Organization","name":"MicroStudio","url":"https://heyhengl.github.io/lineageproof/studio"},"url":"https://heyhengl.github.io/lineageproof/studio/zh/catalog-qa-offline-agency-kit/","areaServed":"Worldwide","offers":{"@type":"Offer","price":"249","priceCurrency":"USD","availability":"https://schema.org/InStock"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"询价时需要上传真实商品文件吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。公开询价只选择文件格式、行数区间和主要问题类别，并确认授权、脱敏、范围与付款边界；请勿上传真实文件、商品行、联系人、链接、凭据或付款数据。"}},{"@type":"Question","name":"需要 Shopify 后台权限吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。固定试点只做本地文件准备和质检，不登录 Shopify，也不写入生产店铺。"}},{"@type":"Question","name":"超过 200 个 SKU 或有多个文件怎么办？","acceptedAnswer":{"@type":"Answer","text":"这不在 249 美元固定试点内。先用脱敏元数据说明文件数量、行数区间和问题类别，再单独书面确认范围、价格与验收。"}},{"@type":"Question","name":"什么时候开始工作和付款？","acceptedAnswer":{"@type":"Answer","text":"询价不是订单。只有在书面确认范围、交付文件、验收检查、时间、一轮集中修改与受保护付款路线后才开始工作。"}},{"@type":"Question","name":"这个试点包含 PDF、OCR、税务判断或实时店铺集成吗？","acceptedAnswer":{"@type":"Answer","text":"不包含。PDF、OCR、税务或会计判断、历史回填、实时 API 集成和生产写入都需要另行评估，不能默认并入固定试点。"}}]}</script>
     <title>供应商商品表质检与 Shopify 导入准备 | MicroStudio</title>
   </head>
   <body>
@@ -30,7 +31,7 @@
       <header class="site-header product-preview-header">
         <a class="brand" href="../../" aria-label="MicroStudio 首页">MicroStudio</a>
         <nav aria-label="商品表质检服务导航">
-          <a href="#outputs">交付物</a><a href="#difference">区别</a><a href="#workflow">流程</a><a href="#evidence">验证</a><a href="#launch-gates">范围</a><a href="../../catalog-qa-offline-agency-kit/" lang="en">English</a>
+          <a href="#outputs">交付物</a><a href="#difference">区别</a><a href="#workflow">流程</a><a href="#evidence">验证</a><a href="#launch-gates">范围</a><a href="#faq">问答</a><a href="../../catalog-qa-offline-agency-kit/" lang="en">English</a>
         </nav>
         <a class="button button-secondary product-inquiry-action" href="https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-zh-intake.yml">发起中文脱敏询价</a>
       </header>
@@ -128,10 +129,25 @@
           </div>
         </section>
 
+        <section class="product-gates-section" id="faq" aria-labelledby="faq-title">
+          <div class="product-gates-copy">
+            <p class="product-kicker">先把边界说清楚</p>
+            <h2 id="faq-title">询价前常见问题。</h2>
+            <p>公开询价只收脱敏元数据。真实文件、店铺权限和付款信息都不应出现在 GitHub Issue 中。</p>
+          </div>
+          <div class="product-gate-table" role="list" aria-label="商品表质检固定试点常见问题">
+            <div role="listitem"><strong>询价时要上传真实商品文件吗？</strong><span>不需要。只选择文件格式、行数区间和主要问题类别；不要上传文件、商品行、联系人、链接、凭据或付款数据。</span></div>
+            <div role="listitem"><strong>需要 Shopify 后台权限吗？</strong><span>不需要。本试点只做本地文件准备和质检，不登录 Shopify，也不写入生产店铺。</span></div>
+            <div role="listitem"><strong>超过 200 个 SKU 或有多个文件怎么办？</strong><span>不属于 249 美元固定试点。先提供脱敏元数据，再单独书面确认范围、价格与验收。</span></div>
+            <div role="listitem"><strong>什么时候付款和开始工作？</strong><span>询价不是订单。范围、交付物、验收、时间、一轮修改和受保护付款路线书面确认后才开工。</span></div>
+            <div role="listitem"><strong>包含 PDF、OCR、税务判断或实时集成吗？</strong><span>不包含。这些能力以及历史回填、生产写入都需要另行评估。</span></div>
+          </div>
+        </section>
+
         <section class="product-preview-closing"><div><p>固定价 249 美元试点</p><h2>从文件格式、行数和问题类别开始——不要上传客户文件。</h2></div><a class="button product-closing-action" href="https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-zh-intake.yml">打开中文脱敏询价</a></section>
       </main>
 
-      <footer class="site-footer product-preview-footer"><div><strong>MicroStudio</strong><p>本地优先的供应商文件质检，配有明确发布契约。</p></div><nav aria-label="页脚导航"><a href="../../">全部服务</a><a href="#difference">区别</a><a href="#evidence">验证</a><a href="#launch-gates">范围</a></nav><p class="footer-boundary">固定价 249 美元试点。询价不是订单；没有结账、客户上传、生产 Shopify 连接或客户案例。</p></footer>
+      <footer class="site-footer product-preview-footer"><div><strong>MicroStudio</strong><p>本地优先的供应商文件质检，配有明确发布契约。</p></div><nav aria-label="页脚导航"><a href="../../">全部服务</a><a href="#difference">区别</a><a href="#evidence">验证</a><a href="#launch-gates">范围</a><a href="#faq">问答</a></nav><p class="footer-boundary">固定价 249 美元试点。询价不是订单；没有结账、客户上传、生产 Shopify 连接或客户案例。</p></footer>
     </div>
   </body>
 </html>
