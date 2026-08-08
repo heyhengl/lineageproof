@@ -1,18 +1,18 @@
-name: Catalog QA structured intake
-description: Metadata-only preflight for one redacted supplier-catalog CSV.
+name: Catalog QA fixed-pilot inquiry
+description: Metadata-only inquiry for the USD 249 supplier-catalog QA pilot.
 title: "[Catalog QA intake]: "
 body:
   - type: markdown
     attributes:
       value: |
-        This form is a scope preflight, not an order or payment request.
+        The fixed-scope pilot is USD 249. This form is an inquiry, not an order or payment request.
         Do not paste personal data, customer rows, contact details, links, files, credentials, bank data, or store access.
         The parser accepts only the fixed choices below and returns `accepted`, `needs_correction`, or `out_of_scope`.
   - type: dropdown
     id: requested_tier
     attributes:
       label: Requested tier
-      description: Prices remain draft_not_offer and require separate written acceptance.
+      description: The USD 249 price applies only to the fixed-scope pilot. Other tiers remain unavailable unless separately quoted in writing.
       options:
         - self_serve
         - fixed_scope_pilot
