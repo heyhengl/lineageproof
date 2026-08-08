@@ -150,6 +150,7 @@
         "revision_rounds": 1
       },
       "scope_note": "One inactive exported workflow plus sanitized fixture shapes; no production credentials, tenant access, live execution, deployment, paid connector or SLA.",
+      "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=n8n-workflow-reliability-intake.yml",
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/N8N_Workflow_Reliability_Proof.zip",
       "evidence_sha256": "f132ff63aa5b57d40fa0a9704ecf16263136cf026f46ed4b4f8483e72c0d3415",
       "disclosure": "Owned synthetic inactive export only; no client work, customer data, credentials, private URLs, production access, live execution, external action or paid dependency."

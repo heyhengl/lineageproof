@@ -1,0 +1,104 @@
+name: n8n workflow reliability fixed-sample inquiry
+description: Metadata-only inquiry for one USD 249 inactive-workflow reliability review.
+title: "[n8n reliability intake]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The opening sample is USD 249 for one inactive exported workflow, one trigger, up to 25 nodes, synthetic checks and one review round. This form is an inquiry, not an order or payment request.
+        Keep the title generic. Do not paste or attach a workflow export, execution payload, customer record, company or person name, credential, token, private URL, account detail, payment data or confidential file.
+  - type: dropdown
+    id: requested_tier
+    attributes:
+      label: Requested tier
+      description: This public inquiry covers only the fixed opening sample.
+      options:
+        - fixed_sample_usd_249
+    validations:
+      required: true
+  - type: dropdown
+    id: trigger_type
+    attributes:
+      label: Trigger type
+      description: Select the closest sanitized trigger category.
+      options:
+        - webhook
+        - schedule
+        - manual
+        - form
+        - queue_or_event
+        - other_non_sensitive_trigger
+    validations:
+      required: true
+  - type: dropdown
+    id: node_count
+    attributes:
+      label: Approximate node count
+      description: The fixed sample supports no more than 25 nodes.
+      options:
+        - 1_to_10
+        - 11_to_25
+    validations:
+      required: true
+  - type: dropdown
+    id: primary_review_need
+    attributes:
+      label: Primary reliability question
+      description: Choose the single most important behavior to review first.
+      options:
+        - duplicate_or_idempotency_behavior
+        - retry_or_timeout_behavior
+        - malformed_or_unexpected_input
+        - silent_or_partial_failure
+        - rate_limit_or_backoff_behavior
+        - operator_handoff_visibility
+    validations:
+      required: true
+  - type: dropdown
+    id: requested_output
+    attributes:
+      label: Preferred output
+      options:
+        - focused_inactive_export_patch_plus_tests
+        - repair_plan_plus_synthetic_tests
+    validations:
+      required: true
+  - type: dropdown
+    id: target_timing
+    attributes:
+      label: Target timing
+      description: Final timing is confirmed privately after scope review.
+      options:
+        - within_5_business_days
+        - within_10_business_days
+        - flexible
+    validations:
+      required: true
+  - type: checkboxes
+    id: artifact_confirmations
+    attributes:
+      label: Artifact and privacy confirmations
+      description: Every confirmation is required before a private scope review.
+      options:
+        - label: I confirm the workflow export is inactive and contains no bound credentials.
+          required: true
+        - label: I confirm future fixtures can be synthetic or irreversibly sanitized.
+          required: true
+        - label: I will not post or attach the export, execution payloads, customer data, credentials, account details, private URLs or confidential files to this public issue.
+          required: true
+  - type: checkboxes
+    id: scope_confirmations
+    attributes:
+      label: Scope and commercial confirmations
+      description: These boundaries keep the inquiry private-sector, bounded and reviewable.
+      options:
+        - label: I confirm the buyer, payer, project and intended use are entirely private and have no government, public-institution, state-media, official-association or official-contest relationship.
+          required: true
+        - label: I confirm the workflow is not for health, finance, crypto, security, identity, surveillance or another regulated or high-risk use.
+          required: true
+        - label: I confirm one workflow, one trigger, at most 25 nodes and one review round.
+          required: true
+        - label: I do not require production credentials, tenant access, live execution, deployment, a paid connector or an SLA in this sample.
+          required: true
+        - label: I understand scope, payer, payment protection, acceptance, revisions, cancellation and rights must be confirmed privately before work begins.
+          required: true
