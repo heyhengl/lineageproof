@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f0e7" />
+    <meta name="description" content="Five controls for cleaning a sanitized business spreadsheet without hiding rejected rows, duplicate decisions, broken totals or manual corrections." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heyhengl.github.io/lineageproof/studio/notes/spreadsheet-cleanup-reconciliation/" />
+    <meta property="og:title" content="A clean spreadsheet needs an exception ledger, not just deduplication. | MicroStudio" />
+    <meta property="og:description" content="Five controls for a reviewable spreadsheet cleanup: schema, rejection, duplication, reconciliation and correction evidence." />
+    <meta property="og:image" content="https://heyhengl.github.io/lineageproof/studio/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A clean spreadsheet needs an exception ledger, not just deduplication. | MicroStudio" />
+    <meta name="twitter:description" content="Five controls for a reviewable spreadsheet cleanup." />
+    <meta name="twitter:image" content="https://heyhengl.github.io/lineageproof/studio/og.png" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="canonical" href="https://heyhengl.github.io/lineageproof/studio/notes/spreadsheet-cleanup-reconciliation/" />
+    <link rel="alternate" type="application/rss+xml" title="MicroStudio engineering notes" href="https://heyhengl.github.io/lineageproof/studio/feed.xml" />
+    <title>A clean spreadsheet needs an exception ledger, not just deduplication. | MicroStudio</title>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"A clean spreadsheet needs an exception ledger, not just deduplication.","description":"Five controls for cleaning a sanitized business spreadsheet without hiding rejected rows, duplicate decisions, broken totals or manual corrections.","datePublished":"2026-08-09","dateModified":"2026-08-09","author":{"@type":"Organization","name":"MicroStudio"},"publisher":{"@type":"Organization","name":"MicroStudio","url":"https://heyhengl.github.io/lineageproof/studio/"},"mainEntityOfPage":"https://heyhengl.github.io/lineageproof/studio/notes/spreadsheet-cleanup-reconciliation/","inLanguage":"en"}</script>
+    <style>
+      :root{--ink:#20231f;--muted:#62675f;--paper:#f4f0e7;--panel:#fffdf7;--line:#d4cec0;--accent:#87531d}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.72 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--accent);text-underline-offset:4px}.shell{width:min(900px,calc(100% - 40px));margin:auto}.top{display:flex;justify-content:space-between;gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}.top a{text-decoration:none;font-weight:800}.hero{padding:86px 0 62px}.eyebrow{margin:0 0 14px;color:var(--accent);font-size:.78rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}h1{max-width:900px;margin:0;font:700 clamp(3rem,7vw,6.2rem)/.95 Georgia,"Times New Roman",serif;letter-spacing:-.055em}.lede{max-width:760px;margin:28px 0 0;color:#42473f;font-size:1.25rem}.thesis{margin:0 0 64px;padding:28px 30px;background:var(--panel);border-left:5px solid var(--accent);font-size:1.08rem}.controls{counter-reset:controls;border-top:1px solid var(--line)}.control{display:grid;grid-template-columns:80px 1fr;gap:28px;padding:40px 0;border-bottom:1px solid var(--line);counter-increment:controls}.control:before{content:"0" counter(controls);color:var(--accent);font:700 2rem/1 Georgia,serif}.control h2{margin:0 0 10px;font:700 2rem/1.08 Georgia,serif}.control p{margin:0;color:var(--muted)}.check{margin:70px 0;padding:34px;background:#292b26;color:#f8f2e7}.check h2{margin-top:0;font:700 2rem/1.1 Georgia,serif}.check ul{margin:0;padding-left:22px}.check li+li{margin-top:9px}.closing{display:flex;align-items:flex-start;justify-content:space-between;gap:38px;padding:0 0 88px}.button{display:inline-block;padding:12px 17px;background:var(--accent);color:white;text-decoration:none;font-weight:800;white-space:nowrap}footer{padding:26px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}@media(max-width:620px){.shell{width:min(100% - 26px,900px)}.top,.closing{flex-direction:column}.hero{padding-top:52px}.control{grid-template-columns:1fr;gap:12px}}
+    </style>
+  </head>
+  <body>
+    <header class="shell top"><a href="../../">MicroStudio</a><span>Engineering note · 9 August 2026</span></header>
+    <main class="shell">
+      <div class="hero"><p class="eyebrow">Spreadsheet cleanup controls</p><h1>A clean spreadsheet needs an exception ledger, not just deduplication.</h1><p class="lede">A file can look tidy and still be impossible to audit. The useful result is not merely fewer rows or uniform formatting; it is a clean table plus evidence for every rejected, merged and corrected record.</p></div>
+      <p class="thesis"><strong>Control equation:</strong> input rows = accepted rows + rejected rows + duplicate dispositions. Numeric totals need the same before-and-after reconciliation wherever the fields support it.</p>
+      <div class="controls">
+        <article class="control"><div><h2>Write the schema before changing a cell.</h2><p>Define required columns, types, allowed blanks and normalization rules first. A date that cannot be parsed is an exception; it should not quietly become today, zero or an empty value.</p></div></article>
+        <article class="control"><div><h2>Give rejected rows stable reason codes.</h2><p>Keep invalid records in a separate queue with source-row identity and codes such as invalid_date, missing_key or nonnumeric_amount. This makes correction possible without rerunning guesswork.</p></div></article>
+        <article class="control"><div><h2>Make duplicate decisions reviewable.</h2><p>Choose an explicit business key. Record whether duplicates were exact, conflicting, merged or retained for review, and identify which source row produced the accepted record.</p></div></article>
+        <article class="control"><div><h2>Reconcile counts and totals.</h2><p>Compare input, accepted, rejected and duplicate counts. For quantities or amounts, document which totals should remain invariant and explain any intentional difference.</p></div></article>
+        <article class="control"><div><h2>Freeze the correction ledger.</h2><p>Record rule versions, affected-row counts and output hashes. A second run on the same input and rules should reproduce the same result, while a correction round should leave a visible delta.</p></div></article>
+      </div>
+      <aside class="check"><h2>A minimum handoff should include</h2><ul><li>the cleaned dataset;</li><li>rejected-row and duplicate-decision logs;</li><li>before/after row and numeric control totals;</li><li>a correction ledger and reproducible run receipt;</li><li>a plain-language boundary describing what was not inferred or verified.</li></ul></aside>
+      <div class="closing"><div><p class="eyebrow">Privacy boundary</p><p>This control is designed for authorized, sanitized sales, product, inventory or similar nonregulated business records. It does not require names, emails, phones, addresses, payment data, account access, live CRM access or web/contact verification.</p><p><a href="../../portfolio/Sales_Insight_Audit_Proof.zip">Inspect the synthetic proof ZIP</a></p></div><a class="button" href="https://github.com/heyhengl/lineageproof/issues/new?template=sales-data-cleaning-intake.yml">Open a metadata-only inquiry</a></div>
+    </main>
+    <footer><div class="shell">This note describes a control pattern, not a customer result, guarantee, financial opinion or authorization to process personal data.</div></footer>
+  </body>
+</html>

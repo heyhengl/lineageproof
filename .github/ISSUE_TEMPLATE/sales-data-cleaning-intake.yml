@@ -1,11 +1,11 @@
-name: Sales data cleaning fixed-sample inquiry
-description: Metadata-only inquiry for one USD 149 sales-data cleaning sample.
-title: "[Sales data intake]: "
+name: Business spreadsheet cleanup inquiry
+description: Metadata-only inquiry for one USD 149 sanitized spreadsheet cleanup.
+title: "[Spreadsheet cleanup]: "
 body:
   - type: markdown
     attributes:
       value: |
-        The opening sample is USD 149 for one sanitized CSV or XLSX dataset, up to 10,000 rows, one schema and one correction round. This form is an inquiry, not an order or payment request.
+        The opening sample is USD 149 for one sanitized sales, product or inventory CSV or XLSX, up to 10,000 rows, one schema and one correction round. This form is an inquiry, not an order or payment request.
         Keep the title generic. Do not paste, attach or link a dataset, field names, customer or personal data, company or person names, credentials, private URLs, account details, payment data or confidential files.
   - type: dropdown
     id: requested_tier
@@ -38,6 +38,18 @@ body:
     validations:
       required: true
   - type: dropdown
+    id: record_family
+    attributes:
+      label: Sanitized record family
+      description: Choose a broad category only. Do not reveal company, customer, product or field names.
+      options:
+        - sales_records
+        - product_or_catalog_records
+        - inventory_records
+        - other_nonregulated_business_records
+    validations:
+      required: true
+  - type: dropdown
     id: primary_need
     attributes:
       label: Primary cleaning need
@@ -47,6 +59,7 @@ body:
         - rejected_row_controls
         - duplicate_detection_and_log
         - row_and_total_reconciliation
+        - correction_and_exception_ledger
         - descriptive_summary_controls
     validations:
       required: true
@@ -96,7 +109,7 @@ body:
           required: true
         - label: I confirm one CSV or XLSX dataset, one schema, at most 10,000 rows and one correction round.
           required: true
-        - label: I need descriptive cleaning and summaries only, not forecasting, valuation, accounting approval, tax judgment or financial advice.
+        - label: I need descriptive cleaning, reconciliation and summaries only, not forecasting, valuation, accounting approval, tax judgment or financial advice.
           required: true
         - label: I do not require live CRM access, credentials, production writes, deployment, a paid connector or an SLA in this sample.
           required: true

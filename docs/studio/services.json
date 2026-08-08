@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.17",
-  "updated_at": "2026-08-08",
+  "schema_version": "1.18",
+  "updated_at": "2026-08-09",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
   "description": "Fixed-scope technical delivery with synthetic proof, explicit acceptance criteria and privacy-safe public inquiry briefs.",
@@ -264,16 +264,22 @@
     },
     {
       "id": "sales-data-cleaning",
-      "name": "Sales data cleaning and analysis",
+      "name": "Business spreadsheet cleanup and reconciliation",
       "url": "https://heyhengl.github.io/lineageproof/studio/sales-data-cleaning/",
       "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=sales-data-cleaning-intake.yml",
       "inquiry_url": "https://github.com/heyhengl/lineageproof/issues/new?template=sales-data-cleaning-intake.yml",
       "opening_scope": {
         "currency": "USD",
-        "amount_from": 149
+        "amount_from": 149,
+        "input": "one sanitized CSV or XLSX",
+        "maximum_rows": 10000,
+        "schemas": 1,
+        "correction_rounds": 1
       },
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Sales_Insight_Audit_Proof.zip",
       "case_study": "https://heyhengl.github.io/lineageproof/studio/portfolio/Sales_Insight_Audit_Case_Study.pdf",
+      "engineering_note": "https://heyhengl.github.io/lineageproof/studio/notes/spreadsheet-cleanup-reconciliation/",
+      "description": "Clean one sanitized sales, product or inventory spreadsheet with typed fields, a duplicate log, rejected-row queue, control totals and a correction ledger.",
       "disclosure": "Synthetic fixture only; no customer project, production result or predictive claim."
     },
     {
