@@ -1,0 +1,92 @@
+name: Weekly property watchlist merge inquiry
+description: Metadata-only inquiry for one USD 79 two-period spreadsheet merge.
+title: "[Weekly watchlist merge]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The opening scope is USD 79 for one prior export, one current export, up to 1,000 current rows, one stable-key rule, one merged workbook and one correction round. This form is an inquiry, not an order or payment request.
+        Keep the title generic. Do not paste, attach or link a workbook, address, listing, field name, staff note, customer data, credentials, private URL, account detail or payment information.
+  - type: dropdown
+    id: requested_tier
+    attributes:
+      label: Requested tier
+      options:
+        - fixed_two_period_merge_usd_79
+    validations:
+      required: true
+  - type: dropdown
+    id: file_format
+    attributes:
+      label: Sanitized input format
+      options:
+        - two_XLSX_files
+        - two_CSV_files
+        - one_XLSX_with_two_tabs
+    validations:
+      required: true
+  - type: dropdown
+    id: current_rows
+    attributes:
+      label: Approximate current row count
+      options:
+        - 1_to_250
+        - 251_to_500
+        - 501_to_1000
+    validations:
+      required: true
+  - type: dropdown
+    id: stable_key
+    attributes:
+      label: Stable listing key
+      description: Do not name or paste the key. Select only whether one exists.
+      options:
+        - stable_listing_ID_present
+        - stable_key_uncertain_requires_review
+    validations:
+      required: true
+  - type: dropdown
+    id: note_behavior
+    attributes:
+      label: Required note behavior
+      options:
+        - carry_prior_note_when_current_is_blank
+        - current_note_replaces_prior_note
+        - both_behaviors
+    validations:
+      required: true
+  - type: dropdown
+    id: target_timing
+    attributes:
+      label: Target timing
+      description: Final timing is confirmed privately after scope review.
+      options:
+        - within_2_business_days
+        - within_5_business_days
+        - flexible
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy_confirmations
+    attributes:
+      label: Data and privacy confirmations
+      options:
+        - label: I am authorized to use the future source exports.
+          required: true
+        - label: I can remove or replace names, phone numbers, private owner details and other personal information before transfer.
+          required: true
+        - label: I will not paste, attach or link a workbook, address, listing or staff note in this public issue.
+          required: true
+        - label: I will not provide credentials, cookies, tokens, account access, private URLs or payment information.
+          required: true
+  - type: checkboxes
+    id: scope_confirmations
+    attributes:
+      label: Scope and commercial confirmations
+      options:
+        - label: The buyer, payer and intended use are entirely private and have no government, public-institution or official-sector relationship.
+          required: true
+        - label: I need a two-period spreadsheet merge, not property-site scraping, CRM access, live writes, email sending, valuation, legal, tax or investment advice.
+          required: true
+        - label: I understand scope, payer, payment protection, acceptance, revisions, cancellation, privacy and rights must be confirmed privately before work begins.
+          required: true

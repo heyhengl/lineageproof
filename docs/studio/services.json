@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.19",
+  "schema_version": "1.20",
   "updated_at": "2026-08-09",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -301,6 +301,31 @@
       "engineering_note": "https://heyhengl.github.io/lineageproof/studio/notes/spreadsheet-cleanup-reconciliation/",
       "description": "Clean one sanitized sales, product or inventory spreadsheet with typed fields, a duplicate log, rejected-row queue, control totals and a correction ledger.",
       "disclosure": "Synthetic fixture only; no customer project, production result or predictive claim."
+    },
+    {
+      "id": "weekly-property-watchlist-merge",
+      "name": "Weekly property watchlist merge",
+      "url": "https://heyhengl.github.io/lineageproof/studio/weekly-property-watchlist-merge/",
+      "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=weekly-property-watchlist-merge.yml",
+      "opening_scope": {
+        "currency": "USD",
+        "amount": 79,
+        "prior_periods": 1,
+        "current_periods": 1,
+        "maximum_current_rows": 1000,
+        "stable_key_rules": 1,
+        "correction_rounds": 1
+      },
+      "scope_note": "One prior and one current authorized CSV/XLSX export become a stable-key merged workbook with visit-note carry-forward, current-note override, an exception queue, a change log and refresh instructions. No property-site login, scraping, live-system access or production write.",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Weekly_Property_Watchlist_Merge_Synthetic_Proof.xlsx",
+      "evidence_sha256": "1641aea153869d6e56bf76e1a27952963e8fab2ae78465d510f1ef9dfb220cf1",
+      "evidence_summary": "Owned fictional eight-row current-period workbook with five ready rows, three review rows, three notes retained, one new listing, one exited listing, six visually checked worksheets and zero formula errors. Not customer work or a production export.",
+      "commercial_state": {
+        "checkout": false,
+        "customer_upload": false,
+        "live_account": false,
+        "written_scope_required": true
+      }
     },
     {
       "id": "excel-automation",
