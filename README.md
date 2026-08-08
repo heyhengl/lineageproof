@@ -2,6 +2,8 @@
 
 LineageProof is an evidence-first schema-change audit agent for DataHub. It reads the affected dataset, schema, column-level lineage, and production query context through the official DataHub MCP tools, then produces a deterministic risk decision, remediation plan, SARIF report, and a safe-by-default DataHub write-back plan.
 
+Looking for a small, fixed-scope data or automation deliverable? [MicroStudio evidence-led services](https://heyhengl.github.io/lineageproof/studio/) lists current opening scopes, public synthetic evidence, prices, and metadata-only inquiry forms. An inquiry is not an order or payment request.
+
 The fixture demo is fully synthetic and requires no credentials or external writes.
 
 ## Why it exists
