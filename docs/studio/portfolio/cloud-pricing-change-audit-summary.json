@@ -1,0 +1,52 @@
+{
+  "as_of": "2026-08-08T22:30:00+08:00",
+  "change_counts": {
+    "new": 2,
+    "price_changed": 2,
+    "removed": 1,
+    "unchanged": 1
+  },
+  "current": {
+    "duplicate_records": 1,
+    "invalid_records": 0,
+    "raw_records": 6,
+    "unique_records": 5
+  },
+  "duplicates": {
+    "current": [
+      {
+        "key": [
+          "azure",
+          "SYNTH-AZURE-B2S",
+          "eastus",
+          "Linux",
+          "Consumption",
+          "USD",
+          "1 Hour"
+        ],
+        "same_price": true
+      }
+    ],
+    "previous": []
+  },
+  "invalid": {
+    "current": [],
+    "previous": []
+  },
+  "previous": {
+    "duplicate_records": 0,
+    "invalid_records": 0,
+    "raw_records": 4,
+    "unique_records": 4
+  },
+  "run_receipt": {
+    "as_of": "2026-08-08T22:30:00+08:00",
+    "changes_sha256": "80705172bd252c39e1a3cd8289c97c3859df520732272fd398714f3e7c9abe9a",
+    "current_sha256": "b2149f01ff75234e13911c0fa93f7acd85d816ff3b63ec079967d85c5edb84a3",
+    "previous_sha256": "03cb03e579ab865c203093e210ffdcf18b701f8a1e2a83cc639215c7a8a80843",
+    "receipt_sha256": "534238e325a747077dd9b0d52f2d890bc20be1e9ae955d2922ca70f866ca427c",
+    "source_mode": "synthetic_offline_only"
+  },
+  "schema_version": 1,
+  "source_mode": "synthetic_offline_only"
+}

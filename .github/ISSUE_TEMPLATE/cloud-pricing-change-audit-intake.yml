@@ -1,0 +1,76 @@
+name: cloud pricing change audit inquiry
+description: Metadata-only inquiry for one USD 349 fixed cloud-pricing change sample.
+title: "[cloud pricing audit]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The opening sample is USD 349 for one provider, two authorized JSON snapshots, up to 100 unique price keys and one review round. This form is an inquiry, not an order or payment request.
+        Do not paste or attach payloads, prices, account details, credentials, tokens, private URLs, customer records, payment data or confidential files.
+  - type: dropdown
+    id: provider
+    attributes:
+      label: Provider payload family
+      options:
+        - aws_price_list_style
+        - azure_retail_prices_style
+    validations:
+      required: true
+  - type: dropdown
+    id: approximate_price_keys
+    attributes:
+      label: Approximate unique price keys per snapshot
+      options:
+        - 1_to_25
+        - 26_to_50
+        - 51_to_100
+    validations:
+      required: true
+  - type: dropdown
+    id: primary_change_question
+    attributes:
+      label: Primary review need
+      options:
+        - new_and_removed_price_keys
+        - price_changes
+        - normalization_and_duplicates
+        - full_bounded_audit
+    validations:
+      required: true
+  - type: dropdown
+    id: target_timing
+    attributes:
+      label: Target timing
+      description: Final timing is confirmed privately after scope review.
+      options:
+        - within_5_business_days
+        - within_10_business_days
+        - flexible
+    validations:
+      required: true
+  - type: checkboxes
+    id: data_confirmations
+    attributes:
+      label: Data and privacy confirmations
+      options:
+        - label: I am authorized to use both snapshots for this audit.
+          required: true
+        - label: I can provide synthetic or irreversibly sanitized samples privately after scope acceptance.
+          required: true
+        - label: I will not post or attach payloads, prices, credentials, account details, private URLs, customer records, payment data or confidential files to this public issue.
+          required: true
+  - type: checkboxes
+    id: scope_confirmations
+    attributes:
+      label: Scope and commercial confirmations
+      options:
+        - label: I confirm the buyer, payer, project and intended use are entirely private and have no government, public-institution, state-media, official-association or official-contest relationship.
+          required: true
+        - label: I confirm this is not for finance, payments, crypto, health, security, identity, surveillance or another regulated or high-risk use.
+          required: true
+        - label: I confirm one provider, two JSON snapshots, at most 100 unique price keys and one review round.
+          required: true
+        - label: I do not require cloud-account access, credentials, live provider calls, calculator scraping, deployment, monitoring, an SLA or cost advice in this sample.
+          required: true
+        - label: I understand scope, payer, payment protection, acceptance, revisions, cancellation and rights must be confirmed privately before work begins.
+          required: true

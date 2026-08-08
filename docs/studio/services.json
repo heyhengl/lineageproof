@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.16",
+  "schema_version": "1.17",
   "updated_at": "2026-08-08",
   "name": "MicroStudio service catalog",
   "canonical_url": "https://heyhengl.github.io/lineageproof/studio/",
@@ -155,6 +155,31 @@
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/N8N_Workflow_Reliability_Proof.zip",
       "evidence_sha256": "f132ff63aa5b57d40fa0a9704ecf16263136cf026f46ed4b4f8483e72c0d3415",
       "disclosure": "Owned synthetic inactive export only; no client work, customer data, credentials, private URLs, production access, live execution, external action or paid dependency."
+    },
+    {
+      "id": "cloud-pricing-change-audit",
+      "name": "Cloud pricing change audit",
+      "url": "https://heyhengl.github.io/lineageproof/studio/cloud-pricing-change-audit/",
+      "opening_scope": {
+        "currency": "USD",
+        "amount": 349,
+        "provider_count": 1,
+        "snapshot_count": 2,
+        "maximum_unique_price_keys": 100,
+        "revision_rounds": 1
+      },
+      "scope_note": "One AWS or Azure retail-pricing payload family and two authorized, sanitized JSON snapshots become a normalized current catalog, change ledger, SQLite database and deterministic receipt. No cloud account, credentials, live provider call, calculator scraping, deployment, monitoring, SLA or cost advice.",
+      "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=cloud-pricing-change-audit-intake.yml",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Cloud_Pricing_Change_Audit_Proof.zip",
+      "evidence_sha256": "865e2c5e9ad603054f40fe68481cd237d302821fd50651be89b0b27230db047d",
+      "run_report": "https://heyhengl.github.io/lineageproof/studio/portfolio/cloud-pricing-change-audit-summary.json",
+      "evidence_summary": "Owned synthetic AWS Price List-style and Azure Retail Prices-style fixtures; 6 of 6 tests, deterministic new/removed/changed/unchanged comparison and zero external calls. Not customer work or a live provider deployment.",
+      "commercial_state": {
+        "checkout": false,
+        "customer_upload": false,
+        "cloud_account_access": false,
+        "written_scope_required": true
+      }
     },
     {
       "id": "evidence-contract-data-interface",
