@@ -131,17 +131,21 @@ See [`docs/architecture.md`](docs/architecture.md) for the decision flow, [`docs
 
 ## MicroStudio evidence-led services
 
-For small, fixed-scope technical work, MicroStudio publishes the acceptance
-boundary and a synthetic proof before any project data is exchanged:
+MicroStudio publishes the acceptance boundary and owned synthetic evidence before
+any project data is exchanged. These opening samples cover small, fixed-scope,
+private-sector work outside regulated or high-risk uses.
 
-- [Supplier catalog QA and Shopify import prep](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/) - a USD 249 fixed pilot for one authorized CSV or simple XLSX, with explicit field mapping, quarantined exceptions, Shopify draft-import output, and a reconciliation receipt. [Inspect the seven-file public synthetic sample](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/sample/) or [open a sanitized Catalog QA inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-intake.yml).
-- [PDF to Excel audit](https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/) - typed workbook, source order, page reconciliation, formulas, and an issues register.
-- [PDF layout block extraction](https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/) - per-page blocks, article grouping, bbox and map-area coordinates, and a JSON contract.
-- [Excel automation](https://heyhengl.github.io/lineageproof/studio/excel-automation/) - controlled inputs, formula-backed reporting, native charts, and a reusable handoff.
-- [Intake automation readiness audit](https://heyhengl.github.io/lineageproof/studio/intake-automation-readiness-audit/) - a bounded synthetic evidence pack for intake, routing, retry, deduplication, and handoff checks.
-- [Release readiness QA audit](https://heyhengl.github.io/lineageproof/studio/release-readiness-qa-audit/) - six synthetic cases covering acceptance evidence, regression checks, and a concise release decision.
+| Service | Opening sample | Public evidence | Metadata-only inquiry |
+| --- | --- | --- | --- |
+| [Replay-safe webhook audit and repair](https://heyhengl.github.io/lineageproof/studio/replay-safe-webhook-audit/) | From USD 349 for one nonregulated event family and one review round | [Synthetic reliability proof](https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Webhook_Reliability_Proof.zip) | [Webhook inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=replay-safe-webhook-intake.yml) |
+| [n8n workflow reliability review and repair](https://heyhengl.github.io/lineageproof/studio/n8n-workflow-reliability-review/) | From USD 249 for one inactive workflow, one trigger, up to 25 nodes and one review round | [Synthetic workflow proof](https://heyhengl.github.io/lineageproof/studio/portfolio/N8N_Workflow_Reliability_Proof.zip) | [n8n inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=n8n-workflow-reliability-intake.yml) |
+| [Supplier catalog QA and Shopify import prep](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/) | USD 249 for one authorized CSV or simple XLSX, up to 200 SKUs and one revision | [Seven-file synthetic sample](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/sample/) | [Catalog QA inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-intake.yml) |
+| [Sales data cleaning and analysis](https://heyhengl.github.io/lineageproof/studio/sales-data-cleaning/) | From USD 149 for one sanitized CSV or XLSX, up to 10,000 rows and one correction round | [Synthetic analysis proof](https://heyhengl.github.io/lineageproof/studio/portfolio/Sales_Insight_Audit_Proof.zip) | [Sales-data inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=sales-data-cleaning-intake.yml) |
+| [MT5 indicator and dashboard engineering](https://heyhengl.github.io/lineageproof/studio/mt5-indicator-dashboard-audit/) | From USD 50 for one indicator, dashboard, risk-control module, bounded EA slice or source audit, with one revision | [Compile-evidence note](https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/) | [MT5 inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=mt5-build-intake.yml) |
 
-[Open a public project inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=project-inquiry.yml) only with synthetic or sanitized details. A public issue is not an order and does not authorize payment; scope, acceptance criteria, price, delivery terms, and any payment action remain separate.
+Other evidence-led routes include [PDF to Excel audit](https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/), [PDF layout block extraction](https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/), [Excel automation](https://heyhengl.github.io/lineageproof/studio/excel-automation/), [intake automation readiness audit](https://heyhengl.github.io/lineageproof/studio/intake-automation-readiness-audit/), and [release readiness QA audit](https://heyhengl.github.io/lineageproof/studio/release-readiness-qa-audit/). For another bounded route, [open a public project inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=project-inquiry.yml).
+
+Use public issues for metadata only: do not attach files or include customer or personal data, credentials, private URLs, payment data, or production secrets. Health, finance, payments, crypto, government, security, identity, surveillance, and other regulated or high-risk work are out of scope. An inquiry is not an order, revenue, or payment authorization; written scope, acceptance criteria, price, delivery terms, and any payment action remain separate. MT5 work does not include live-account operation or performance promises.
 
 ## License
 
