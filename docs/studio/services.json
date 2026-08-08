@@ -127,11 +127,12 @@
         "language": "zh-CN",
         "url": "https://heyhengl.github.io/lineageproof/studio/zh/catalog-qa-offline-agency-kit/",
         "currency": "USD",
-        "amount": 249
+        "amount": 249,
+        "sample": "https://heyhengl.github.io/lineageproof/studio/zh/catalog-qa-offline-agency-kit/sample/"
       },
       "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-intake.yml",
-      "evidence": null,
-      "evidence_summary": "Private synthetic Cloud smoke plus local SDK proof; no public download is claimed.",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/sample/",
+      "evidence_summary": "Public five-row synthetic sample with two accepted rows, three quarantined exceptions, field mapping, deterministic reconciliation and byte-addressed downloads; no customer data or Shopify Admin import.",
       "commercial_state": {
         "checkout": false,
         "customer_upload": false,
