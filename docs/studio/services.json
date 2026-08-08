@@ -125,6 +125,7 @@
       "id": "replay-safe-webhook-audit",
       "name": "Replay-safe webhook audit and repair",
       "url": "https://heyhengl.github.io/lineageproof/studio/replay-safe-webhook-audit/",
+      "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=replay-safe-webhook-intake.yml",
       "opening_scope": {
         "currency": "USD",
         "amount_from": 349
