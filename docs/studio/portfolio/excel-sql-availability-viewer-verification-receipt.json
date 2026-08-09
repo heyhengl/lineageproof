@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "synthetic_only": true,
+  "reference_date": "2026-08-10",
+  "source_rows": 14,
+  "accepted_rows": 11,
+  "rejected_rows": 3,
+  "sql_totals": {
+    "fleet_total": 31,
+    "quoted_now": 4,
+    "booked_now": 4,
+    "on_hire_now": 6,
+    "available_now": 21,
+    "quote_headroom": 17
+  },
+  "workbook_totals": {
+    "fleet_total": 31,
+    "quoted_now": 4,
+    "booked_now": 4,
+    "on_hire_now": 6,
+    "available_now": 21,
+    "quote_headroom": 17
+  },
+  "workbook_sql_control_delta": 0,
+  "formula_error_count": 0,
+  "rendered_sheet_count": 9,
+  "workbook_sha256": "52b61114595969b2e78cc6d22a18086e302f4ed2e6e2584b6f15eb0c0f8f9c78",
+  "package_files": [
+    "Excel_SQL_Availability_Viewer_Synthetic_Proof.xlsx",
+    "README.md",
+    "accepted_bookings.csv",
+    "availability_snapshot.csv",
+    "availability_source.sqlite",
+    "client_schedule.csv",
+    "daily_booked_out.csv",
+    "queries.sql",
+    "rejected_rows.csv",
+    "source_snapshot.json",
+    "synthetic_bookings.csv",
+    "synthetic_products.csv",
+    "verification_receipt.json"
+  ],
+  "production_claims": {
+    "live_database_connection_proven": false,
+    "buyer_data_used": false,
+    "buyer_credentials_used": false,
+    "prior_client_delivery_claimed": false
+  }
+}

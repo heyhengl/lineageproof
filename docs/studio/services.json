@@ -353,6 +353,12 @@
           "name": "Inventory and batch tracking workbook",
           "url": "https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Inventory_Batch_Tracking_Workbook.xlsx",
           "disclosure": "Synthetic data; no macros, external links or client material."
+        },
+        {
+          "name": "Excel + SQL availability viewer proof",
+          "url": "https://heyhengl.github.io/lineageproof/studio/portfolio/Excel_SQL_Availability_Viewer_Proof.zip",
+          "machine_receipt": "https://heyhengl.github.io/lineageproof/studio/portfolio/excel-sql-availability-viewer-verification-receipt.json",
+          "disclosure": "Synthetic SQLite snapshot and formula-driven workbook only; not a live database connection or client delivery."
         }
       ]
     }
