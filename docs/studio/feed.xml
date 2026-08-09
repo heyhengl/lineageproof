@@ -5,8 +5,16 @@
     <link>https://heyhengl.github.io/lineageproof/studio/</link>
     <description>Practical, evidence-led notes about narrow technical controls, built with synthetic or public information and explicit scope boundaries.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2026 00:28:57 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 08:05:33 +0800</lastBuildDate>
     <atom:link href="https://heyhengl.github.io/lineageproof/studio/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When days-on-market changes, row deduplication can erase visit notes.</title>
+      <link>https://heyhengl.github.io/lineageproof/studio/notes/weekly-property-stable-key-merge/</link>
+      <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/notes/weekly-property-stable-key-merge/</guid>
+      <pubDate>Sun, 09 Aug 2026 08:05:33 +0800</pubDate>
+      <dc:language>en</dc:language>
+      <description>Five controls for merging weekly property spreadsheets without losing visit notes when days-on-market, price or status fields change.</description>
+    </item>
     <item>
       <title>A clean spreadsheet needs an exception ledger, not just deduplication.</title>
       <link>https://heyhengl.github.io/lineageproof/studio/notes/spreadsheet-cleanup-reconciliation/</link>
