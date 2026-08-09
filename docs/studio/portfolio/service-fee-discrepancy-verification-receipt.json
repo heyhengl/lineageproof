@@ -1,0 +1,51 @@
+{
+  "accepted_rows": 472,
+  "all_flags_match_fixture_truth": true,
+  "all_rejections_match_fixture_truth": true,
+  "artifact_hashes": {
+    "analysis.ipynb": "b7c1bfcde135c03531f930fbc002cfa5eedcc73bfadc5d280dcccc2dc79f124b",
+    "analysis.sqlite": "7650804bb11646f6cb4b07e95bba4598ab0ed0660ebcc04ec16a3d13cd6d5513",
+    "cleaned_transactions.csv": "8fffd199af89cb4008ad7c7c5260571d19b0cf73d955b4b6795c3cd648e284e7",
+    "evidence_brief.html": "04e864485892db90d1d4fd02f6913bdf190839696c4b05386caf9d2f11f4880c",
+    "fee_distribution_histogram.png": "0029c8aba1e554d1a7c01b7172f23e8ba8c4015d94e0fd780ae54e25ee454997",
+    "monthly_discrepancy_heatmap.png": "0708fd1585755212d6c6136284a87cc13ba004c4236b7e4c319512206f01f342",
+    "narrative_report.md": "d7a2108210c7708b771ce234661c72f3f311e03289ff8aaa5fadb0914d2fa8e8",
+    "ranked_discrepancies.csv": "fd99d0f648dd3f08bc573be792a56649ab0048b98a54c2730ebe4ffb39ccef1f",
+    "rejected_rows.csv": "a4be8c350e82c245d4137ae6ddb8ec401bdca93b7cdde5fefebfcd6bdb0107f2",
+    "service_fee_boxplot.png": "80a1518addcdbffc58ac6d856e8c8d0036479090821453cc7c3e50f22a85a566",
+    "service_profile.csv": "3521635055a593542b2da2ee185f4a30e27577951dcefe94ac7afd4e16a1b44c",
+    "spot_check_95pct.csv": "0aa75817836c77486df1d4d4bf5d81f0b71bf83b45a5e61ab18afddcb03038c7",
+    "sql_results.json": "6f149199470ba3f4ca0feecaba555b01f4041b5cd2117e52e040eeda54002054",
+    "synthetic_fee_policy.csv": "02a63a12e5231638f408351541ab50da3d007fa8bc49b87aeb309425a8621d75",
+    "synthetic_ground_truth.csv": "5efdf9810cc9124d8189a4e32793c72b7427508e27937ad503011b01ff216f20",
+    "synthetic_transactions.csv": "bf0f406c9e32154969d7f4866646f62044744b24b56b8b36d9e4a0e0b4c4051b"
+  },
+  "as_of": "2026-08-09T13:45:00+08:00",
+  "pandas_reconciliation": {
+    "absolute_fee_delta": 0.55,
+    "accepted_rows": 472,
+    "listed_fee": 111412.54,
+    "realized_revenue": 1293160.68,
+    "suspect_rows": 20
+  },
+  "pandas_sql_reconciliation_parity": true,
+  "receipt_sha256": "065ff862348aead4b45a12fc3a3525399a522f737482a725ec6fc539ae8282f5",
+  "rejected_rows": 11,
+  "rejection_reason_counts": {
+    "DUPLICATE_TRANSACTION": 3,
+    "MISSING_LISTED_FEE": 4,
+    "MISSING_REALIZED_REVENUE": 4
+  },
+  "review_reason_counts": {
+    "ABOVE_POLICY_RANGE": 8,
+    "BELOW_POLICY_RANGE": 7,
+    "FEE_ARITHMETIC_MISMATCH": 5
+  },
+  "seed": 40635458,
+  "source_rows": 483,
+  "spot_check_matches_fixture_truth": true,
+  "spot_check_pct": 95.12711864406779,
+  "spot_check_rows": 449,
+  "suspect_rows": 20,
+  "synthetic_fixture": true
+}

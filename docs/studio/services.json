@@ -296,11 +296,13 @@
         "schemas": 1,
         "correction_rounds": 1
       },
-      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Sales_Insight_Audit_Proof.zip",
+      "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Service_Fee_Discrepancy_Proof.zip",
       "case_study": "https://heyhengl.github.io/lineageproof/studio/portfolio/Sales_Insight_Audit_Case_Study.pdf",
       "engineering_note": "https://heyhengl.github.io/lineageproof/studio/notes/spreadsheet-cleanup-reconciliation/",
+      "machine_receipt": "https://heyhengl.github.io/lineageproof/studio/portfolio/service-fee-discrepancy-verification-receipt.json",
+      "preview": "https://heyhengl.github.io/lineageproof/studio/portfolio/service-fee-discrepancy-heatmap.png",
       "description": "Clean one sanitized sales, product or inventory spreadsheet with typed fields, a duplicate log, rejected-row queue, control totals and a correction ledger.",
-      "disclosure": "Synthetic fixture only; no customer project, production result or predictive claim."
+      "disclosure": "Deterministic synthetic fixture only; no customer project, production result, accounting approval or predictive claim."
     },
     {
       "id": "weekly-property-watchlist-merge",
