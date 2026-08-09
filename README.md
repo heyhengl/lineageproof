@@ -2,7 +2,7 @@
 
 LineageProof is an evidence-first schema-change audit agent for DataHub. It reads the affected dataset, schema, column-level lineage, and production query context through the official DataHub MCP tools, then produces a deterministic risk decision, remediation plan, SARIF report, and a safe-by-default DataHub write-back plan.
 
-Looking for a small, fixed-scope data or automation deliverable? [MicroStudio evidence-led services](https://heyhengl.github.io/lineageproof/studio/) lists current opening scopes, public synthetic evidence, prices, and metadata-only inquiry forms. Buyers who already use Freelancer can also [view the public profile](https://www.freelancer.com/u/heyhengl). An inquiry or profile view is not an order or payment request.
+Looking for a small, fixed-scope data or automation deliverable? [MicroStudio evidence-led services](https://heyhengl.github.io/lineageproof/studio/) lists current opening scopes, public synthetic evidence, prices, and metadata-only inquiry forms. Buyers can review the [public Python source](https://github.com/heyhengl/lineageproof) before opening an inquiry. An inquiry or repository view is not an order or payment request.
 
 The fixture demo is fully synthetic and requires no credentials or external writes.
 
@@ -159,8 +159,6 @@ private links, or payment information in a public issue.
 | [MT5 indicator and dashboard engineering](https://heyhengl.github.io/lineageproof/studio/mt5-indicator-dashboard-audit/) | From USD 50 for one indicator, dashboard, risk-control module, bounded EA slice or source audit, with one revision | [Compile-evidence note](https://heyhengl.github.io/lineageproof/studio/notes/mql5-compile-evidence/) | [MT5 inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=mt5-build-intake.yml) |
 
 Other evidence-led routes include [PDF to Excel audit](https://heyhengl.github.io/lineageproof/studio/pdf-to-excel-audit/), [PDF layout block extraction](https://heyhengl.github.io/lineageproof/studio/pdf-layout-extraction/), [Excel automation](https://heyhengl.github.io/lineageproof/studio/excel-automation/), [intake automation readiness audit](https://heyhengl.github.io/lineageproof/studio/intake-automation-readiness-audit/), and [release readiness QA audit](https://heyhengl.github.io/lineageproof/studio/release-readiness-qa-audit/). For another bounded route, [open a public project inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=project-inquiry.yml).
-
-Prefer platform contact? The same public scopes are linked from the [Freelancer profile](https://www.freelancer.com/u/heyhengl). Viewing or contacting the profile does not accept an award or authorize a contract, milestone, fee or payment.
 
 Use public issues for metadata only: do not attach files or include customer or personal data, credentials, private URLs, payment data, or production secrets. Health, finance, payments, crypto, government, security, identity, surveillance, and other regulated or high-risk work are out of scope. An inquiry is not an order, revenue, or payment authorization; written scope, acceptance criteria, price, delivery terms, and any payment action remain separate. MT5 work does not include live-account operation or performance promises.
 
