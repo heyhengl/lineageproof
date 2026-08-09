@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f0e7" />
+    <meta name="description" content="Five controls for an Excel availability viewer backed by a read-only SQL snapshot: status mapping, date overlap, exception queues, reconciliation and credential boundaries." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heyhengl.github.io/lineageproof/studio/notes/excel-sql-availability-controls/" />
+    <meta property="og:title" content="A live availability viewer needs a snapshot contract, not workbook credentials. | MicroStudio" />
+    <meta property="og:description" content="Five controls for reconciling fleet capacity, quotes, bookings and on-hire units between SQL and Excel." />
+    <meta property="og:image" content="https://heyhengl.github.io/lineageproof/studio/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A live availability viewer needs a snapshot contract, not workbook credentials. | MicroStudio" />
+    <meta name="twitter:description" content="Five controls for a reviewable Excel and SQL availability view." />
+    <meta name="twitter:image" content="https://heyhengl.github.io/lineageproof/studio/og.png" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="canonical" href="https://heyhengl.github.io/lineageproof/studio/notes/excel-sql-availability-controls/" />
+    <link rel="alternate" type="application/rss+xml" title="MicroStudio engineering notes" href="https://heyhengl.github.io/lineageproof/studio/feed.xml" />
+    <title>A live availability viewer needs a snapshot contract, not workbook credentials. | MicroStudio</title>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"A live availability viewer needs a snapshot contract, not workbook credentials.","description":"Five controls for an Excel availability viewer backed by a read-only SQL snapshot: status mapping, date overlap, exception queues, reconciliation and credential boundaries.","datePublished":"2026-08-09","dateModified":"2026-08-09","author":{"@type":"Organization","name":"MicroStudio"},"publisher":{"@type":"Organization","name":"MicroStudio","url":"https://heyhengl.github.io/lineageproof/studio/"},"mainEntityOfPage":"https://heyhengl.github.io/lineageproof/studio/notes/excel-sql-availability-controls/","inLanguage":"en"}</script>
+    <style>
+      :root{--ink:#20231f;--muted:#62675f;--paper:#f4f0e7;--panel:#fffdf7;--line:#d4cec0;--accent:#87531d}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.72 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--accent);text-underline-offset:4px}.shell{width:min(900px,calc(100% - 40px));margin:auto}.top{display:flex;justify-content:space-between;gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}.top a{text-decoration:none;font-weight:800}.hero{padding:86px 0 62px}.eyebrow{margin:0 0 14px;color:var(--accent);font-size:.78rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}h1{max-width:900px;margin:0;font:700 clamp(3rem,7vw,6.2rem)/.95 Georgia,"Times New Roman",serif;letter-spacing:-.055em}.lede{max-width:760px;margin:28px 0 0;color:#42473f;font-size:1.25rem}.thesis{margin:0 0 64px;padding:28px 30px;background:var(--panel);border-left:5px solid var(--accent);font-size:1.08rem}.controls{counter-reset:controls;border-top:1px solid var(--line)}.control{display:grid;grid-template-columns:80px 1fr;gap:28px;padding:40px 0;border-bottom:1px solid var(--line);counter-increment:controls}.control:before{content:"0" counter(controls);color:var(--accent);font:700 2rem/1 Georgia,serif}.control h2{margin:0 0 10px;font:700 2rem/1.08 Georgia,serif}.control p{margin:0;color:var(--muted)}.check{margin:70px 0;padding:34px;background:#292b26;color:#f8f2e7}.check h2{margin-top:0;font:700 2rem/1.1 Georgia,serif}.check ul{margin:0;padding-left:22px}.check li+li{margin-top:9px}.closing{display:flex;align-items:flex-start;justify-content:space-between;gap:38px;padding:0 0 88px}.button{display:inline-block;padding:12px 17px;background:var(--accent);color:white;text-decoration:none;font-weight:800;white-space:nowrap}footer{padding:26px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}@media(max-width:620px){.shell{width:min(100% - 26px,900px)}.top,.closing{flex-direction:column}.hero{padding-top:52px}.control{grid-template-columns:1fr;gap:12px}}
+    </style>
+  </head>
+  <body>
+    <header class="shell top"><a href="../../">MicroStudio</a><span>Engineering note · 9 August 2026</span></header>
+    <main class="shell">
+      <div class="hero"><p class="eyebrow">Excel + SQL availability controls</p><h1>A live availability viewer needs a snapshot contract, not workbook credentials.</h1><p class="lede">A workbook can show fleet totals, quotes, bookings and on-hire units without becoming a second production database. The safe handoff is a read-only query contract, a dated snapshot and explicit reconciliation back to source.</p></div>
+      <p class="thesis"><strong>Control equation:</strong> available now = fleet total − booked now − on-hire now. Quote headroom also subtracts quoted units. Every product total should reconcile between SQL output and the workbook at the same reference date.</p>
+      <div class="controls">
+        <article class="control"><div><h2>Fix the reference date and source boundary.</h2><p>State the database type, timezone, snapshot time and permitted source view before building formulas. A workbook refreshed at one moment cannot be reconciled to a database queried at another without recording both timestamps.</p></div></article>
+        <article class="control"><div><h2>Map statuses before counting units.</h2><p>Define which source values mean quoted, booked, on hire, cancelled or unavailable. Quotes may consume sales headroom without reducing physical availability; cancelled rows should consume neither.</p></div></article>
+        <article class="control"><div><h2>Use one interval rule everywhere.</h2><p>The SQL snapshot and the daily Excel view must use the same start/end-date overlap rule. This proof treats both dates as inclusive, then applies that rule identically at the reference date and across the 14-day window.</p></div></article>
+        <article class="control"><div><h2>Reject bad keys and impossible quantities visibly.</h2><p>Unknown products, malformed dates and nonpositive quantities belong in a separate exception queue with stable reason codes. They must not silently become zero, today or an invented product.</p></div></article>
+        <article class="control"><div><h2>Keep credentials outside the workbook.</h2><p>Use a least-privilege read-only view or an authorized sanitized export. The workbook receives query outputs and refresh instructions, never embedded production passwords, write access or private customer records in a public proof.</p></div></article>
+      </div>
+      <aside class="check"><h2>The synthetic proof freezes these controls</h2><ul><li>14 source rows: 11 accepted and 3 rejected;</li><li>five products and 31 total fleet units;</li><li>four quoted, four booked and six on-hire units at the reference date;</li><li>21 available units and 17 units of quote headroom;</li><li>zero product-level SQL/workbook delta and zero workbook formula errors.</li></ul></aside>
+      <div class="closing"><div><p class="eyebrow">Inspect before connecting</p><p>The downloadable ZIP contains a fictional SQLite source, SQL, CSV controls, a formula-driven workbook and a machine receipt. It is proof of method only, not a live database connection, customer project or prior-client result.</p><p><a href="../../portfolio/Excel_SQL_Availability_Viewer_Proof.zip">Download the synthetic proof ZIP</a> · <a href="../../portfolio/excel-sql-availability-viewer-verification-receipt.json">Open the machine receipt</a> · <a href="../../excel-automation/">View the Excel service boundary</a></p></div><a class="button" href="https://github.com/heyhengl/lineageproof/issues/new">Open a metadata-only inquiry</a></div>
+    </main>
+    <footer><div class="shell">Do not place credentials, customer records or production exports in a public inquiry. This note is not a customer result, accounting approval or authorization to access a live system.</div></footer>
+  </body>
+</html>
