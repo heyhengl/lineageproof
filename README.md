@@ -137,6 +137,17 @@ MicroStudio publishes the acceptance boundary and owned synthetic evidence befor
 any project data is exchanged. These opening samples cover small, fixed-scope,
 private-sector work outside regulated or high-risk uses.
 
+**Currently available: weekly property watchlist merge — USD 79.** Merge one
+prior and one current authorized CSV or XLSX export, up to 1,000 current rows,
+using one stable listing key. The fixed scope includes a merged workbook,
+carried visit notes, a missing or duplicate ID review queue, a change log,
+refresh instructions, and one correction round.
+
+[Inspect the synthetic proof](https://heyhengl.github.io/lineageproof/studio/weekly-property-watchlist-merge/)
+or [open the metadata-only inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=weekly-property-watchlist-merge.yml).
+Do not post real files, addresses, staff notes, contact details, credentials,
+private links, or payment information in a public issue.
+
 | Service | Opening sample | Public evidence | Metadata-only inquiry |
 | --- | --- | --- | --- |
 | [Cloud pricing change audit](https://heyhengl.github.io/lineageproof/studio/cloud-pricing-change-audit/) | USD 349 for one provider, two authorized JSON snapshots, up to 100 unique price keys and one review round | [Synthetic change-audit proof](https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Cloud_Pricing_Change_Audit_Proof.zip) | [Cloud-pricing inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=cloud-pricing-change-audit-intake.yml) |
