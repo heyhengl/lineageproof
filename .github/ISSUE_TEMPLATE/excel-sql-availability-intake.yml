@@ -1,0 +1,118 @@
+name: Excel + SQL availability snapshot inquiry
+description: Metadata-only inquiry for one USD 95 sanitized availability snapshot pilot.
+title: "[Availability snapshot]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The fixed opening pilot is USD 95 for one authorized, sanitized availability snapshot: up to three logical inputs, 5,000 combined rows, one reference date, one status map, one workbook output and one correction round. This form is an inquiry, not an order or payment request.
+        Keep the title generic. Do not paste, attach or link source data, schema or field names, company, customer or person names, credentials, private URLs, account details, payment data or confidential files.
+  - type: dropdown
+    id: requested_tier
+    attributes:
+      label: Requested tier
+      description: This public inquiry covers only the fixed opening pilot.
+      options:
+        - fixed_snapshot_pilot_usd_95
+    validations:
+      required: true
+  - type: dropdown
+    id: input_format
+    attributes:
+      label: Sanitized input format
+      description: Select the format that would be transferred only after private scope confirmation.
+      options:
+        - CSV_exports
+        - XLSX_exports
+        - SQLite_snapshot
+        - SQL_query_output_as_CSV
+    validations:
+      required: true
+  - type: dropdown
+    id: logical_inputs
+    attributes:
+      label: Logical input count
+      description: The pilot supports at most three logical input tables or exports.
+      options:
+        - "1"
+        - "2"
+        - "3"
+    validations:
+      required: true
+  - type: dropdown
+    id: approximate_rows
+    attributes:
+      label: Approximate combined row count
+      description: The fixed pilot supports no more than 5,000 combined input rows.
+      options:
+        - 1_to_500
+        - 501_to_2000
+        - 2001_to_5000
+    validations:
+      required: true
+  - type: dropdown
+    id: primary_output
+    attributes:
+      label: Primary output
+      description: Choose the first view that must reconcile to the source snapshot.
+      options:
+        - reference_date_availability
+        - multi_day_availability_view
+        - product_or_asset_control_totals
+        - client_or_booking_schedule
+        - visible_rejection_queue
+    validations:
+      required: true
+  - type: dropdown
+    id: status_mapping
+    attributes:
+      label: Status mapping readiness
+      description: Do not list real status or field names in this public issue.
+      options:
+        - mapping_is_already_documented
+        - mapping_needs_private_scope_review
+    validations:
+      required: true
+  - type: dropdown
+    id: target_timing
+    attributes:
+      label: Target timing
+      description: Final timing is confirmed privately after scope review.
+      options:
+        - within_5_business_days
+        - within_10_business_days
+        - flexible
+    validations:
+      required: true
+  - type: checkboxes
+    id: data_confirmations
+    attributes:
+      label: Data and privacy confirmations
+      description: Every confirmation is required before a private scope review.
+      options:
+        - label: I confirm I am authorized to use the future input data.
+          required: true
+        - label: I confirm future inputs can use sanitized identifiers and contain no names, emails, phone numbers, addresses, payment data or other personal or regulated data.
+          required: true
+        - label: I confirm future inputs contain no credentials, cookies, tokens, account login, private URLs or confidential notes.
+          required: true
+        - label: I will not paste, attach or link data, schema, field names, customer records or files in this public issue.
+          required: true
+  - type: checkboxes
+    id: scope_confirmations
+    attributes:
+      label: Scope and commercial confirmations
+      description: These boundaries keep the inquiry private-sector, bounded and reviewable.
+      options:
+        - label: I confirm the buyer, payer, project and intended use are entirely private and have no government, public-institution, state-media, official-association or official-contest relationship.
+          required: true
+        - label: I confirm the work is not for health, finance, crypto, security, identity, surveillance or another regulated or high-risk use.
+          required: true
+        - label: I confirm at most three sanitized logical inputs, 5,000 combined rows, one reference date, one status map, one workbook output and one correction round.
+          required: true
+        - label: I do not require a production login, website scraping, account creation, credentials in a workbook, production writes, deployment, paid connector or SLA in this pilot.
+          required: true
+        - label: I understand the pilot begins from an authorized export or snapshot; a later read-only database connector would be a separate reviewed scope.
+          required: true
+        - label: I understand scope, payer, payment protection, acceptance, revisions, cancellation and rights must be confirmed privately before work begins.
+          required: true

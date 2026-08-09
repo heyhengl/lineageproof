@@ -341,6 +341,20 @@
         "correction_rounds": 1
       },
       "scope_note": "One sanitized workbook and either one formula-backed dashboard view or one reproduced workbook defect, with formula checks plus an issue and change log. Extra views, unrelated defects, macros, live systems and integrations are separate scope.",
+      "inquiry_url": "https://github.com/heyhengl/lineageproof/issues/new?template=excel-sql-availability-intake.yml",
+      "availability_snapshot_pilot": {
+        "currency": "USD",
+        "amount": 95,
+        "maximum_logical_inputs": 3,
+        "maximum_combined_rows": 5000,
+        "reference_dates": 1,
+        "status_maps": 1,
+        "workbook_outputs": 1,
+        "correction_rounds": 1,
+        "production_login": false,
+        "production_write": false,
+        "live_connector_included": false
+      },
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Referral_Tracker_Dashboard_Portfolio.xlsx",
       "social_image": "https://heyhengl.github.io/lineageproof/studio/portfolio/excel-dashboard-repair-og.png",
       "engineering_note": "https://heyhengl.github.io/lineageproof/studio/notes/excel-sql-availability-controls/",
