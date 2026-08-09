@@ -329,13 +329,18 @@
     },
     {
       "id": "excel-automation",
-      "name": "Inspectable Excel automation",
+      "name": "Excel dashboard and workbook repair",
       "url": "https://heyhengl.github.io/lineageproof/studio/excel-automation/",
       "opening_scope": {
         "currency": "USD",
-        "amount_from": 69
+        "amount_from": 69,
+        "maximum_input_rows": 100,
+        "dashboard_or_repair_targets": 1,
+        "correction_rounds": 1
       },
+      "scope_note": "One sanitized workbook and either one formula-backed dashboard view or one reproduced workbook defect, with formula checks plus an issue and change log. Extra views, unrelated defects, macros, live systems and integrations are separate scope.",
       "evidence": "https://heyhengl.github.io/lineageproof/studio/portfolio/Referral_Tracker_Dashboard_Portfolio.xlsx",
+      "social_image": "https://heyhengl.github.io/lineageproof/studio/portfolio/excel-dashboard-repair-og.png",
       "evidence_items": [
         {
           "name": "Referral tracker dashboard workbook",
