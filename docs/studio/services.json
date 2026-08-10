@@ -104,6 +104,9 @@
       "blank_inventory": "https://heyhengl.github.io/lineageproof/studio/merchant-api-method-inventory.csv",
       "synthetic_example": "https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-method-example.csv",
       "synthetic_audit_receipt": "https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-audit-receipt.csv",
+      "static_scanner_source": "https://github.com/heyhengl/lineageproof/blob/main/src/lineageproof/merchant_scan.py",
+      "synthetic_static_scan_json": "https://heyhengl.github.io/lineageproof/studio/merchant-api-legacy-scan-synthetic.json",
+      "synthetic_static_scan_csv": "https://heyhengl.github.io/lineageproof/studio/merchant-api-legacy-scan-synthetic.csv",
       "disclosure": "Public documentation and synthetic evidence only; no customer work, live Merchant Center access, Google affiliation, completed migration or approval result is represented.",
       "commercial_state": {
         "checkout": false,
