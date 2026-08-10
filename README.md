@@ -6,6 +6,8 @@ Looking for a small, fixed-scope data or automation deliverable? [MicroStudio ev
 
 Current deadline route: Google says Content API for Shopping sunsets on 18 August 2026. The [seven-control Merchant API migration plan](https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/) includes a [two-page readiness checklist](https://heyhengl.github.io/lineageproof/studio/merchant-api-migration-readiness-checklist.pdf), a blank method inventory, a [five-call-site synthetic audit receipt](https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-audit-receipt.csv) and a USD 249 fixed source-code dependency review for custom integrations. It does not require live Merchant Center access or credentials.
 
+For the engineering walkthrough behind those controls, read [Seven Failure Modes Hidden in a Content API-to-Merchant API Migration](https://microstudio-evidence.hashnode.dev/migrating-content-api-source-code-inventory-before-august-18).
+
 Run the credential-free static inventory before sharing any source archive. The easiest
 path is the inspectable, dependency-free Python zipapp; it does not install a package:
 
