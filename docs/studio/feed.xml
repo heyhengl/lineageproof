@@ -5,8 +5,16 @@
     <link>https://heyhengl.github.io/lineageproof/studio/</link>
     <description>Practical, evidence-led notes about narrow technical controls, built with synthetic or public information and explicit scope boundaries.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2026 14:54:43 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 18:32:35 +0800</lastBuildDate>
     <atom:link href="https://heyhengl.github.io/lineageproof/studio/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Content API sunsets August 18: seven Merchant API migration controls.</title>
+      <link>https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/</link>
+      <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/</guid>
+      <pubDate>Mon, 10 Aug 2026 18:32:35 +0800</pubDate>
+      <dc:language>en</dc:language>
+      <description>A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API.</description>
+    </item>
     <item>
       <title>A live availability viewer needs a snapshot contract, not workbook credentials.</title>
       <link>https://heyhengl.github.io/lineageproof/studio/notes/excel-sql-availability-controls/</link>

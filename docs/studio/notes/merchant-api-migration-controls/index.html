@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/" />
+    <meta property="og:title" content="Content API sunsets August 18: seven Merchant API migration controls. | MicroStudio" />
+    <meta property="og:description" content="A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API." />
+    <meta property="og:image" content="https://heyhengl.github.io/lineageproof/studio/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Content API sunsets August 18: seven Merchant API migration controls. | MicroStudio" />
+    <meta name="twitter:description" content="A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API." />
+    <meta name="twitter:image" content="https://heyhengl.github.io/lineageproof/studio/og.png" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="canonical" href="https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/" />
+    <link rel="alternate" type="application/rss+xml" title="MicroStudio engineering notes" href="https://heyhengl.github.io/lineageproof/studio/feed.xml" />
+    <link rel="alternate" type="application/json" title="MicroStudio service catalog" href="https://heyhengl.github.io/lineageproof/studio/services.json" />
+    <title>Content API sunsets August 18: seven Merchant API migration controls. | MicroStudio</title>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BquKs8Np.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "headline": "Content API sunsets August 18: seven Merchant API migration controls.",
+            "description": "A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API.",
+            "datePublished": "2026-08-10",
+            "dateModified": "2026-08-10",
+            "author": { "@type": "Organization", "name": "MicroStudio" },
+            "publisher": { "@type": "Organization", "name": "MicroStudio", "url": "https://heyhengl.github.io/lineageproof/studio/" },
+            "mainEntityOfPage": "https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/",
+            "image": "https://heyhengl.github.io/lineageproof/studio/og.png",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Service",
+            "name": "Content API to Merchant API source-only migration review",
+            "description": "A fixed source-only review of legacy call sites, scheduled jobs, method mappings and cutover controls without live Merchant Center access.",
+            "provider": { "@type": "Organization", "name": "MicroStudio", "url": "https://heyhengl.github.io/lineageproof/studio/" },
+            "areaServed": "Worldwide",
+            "offers": {
+              "@type": "Offer",
+              "price": "249",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/OnlineOnly",
+              "url": "https://github.com/heyhengl/lineageproof/issues/new?template=merchant-api-migration-intake.yml"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <main data-static-fallback class="article-page">
+        <article class="article-body">
+          <p class="article-kicker">Google commerce integration · 10 August 2026 · Public-source control plan</p>
+          <h1>Content API sunsets August 18: seven Merchant API migration controls.</h1>
+          <p class="article-lede">Google says Content API for Shopping will sunset on 18 August 2026. This source-only plan is for teams that directly maintain a custom API integration; users of a managed connector should first confirm the provider&apos;s migration path.</p>
+          <section>
+            <h2>Fixed source-only readiness review</h2>
+            <p><strong>USD 249 fixed opening sample.</strong> One authorized source archive or repository snapshot, up to 25 legacy call sites, three scheduled jobs and three Merchant sub-APIs. The deliverable is a completed method inventory, ranked migration risks, a source-level cutover checklist and one review round, with a target of three business days after the private scope is accepted.</p>
+            <p>No live account access, credentials, API calls, developer registration, data-source creation, catalog upload, production cutover or support SLA is included.</p>
+            <p><a href="https://github.com/heyhengl/lineageproof/issues/new?template=merchant-api-migration-intake.yml">Open a metadata-only inquiry</a>. The public form asks for broad technical metadata only and is not an order or payment request.</p>
+          </section>
+          <section>
+            <h2>Seven controls before the Content API shutdown</h2>
+            <ol class="record-list">
+              <li><strong>Inventory legacy exposure and ownership</strong><span>List every call site, scheduled job, runtime or library, response dependency and owner, then verify zero unexplained legacy traffic.</span></li>
+              <li><strong>Register the developer and limit authority</strong><span>Evidence the production project registration, API Developer contact, authentication type and required roles without retaining account IDs or credentials.</span></li>
+              <li><strong>Map every method and sub-API contract</strong><span>Record exact Merchant API v1 request, response, error and status semantics—not only a hostname swap.</span></li>
+              <li><strong>Preserve identity and data-source ownership</strong><span>Store full resource names, backfill dataSource names, keep offerId continuity and test reserved-character encoding.</span></li>
+              <li><strong>Transform payloads and money deliberately</strong><span>Map productAttributes, amountMicros, currencyCode, update masks and future enums with exact fixtures.</span></li>
+              <li><strong>Make pagination, concurrency and quota observable</strong><span>Replace customBatch, consume every page token, retain item-level outcomes and test quota budgeting plus bounded 429 retries.</span></li>
+              <li><strong>Reconcile processed state and stage the cutover</strong><span>Inspect Product.productStatus, destinationStatuses and itemLevelIssues, canary one small segment and define rollback thresholds.</span></li>
+            </ol>
+          </section>
+          <section>
+            <h2>Keep one method inventory and one synthetic proof set</h2>
+            <p><a href="../../merchant-api-method-inventory.csv">Download the blank method inventory</a> and compare it with the <a href="../../merchant-api-synthetic-method-example.csv">single-row synthetic example</a>.</p>
+            <ul class="article-checklist">
+              <li>Every observed legacy call maps to a reviewed Merchant API method or an explicit retirement decision.</li>
+              <li>Developer registration and authentication are evidenced without retaining credentials or account identifiers.</li>
+              <li>Identifier tests cover REST resource names, feed labels, offerId continuity and reserved-character encoding.</li>
+              <li>Every product-input write names the intended data source and verifies the processed Product separately.</li>
+              <li>Price fixtures prove micros conversion without floating-point drift.</li>
+              <li>Pagination and concurrent execution retain item-level outcomes, quota counts and bounded retry evidence.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Review source and synthetic fixtures first</h2>
+            <ul class="article-checklist boundary-list">
+              <li>No password, OAuth token, service-account JSON, session cookie or payment information.</li>
+              <li>No Merchant Center account ID, real product feed, customer record or proprietary source in a public inquiry.</li>
+              <li>No production write, account configuration change, data-source creation or live cutover.</li>
+              <li>No claim of Google affiliation, Google endorsement, complete migration or production performance.</li>
+            </ul>
+          </section>
+          <p><a href="https://support.google.com/merchants/answer/16493611?hl=en">Confirm the cutoff in Google&apos;s announcement</a> and review the <a href="https://developers.google.com/merchant/api/guides/compatibility/products">official product migration guide</a>.</p>
+          <p><a href="../../">View MicroStudio services</a></p>
+          <footer class="article-disclosure"><p><strong>Authorship and evidence disclosure.</strong> This independent note was produced with AI-assisted tooling and checked against Google&apos;s public Merchant Center and Merchant API documentation on 10 August 2026. MicroStudio is not affiliated with or endorsed by Google. No customer engagement, live migration, production access, external rating or revenue result is represented.</p></footer>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
