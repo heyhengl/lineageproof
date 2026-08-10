@@ -22,6 +22,7 @@ ROOT_FILES = (
 PUBLIC_GLOBS = (
     "docs/*.md",
     "examples/*.json",
+    "examples/merchant-api-legacy-source/*",
     "examples/expected-output/*",
     "scripts/*.py",
     "scripts/*.swift",

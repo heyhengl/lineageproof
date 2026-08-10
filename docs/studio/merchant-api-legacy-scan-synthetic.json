@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "inventory_id": "legacy-0001",
+      "legacy_method": "Python Shopping Content client",
+      "legacy_service": "Python Shopping Content client",
+      "line": 5,
+      "line_sha256": "a6628550505f21b88dd2069e2fd21632fb0f405ce6fa7ef0fb677db03bca3d82",
+      "migration_hint": "Inventory the owner and map every dependent request and response contract.",
+      "operation_kind": "unknown",
+      "path": "catalog_job.py",
+      "pattern_id": "python_content_client"
+    },
+    {
+      "inventory_id": "legacy-0002",
+      "legacy_method": "products.insert",
+      "legacy_service": "products",
+      "line": 6,
+      "line_sha256": "921b3a838e20662fa67afbb67cfa14b9781516a0530764236907625024a6d96c",
+      "migration_hint": "Map to productInputs.insert and verify the processed Product separately.",
+      "operation_kind": "write",
+      "path": "catalog_job.py",
+      "pattern_id": "legacy_method"
+    },
+    {
+      "inventory_id": "legacy-0003",
+      "legacy_method": "productstatuses.list",
+      "legacy_service": "productstatuses",
+      "line": 7,
+      "line_sha256": "7a69ad4df5cc63935ce1120fa242bfd3c99d1f6614c120d71244e81d59cf352f",
+      "migration_hint": "Read processed status from products.get or products.list.",
+      "operation_kind": "read",
+      "path": "catalog_job.py",
+      "pattern_id": "legacy_method"
+    },
+    {
+      "inventory_id": "legacy-0004",
+      "legacy_method": "Google Ads Scripts Shopping Content service",
+      "legacy_service": "Google Ads Scripts Shopping Content service",
+      "line": 3,
+      "line_sha256": "1889421f304995582887be7f2162c94e988fcf831ab21e736c14b69f2d53e089",
+      "migration_hint": "Inventory the owner and map every dependent request and response contract.",
+      "operation_kind": "unknown",
+      "path": "scheduled_feed.gs",
+      "pattern_id": "apps_script_service"
+    },
+    {
+      "inventory_id": "legacy-0005",
+      "legacy_method": "products.custombatch",
+      "legacy_service": "products",
+      "line": 3,
+      "line_sha256": "1889421f304995582887be7f2162c94e988fcf831ab21e736c14b69f2d53e089",
+      "migration_hint": "Replace with individually tracked async calls or HTTP batching.",
+      "operation_kind": "write",
+      "path": "scheduled_feed.gs",
+      "pattern_id": "legacy_method"
+    }
+  ],
+  "findings_count": 5,
+  "legacy_exposure_found": true,
+  "scanned_files": 2,
+  "schema_version": 1,
+  "skipped_files": [],
+  "source_label": "authorized-source",
+  "truth_boundary": "Static source evidence only. No credential, API call, Merchant Center account, runtime traffic or completed migration is represented."
+}

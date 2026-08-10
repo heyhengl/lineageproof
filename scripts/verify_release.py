@@ -34,7 +34,17 @@ def canonical_hash(value) -> str:
 
 def iter_release_text(root: Path):
     ignored = {".git", ".venv", ".pytest_cache", ".ruff_cache", "design", "dist"}
-    extensions = {".md", ".py", ".swift", ".toml", ".json", ".txt", ".gitignore"}
+    extensions = {
+        ".csv",
+        ".gs",
+        ".json",
+        ".md",
+        ".py",
+        ".swift",
+        ".toml",
+        ".txt",
+        ".gitignore",
+    }
     for path in root.rglob("*"):
         if not path.is_file() or any(part in ignored for part in path.parts):
             continue

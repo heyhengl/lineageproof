@@ -14,6 +14,7 @@ import pytest
 from lineageproof.agent import AuditAgent, build_writeback_preview
 from lineageproof.cli import main
 from lineageproof.context import FixtureToolSession
+from lineageproof.merchant_scan import scan_legacy_content_api, write_scan_artifacts
 from lineageproof.models import AuditManifest, ManifestError
 from lineageproof.output import write_artifacts
 from lineageproof.writeback import WritebackSafetyError, execute_writeback
@@ -104,6 +105,88 @@ def test_cli_generates_expected_files(tmp_path: Path, capsys: pytest.CaptureFixt
         "lineageproof.sarif",
         "remediation-plan.md",
         "tool-call-receipts.json",
+    }
+
+
+def test_merchant_scan_is_deterministic_and_does_not_emit_source_text(tmp_path: Path) -> None:
+    source = tmp_path / "source"
+    source.mkdir()
+    secret_marker = "PRIVATE-OFFER-123"
+    (source / "catalog.py").write_text(
+        "\n".join(
+            [
+                "from googleapiclient.discovery import build",
+                'client = build("content", "v2.1")',
+                f"# {secret_marker}",
+                "client.products.insert(merchantId=123, body={})",
+                "client.productstatuses.list(merchantId=123)",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (source / "batch.ts").write_text(
+        'const endpoint = "https://shoppingcontent.googleapis.com/content/v2.1";\n'
+        "service.products.customBatch(request);\n",
+        encoding="utf-8",
+    )
+
+    first = scan_legacy_content_api(source)
+    second = scan_legacy_content_api(source)
+    assert first == second
+    assert first["source_label"] == "authorized-source"
+    assert "root_name" not in first
+    assert first["legacy_exposure_found"] is True
+    assert first["findings_count"] >= 5
+    serialized = json.dumps(first)
+    assert secret_marker not in serialized
+    assert "merchantId=123" not in serialized
+    assert all(re.fullmatch(r"[0-9a-f]{64}", row["line_sha256"]) for row in first["findings"])
+
+    artifacts = write_scan_artifacts(first, tmp_path / "out")
+    assert set(Path(path).name for path in artifacts.values()) == {
+        "merchant-api-legacy-inventory.csv",
+        "merchant-api-legacy-inventory.json",
+    }
+    assert secret_marker not in (tmp_path / "out" / "merchant-api-legacy-inventory.csv").read_text()
+    assert (
+        "Static source evidence only"
+        in (tmp_path / "out" / "merchant-api-legacy-inventory.csv").read_text()
+    )
+
+
+def test_merchant_scan_excludes_dependencies_binary_and_large_files(tmp_path: Path) -> None:
+    source = tmp_path / "source"
+    (source / "node_modules" / "pkg").mkdir(parents=True)
+    (source / "node_modules" / "pkg" / "legacy.js").write_text("ShoppingContent.products.list")
+    (source / "binary.py").write_bytes(b"ShoppingContent\x00products.list")
+    (source / "large.py").write_text("ShoppingContent\n" * 20)
+    (source / "clean.py").write_text("products.list()\nproductstatuses.list()\n")
+
+    report = scan_legacy_content_api(source, max_file_bytes=60)
+    assert report["findings_count"] == 0
+    assert report["scanned_files"] == 1
+    assert report["skipped_files"] == [
+        {"path": "binary.py", "reason": "binary_content"},
+        {"path": "large.py", "reason": "file_too_large"},
+    ]
+
+
+def test_merchant_scan_cli_writes_bounded_inventory(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    source = tmp_path / "source"
+    source.mkdir()
+    (source / "job.gs").write_text("ShoppingContent.Products.list(merchantId);\n")
+    output = tmp_path / "out"
+
+    exit_code = main(["merchant-scan", "--source", str(source), "--out", str(output)])
+    assert exit_code == 0
+    receipt = json.loads(capsys.readouterr().out)
+    assert receipt["legacy_exposure_found"] is True
+    assert receipt["findings_count"] >= 1
+    assert {path.name for path in output.iterdir()} == {
+        "merchant-api-legacy-inventory.csv",
+        "merchant-api-legacy-inventory.json",
     }
 
 
@@ -286,5 +369,8 @@ def test_source_release_archive_is_scoped_and_reproducible(tmp_path: Path) -> No
     with ZipFile(first / "lineageproof-0.1.0-source.zip") as archive:
         names = archive.namelist()
     assert names
+    assert "src/lineageproof/merchant_scan.py" in names
+    assert "examples/merchant-api-legacy-source/catalog_job.py" in names
+    assert "examples/merchant-api-legacy-source/scheduled_feed.gs" in names
     assert all("design" not in Path(name).parts for name in names)
     assert all("dist" not in Path(name).parts for name in names)

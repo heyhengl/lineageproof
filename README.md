@@ -6,6 +6,26 @@ Looking for a small, fixed-scope data or automation deliverable? [MicroStudio ev
 
 Current deadline route: Google says Content API for Shopping sunsets on 18 August 2026. The [seven-control Merchant API migration plan](https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/) includes a [two-page readiness checklist](https://heyhengl.github.io/lineageproof/studio/merchant-api-migration-readiness-checklist.pdf), a blank method inventory, a [five-call-site synthetic audit receipt](https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-audit-receipt.csv) and a USD 249 fixed source-code dependency review for custom integrations. It does not require live Merchant Center access or credentials.
 
+Run the credential-free static inventory before sharing any source archive:
+
+```bash
+uv run --python 3.12 --isolated --no-editable \
+  --refresh-package lineageproof lineageproof merchant-scan \
+  --source /path/to/authorized-source \
+  --out dist/merchant-scan
+```
+
+The scanner searches supported source files for legacy endpoints, client libraries,
+Apps Script services, methods, `productstatuses` and `customBatch`. Its JSON and CSV
+outputs contain relative paths, line numbers, contract labels and hashes only—never
+source snippets, credentials, Merchant IDs or API responses. It performs no network
+request and does not prove runtime coverage or a completed migration.
+
+Inspect the public synthetic run: [JSON inventory](https://heyhengl.github.io/lineageproof/studio/merchant-api-legacy-scan-synthetic.json),
+[CSV inventory](https://heyhengl.github.io/lineageproof/studio/merchant-api-legacy-scan-synthetic.csv),
+and [fictional input files](examples/merchant-api-legacy-source/). The fixture represents
+no customer, live catalog, account or completed cutover.
+
 The fixture demo is fully synthetic and requires no credentials or external writes.
 
 ## Why it exists

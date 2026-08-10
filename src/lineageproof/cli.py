@@ -10,6 +10,7 @@ from pathlib import Path
 
 from .agent import AuditAgent
 from .context import FixtureToolSession, StdioMcpToolSession
+from .merchant_scan import scan_legacy_content_api, write_scan_artifacts
 from .models import AuditManifest
 from .output import write_artifacts
 from .writeback import execute_writeback
@@ -37,6 +38,14 @@ def build_parser() -> argparse.ArgumentParser:
     writeback.add_argument("--receipt", type=Path, required=True)
     writeback.add_argument("--apply", action="store_true")
     writeback.add_argument("--acknowledge")
+
+    merchant_scan = subparsers.add_parser(
+        "merchant-scan",
+        help="inventory legacy Content API exposure without credentials or network access",
+    )
+    merchant_scan.add_argument("--source", type=Path, required=True)
+    merchant_scan.add_argument("--out", type=Path, required=True)
+    merchant_scan.add_argument("--max-file-bytes", type=int, default=2_000_000)
     return parser
 
 
@@ -93,6 +102,24 @@ def main(argv: Sequence[str] | None = None) -> int:
         result = asyncio.run(_writeback(args))
         print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))
         return 0 if result["status"] in {"pass", "preflight_pass"} else 2
+    if args.command == "merchant-scan":
+        report = scan_legacy_content_api(args.source, max_file_bytes=args.max_file_bytes)
+        artifacts = write_scan_artifacts(report, args.out)
+        print(
+            json.dumps(
+                {
+                    "findings_count": report["findings_count"],
+                    "legacy_exposure_found": report["legacy_exposure_found"],
+                    "scanned_files": report["scanned_files"],
+                    "skipped_files": len(report["skipped_files"]),
+                    "artifacts": artifacts,
+                },
+                ensure_ascii=False,
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0
     raise AssertionError(f"unhandled command: {args.command}")
 
 
