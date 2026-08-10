@@ -94,6 +94,12 @@
             </ul>
           </section>
           <section>
+            <h2>Google Ads Scripts need a dependency cutover too</h2>
+            <p>Google now lists Merchant API sub-APIs as individually enabled Advanced APIs for Google Ads Scripts. That makes the script creator and authorizing user part of the migration evidence: only the creator can change its Advanced API dependencies, calls use the authorizing user&apos;s permissions, and a new user can be prompted to configure those dependencies again if the creator is later removed from the account.</p>
+            <p>A source scan should therefore include the <code>ShoppingContent</code> advanced service, the enabled Merchant sub-APIs, the dependency owner and the authorizing user&apos;s required Merchant Center access. A correct method rewrite is not a cutover if the replacement service is unavailable to the running script.</p>
+            <p><a href="https://developers.google.com/google-ads/scripts/docs/integrations/advanced-apis?hl=en">Review Google&apos;s current Advanced APIs guidance</a>.</p>
+          </section>
+          <section>
             <h2>Review source and synthetic fixtures first</h2>
             <ul class="article-checklist boundary-list">
               <li>No password, OAuth token, service-account JSON, session cookie or payment information.</li>
