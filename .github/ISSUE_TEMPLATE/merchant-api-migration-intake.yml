@@ -77,7 +77,7 @@ body:
         - isolated_test_account
         - synthetic_fixtures_only
         - production_canary_available_later
-        - none
+        - no_staging_available
         - unknown
     validations:
       required: true
