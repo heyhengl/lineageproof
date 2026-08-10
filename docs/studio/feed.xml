@@ -13,7 +13,7 @@
       <guid isPermaLink="true">https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/</guid>
       <pubDate>Mon, 10 Aug 2026 18:32:35 +0800</pubDate>
       <dc:language>en</dc:language>
-      <description>A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API.</description>
+      <description>A fixed source-code dependency review that identifies which Content API calls must migrate, can retire or remain unproved before cutover.</description>
     </item>
     <item>
       <title>A live availability viewer needs a snapshot contract, not workbook credentials.</title>

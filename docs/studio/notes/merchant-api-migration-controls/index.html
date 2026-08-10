@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API." />
+    <meta name="description" content="A fixed source-code dependency review that identifies which Content API calls must migrate, can retire or remain unproved before cutover." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/" />
     <meta property="og:title" content="Content API sunsets August 18: seven Merchant API migration controls. | MicroStudio" />
-    <meta property="og:description" content="A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API." />
+    <meta property="og:description" content="A fixed source-code dependency review that identifies which Content API calls must migrate, can retire or remain unproved before cutover." />
     <meta property="og:image" content="https://heyhengl.github.io/lineageproof/studio/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Content API sunsets August 18: seven Merchant API migration controls. | MicroStudio" />
-    <meta name="twitter:description" content="A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API." />
+    <meta name="twitter:description" content="A fixed source-code dependency review that identifies which Content API calls must migrate, can retire or remain unproved before cutover." />
     <meta name="twitter:image" content="https://heyhengl.github.io/lineageproof/studio/og.png" />
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
     <link rel="canonical" href="https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/" />
@@ -29,7 +29,7 @@
           {
             "@type": "TechArticle",
             "headline": "Content API sunsets August 18: seven Merchant API migration controls.",
-            "description": "A fixed source-only review and seven-control readiness plan for migrating custom Content API for Shopping integrations to Merchant API.",
+            "description": "A fixed source-code dependency review that identifies which Content API calls must migrate, can retire or remain unproved before cutover.",
             "datePublished": "2026-08-10",
             "dateModified": "2026-08-10",
             "author": { "@type": "Organization", "name": "MicroStudio" },
@@ -40,15 +40,13 @@
           },
           {
             "@type": "Service",
-            "name": "Content API to Merchant API source-only migration review",
-            "description": "A fixed source-only review of legacy call sites, scheduled jobs, method mappings and cutover controls without live Merchant Center access.",
+            "name": "Content API to Merchant API source-code dependency review",
+            "description": "A fixed review of legacy call sites, scheduled jobs, method mappings and cutover controls without live Merchant Center access.",
             "provider": { "@type": "Organization", "name": "MicroStudio", "url": "https://heyhengl.github.io/lineageproof/studio/" },
-            "areaServed": "Worldwide",
             "offers": {
               "@type": "Offer",
               "price": "249",
               "priceCurrency": "USD",
-              "availability": "https://schema.org/OnlineOnly",
               "url": "https://github.com/heyhengl/lineageproof/issues/new?template=merchant-api-migration-intake.yml"
             }
           }
@@ -60,14 +58,16 @@
     <div id="root">
       <main data-static-fallback class="article-page">
         <article class="article-body">
-          <p class="article-kicker">Google commerce integration · 10 August 2026 · Public-source control plan</p>
+          <p class="article-kicker">Google commerce integration · 10 August 2026 · Source-code dependency review</p>
           <h1>Content API sunsets August 18: seven Merchant API migration controls.</h1>
-          <p class="article-lede">Google says Content API for Shopping will sunset on 18 August 2026. This source-only plan is for teams that directly maintain a custom API integration; users of a managed connector should first confirm the provider&apos;s migration path.</p>
+          <p class="article-lede">Google says Content API for Shopping will sunset on 18 August 2026. Know which calls must migrate, which can retire and which remain unproved before cutover. This review is for teams that directly maintain a custom API integration; users of a managed connector should first confirm the provider&apos;s migration path.</p>
           <section>
-            <h2>Fixed source-only readiness review</h2>
-            <p><strong>USD 249 fixed opening sample.</strong> One authorized source archive or repository snapshot, up to 25 legacy call sites, three scheduled jobs and three Merchant sub-APIs. The deliverable is a completed method inventory, ranked migration risks, a source-level cutover checklist and one review round, with a target of three business days after the private scope is accepted.</p>
-            <p>No live account access, credentials, API calls, developer registration, data-source creation, catalog upload, production cutover or support SLA is included.</p>
-            <p><a href="https://github.com/heyhengl/lineageproof/issues/new?template=merchant-api-migration-intake.yml">Open a metadata-only inquiry</a>. The public form asks for broad technical metadata only and is not an order or payment request.</p>
+            <h2>Fixed source-code dependency review</h2>
+            <p><strong>USD 249 fixed opening sample.</strong> Target: three business days after the private scope is accepted.</p>
+            <p><strong>Included.</strong> One authorized source archive or repository snapshot; up to 25 observed legacy call sites, three scheduled jobs and three Merchant sub-APIs; a completed method inventory, ranked migration risks, source cutover checklist and one review round.</p>
+            <p><strong>Delivery pass.</strong> Every observed call site is marked mapped, retired or explicitly unresolved, with its evidence gap and next cutover action recorded.</p>
+            <p><strong>Not included.</strong> Live account access, credentials, API calls, developer registration, data-source creation, catalog upload, production cutover or support SLA. Scope beyond 25 call sites, three jobs or three sub-APIs is returned as a separate scope; it is not added or charged automatically.</p>
+            <p><a href="https://github.com/heyhengl/lineageproof/issues/new?template=merchant-api-migration-intake.yml">Check fit without sharing code</a>. This is a public GitHub form, so your GitHub username is visible. It does not request a company or repository name, code, credentials, Merchant IDs, feeds, private URLs or customer data, and it is not an order or payment request.</p>
           </section>
           <section>
             <h2>Seven controls before the Content API shutdown</h2>
@@ -83,7 +83,7 @@
           </section>
           <section>
             <h2>Keep one method inventory and one synthetic proof set</h2>
-            <p><a href="../../merchant-api-method-inventory.csv">Download the blank method inventory</a> and compare it with the <a href="../../merchant-api-synthetic-method-example.csv">single-row synthetic example</a>.</p>
+            <p><a href="../../merchant-api-method-inventory.csv">Download the blank method inventory</a>, compare it with the <a href="../../merchant-api-synthetic-method-example.csv">single-row transformation example</a>, then inspect the <a href="../../merchant-api-synthetic-audit-receipt.csv">five-call-site synthetic audit receipt</a> for mapped, retired and unresolved dispositions.</p>
             <ul class="article-checklist">
               <li>Every observed legacy call maps to a reviewed Merchant API method or an explicit retirement decision.</li>
               <li>Developer registration and authentication are evidenced without retaining credentials or account identifiers.</li>

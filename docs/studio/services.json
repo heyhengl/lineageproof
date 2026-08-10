@@ -87,7 +87,7 @@
   "offers": [
     {
       "id": "merchant-api-migration-readiness-review",
-      "name": "Content API to Merchant API source-only migration review",
+      "name": "Content API to Merchant API source-code dependency review",
       "url": "https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/",
       "opening_scope": {
         "currency": "USD",
@@ -98,12 +98,13 @@
         "revision_rounds": 1,
         "target_business_days": 3
       },
-      "scope_note": "One authorized source archive or repository snapshot becomes a method inventory, ranked migration risks and a source-level cutover checklist. No live account access, credentials, API calls, developer registration, data-source creation, catalog upload, production cutover or support SLA.",
+      "scope_note": "One authorized source archive or repository snapshot becomes a method inventory, ranked migration risks and a source cutover checklist. Every observed call site is marked mapped, retired or explicitly unresolved. No live account access, credentials, API calls, developer registration, data-source creation, catalog upload, production cutover or support SLA.",
       "inquiry": "https://github.com/heyhengl/lineageproof/issues/new?template=merchant-api-migration-intake.yml",
       "evidence": "https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/",
       "blank_inventory": "https://heyhengl.github.io/lineageproof/studio/merchant-api-method-inventory.csv",
       "synthetic_example": "https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-method-example.csv",
-      "disclosure": "Public-source and synthetic evidence only; no customer work, live Merchant Center access, Google affiliation, completed migration or approval result is represented.",
+      "synthetic_audit_receipt": "https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-audit-receipt.csv",
+      "disclosure": "Public documentation and synthetic evidence only; no customer work, live Merchant Center access, Google affiliation, completed migration or approval result is represented.",
       "commercial_state": {
         "checkout": false,
         "customer_upload": false,
