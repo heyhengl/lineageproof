@@ -18,6 +18,7 @@ from lineageproof.merchant_scan import scan_legacy_content_api, write_scan_artif
 from lineageproof.models import AuditManifest, ManifestError
 from lineageproof.output import write_artifacts
 from lineageproof.writeback import WritebackSafetyError, execute_writeback
+from lineageproof.zipapp_build import build_merchant_scan_zipapp
 
 ROOT = Path(__file__).parents[1]
 CHANGE = ROOT / "examples" / "schema-change.json"
@@ -188,6 +189,49 @@ def test_merchant_scan_cli_writes_bounded_inventory(
         "merchant-api-legacy-inventory.csv",
         "merchant-api-legacy-inventory.json",
     }
+
+
+def test_merchant_scan_zipapp_is_deterministic_and_runs_without_install(
+    tmp_path: Path,
+) -> None:
+    first = tmp_path / "first.pyz"
+    second = tmp_path / "second.pyz"
+    build_merchant_scan_zipapp(ROOT / "src", first)
+    build_merchant_scan_zipapp(ROOT / "src", second)
+    assert first.read_bytes() == second.read_bytes()
+
+    source = tmp_path / "source"
+    source.mkdir()
+    secret_marker = "PRIVATE-CATALOG-CODE"
+    (source / "catalog.py").write_text(
+        'client = build("content", "v2.1")\n'
+        f"# {secret_marker}\n"
+        "client.products.insert(merchantId=123, body={})\n",
+        encoding="utf-8",
+    )
+    output = tmp_path / "out"
+    completed = subprocess.run(
+        [
+            sys.executable,
+            "-S",
+            str(first),
+            "merchant-scan",
+            "--source",
+            str(source),
+            "--out",
+            str(output),
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+        cwd=tmp_path,
+    )
+
+    receipt = json.loads(completed.stdout)
+    assert receipt["legacy_exposure_found"] is True
+    assert receipt["findings_count"] >= 2
+    assert secret_marker not in (output / "merchant-api-legacy-inventory.json").read_text()
+    assert secret_marker not in (output / "merchant-api-legacy-inventory.csv").read_text()
 
 
 def test_manifest_rejects_non_datahub_urn() -> None:

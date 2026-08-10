@@ -6,7 +6,20 @@ Looking for a small, fixed-scope data or automation deliverable? [MicroStudio ev
 
 Current deadline route: Google says Content API for Shopping sunsets on 18 August 2026. The [seven-control Merchant API migration plan](https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/) includes a [two-page readiness checklist](https://heyhengl.github.io/lineageproof/studio/merchant-api-migration-readiness-checklist.pdf), a blank method inventory, a [five-call-site synthetic audit receipt](https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-audit-receipt.csv) and a USD 249 fixed source-code dependency review for custom integrations. It does not require live Merchant Center access or credentials.
 
-Run the credential-free static inventory before sharing any source archive:
+Run the credential-free static inventory before sharing any source archive. The easiest
+path is the inspectable, dependency-free Python zipapp; it does not install a package:
+
+```bash
+python3 merchant-api-legacy-scan.pyz merchant-scan \
+  --source /path/to/authorized-source \
+  --out merchant-scan-output
+```
+
+[Download the deterministic zipapp](https://heyhengl.github.io/lineageproof/studio/merchant-api-legacy-scan.pyz)
+or build it from the public source with
+`python3 scripts/build_merchant_scan_zipapp.py --output dist/merchant-api-legacy-scan.pyz`.
+Published SHA-256: `556affee3266bc605d8b4ffdbb07b3b18bc71f843be33bae38dd7c26cfeb1328`.
+The repository development command remains:
 
 ```bash
 uv run --python 3.12 --isolated --no-editable \
@@ -175,7 +188,7 @@ private links, or payment information in a public issue.
 | [Cloud pricing change audit](https://heyhengl.github.io/lineageproof/studio/cloud-pricing-change-audit/) | USD 349 for one provider, two authorized JSON snapshots, up to 100 unique price keys and one review round | [Synthetic change-audit proof](https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Cloud_Pricing_Change_Audit_Proof.zip) | [Cloud-pricing inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=cloud-pricing-change-audit-intake.yml) |
 | [Replay-safe webhook audit and repair](https://heyhengl.github.io/lineageproof/studio/replay-safe-webhook-audit/) | From USD 349 for one nonregulated event family and one review round | [Synthetic reliability proof](https://heyhengl.github.io/lineageproof/studio/portfolio/Synthetic_Webhook_Reliability_Proof.zip) | [Webhook inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=replay-safe-webhook-intake.yml) |
 | [n8n workflow reliability review and repair](https://heyhengl.github.io/lineageproof/studio/n8n-workflow-reliability-review/) | From USD 249 for one inactive workflow, one trigger, up to 25 nodes and one review round | [Synthetic MCP-to-email workflow proof](https://heyhengl.github.io/lineageproof/studio/portfolio/N8N_MCP_Video_Analysis_Email_Synthetic_Proof.zip) | [n8n inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=n8n-workflow-reliability-intake.yml) |
-| [Content API to Merchant API source-code dependency review](https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/) | USD 249 for one authorized source snapshot, up to 25 legacy call sites, three jobs, three sub-APIs and one review round | [Two-page readiness checklist](https://heyhengl.github.io/lineageproof/studio/merchant-api-migration-readiness-checklist.pdf) and [synthetic audit receipt](https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-audit-receipt.csv) | [Check fit without sharing code](https://github.com/heyhengl/lineageproof/issues/new?template=merchant-api-migration-intake.yml) |
+| [Content API to Merchant API source-code dependency review](https://heyhengl.github.io/lineageproof/studio/notes/merchant-api-migration-controls/) | USD 249 for one authorized source snapshot, up to 25 legacy call sites, three jobs, three sub-APIs and one review round | [Local scanner zipapp](https://heyhengl.github.io/lineageproof/studio/merchant-api-legacy-scan.pyz), [two-page readiness checklist](https://heyhengl.github.io/lineageproof/studio/merchant-api-migration-readiness-checklist.pdf) and [synthetic audit receipt](https://heyhengl.github.io/lineageproof/studio/merchant-api-synthetic-audit-receipt.csv) | [Check fit without sharing code](https://github.com/heyhengl/lineageproof/issues/new?template=merchant-api-migration-intake.yml) |
 | [Supplier catalog QA and Shopify import prep](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/) | USD 249 for one authorized CSV or simple XLSX, up to 200 SKUs and one revision | [Seven-file synthetic sample](https://heyhengl.github.io/lineageproof/studio/catalog-qa-offline-agency-kit/sample/) | [Catalog QA inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=catalog-qa-intake.yml) |
 | [Business spreadsheet cleanup and reconciliation](https://heyhengl.github.io/lineageproof/studio/sales-data-cleaning/) | USD 149 for one sanitized CSV or XLSX, up to 10,000 rows, one schema and one correction round | [Synthetic analysis proof](https://heyhengl.github.io/lineageproof/studio/portfolio/Sales_Insight_Audit_Proof.zip) | [Spreadsheet-cleanup inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=sales-data-cleaning-intake.yml) |
 | [Weekly property watchlist merge](https://heyhengl.github.io/lineageproof/studio/weekly-property-watchlist-merge/) | USD 79 for one prior and one current authorized CSV/XLSX export, up to 1,000 current rows and one correction round | [Stable-key merge note](https://heyhengl.github.io/lineageproof/studio/notes/weekly-property-stable-key-merge/) and [synthetic workbook](https://heyhengl.github.io/lineageproof/studio/portfolio/Weekly_Property_Watchlist_Merge_Synthetic_Proof.xlsx) | [Weekly-watchlist inquiry](https://github.com/heyhengl/lineageproof/issues/new?template=weekly-property-watchlist-merge.yml) |
