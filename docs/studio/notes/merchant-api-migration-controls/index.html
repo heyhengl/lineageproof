@@ -21,7 +21,7 @@
     <link rel="alternate" type="application/rss+xml" title="MicroStudio engineering notes" href="https://heyhengl.github.io/lineageproof/studio/feed.xml" />
     <link rel="alternate" type="application/json" title="MicroStudio service catalog" href="https://heyhengl.github.io/lineageproof/studio/services.json" />
     <title>Content API sunsets August 18: seven Merchant API migration controls. | MicroStudio</title>
-    <link rel="stylesheet" crossorigin href="../../assets/index-BquKs8Np.css">
+    <link rel="stylesheet" crossorigin href="../../assets/index-YyBaRi-Q.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -84,6 +84,25 @@
           <section>
             <h2>Keep one method inventory and one synthetic proof set</h2>
             <p><a href="../../merchant-api-method-inventory.csv">Download the blank method inventory</a>, compare it with the <a href="../../merchant-api-synthetic-method-example.csv">single-row transformation example</a>, then inspect the <a href="../../merchant-api-synthetic-audit-receipt.csv">five-call-site synthetic audit receipt</a> for mapped, retired and unresolved dispositions.</p>
+            <div class="migration-receipt-preview" aria-labelledby="migration-receipt-title">
+              <div class="migration-receipt-heading">
+                <div><p>Synthetic delivery preview</p><h3 id="migration-receipt-title">Five fictional call sites, each with a cutover disposition</h3></div>
+                <a href="../../merchant-api-synthetic-audit-receipt.csv">Download CSV <span aria-hidden="true">↓</span></a>
+              </div>
+              <div class="migration-receipt-table-wrap">
+                <table>
+                  <thead><tr><th>Call site</th><th>Legacy method</th><th>Disposition</th><th>Risk</th><th>Next evidence</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>catalog_writer_job</code></td><td><code>products.insert</code></td><td><span class="receipt-state receipt-state-mapped">mapped</span></td><td><span class="receipt-risk receipt-risk-high">high</span></td><td>amountMicros + dataSource fixtures</td></tr>
+                    <tr><td><code>catalog_patch_worker</code></td><td><code>products.update</code></td><td><span class="receipt-state receipt-state-mapped">mapped</span></td><td><span class="receipt-risk receipt-risk-high">high</span></td><td>update-mask golden fixture</td></tr>
+                    <tr><td><code>product_status_export</code></td><td><code>productstatuses.list</code></td><td><span class="receipt-state receipt-state-retire">retire</span></td><td><span class="receipt-risk receipt-risk-medium">medium</span></td><td>processed Product reconciliation</td></tr>
+                    <tr><td><code>batch_catalog_submitter</code></td><td><code>custombatch</code></td><td><span class="receipt-state receipt-state-mapped">mapped</span></td><td><span class="receipt-risk receipt-risk-critical">critical</span></td><td>mixed-result + 429 fixtures</td></tr>
+                    <tr><td><code>inventory_delta_wrapper</code></td><td><code>custom wrapper</code></td><td><span class="receipt-state receipt-state-unresolved">unresolved</span></td><td><span class="receipt-risk receipt-risk-critical">critical</span></td><td>owner + runtime-call inventory</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="migration-receipt-boundary">Synthetic example only. It is not evidence of a customer migration, production call or Google approval.</p>
+            </div>
             <ul class="article-checklist">
               <li>Every observed legacy call maps to a reviewed Merchant API method or an explicit retirement decision.</li>
               <li>Developer registration and authentication are evidenced without retaining credentials or account identifiers.</li>
