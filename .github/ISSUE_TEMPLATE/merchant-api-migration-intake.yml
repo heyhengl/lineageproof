@@ -64,8 +64,8 @@ body:
     attributes:
       label: customBatch usage
       options:
-        - yes
-        - no
+        - "yes"
+        - "no"
         - unknown
     validations:
       required: true
