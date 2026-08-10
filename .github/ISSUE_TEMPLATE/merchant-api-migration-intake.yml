@@ -1,0 +1,96 @@
+name: Merchant API migration readiness inquiry
+description: Metadata-only inquiry for the USD 249 Content API to Merchant API source review.
+title: "[Merchant API review]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The fixed opening sample is USD 249 for a source-only review. This form is an inquiry, not an order or payment request.
+        Do not paste source code, Merchant Center IDs, OAuth tokens, service-account files, product feeds, private URLs, customer data, credentials or payment information.
+  - type: dropdown
+    id: language_runtime
+    attributes:
+      label: Primary language and runtime
+      options:
+        - JavaScript_or_TypeScript_Node
+        - Python
+        - Java_or_Kotlin
+        - PHP
+        - Apps_Script
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: legacy_client
+    attributes:
+      label: Current Content API client
+      options:
+        - Google_client_library
+        - Direct_REST
+        - Apps_Script_advanced_service
+        - Custom_wrapper
+        - Unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: call_sites
+    attributes:
+      label: Approximate legacy call-site count
+      description: The fixed sample supports at most 25 call sites.
+      options:
+        - 1_to_5
+        - 6_to_15
+        - 16_to_25
+        - more_than_25
+        - unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: scheduled_jobs
+    attributes:
+      label: Approximate scheduled-job count
+      description: The fixed sample supports at most three scheduled jobs.
+      options:
+        - "0"
+        - "1"
+        - "2"
+        - "3"
+        - more_than_3
+        - unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: custom_batch
+    attributes:
+      label: customBatch usage
+      options:
+        - yes
+        - no
+        - unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: staging_type
+    attributes:
+      label: Available staging type
+      options:
+        - isolated_test_account
+        - synthetic_fixtures_only
+        - production_canary_available_later
+        - none
+        - unknown
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_privacy
+    attributes:
+      label: Public issue boundaries
+      options:
+        - label: I will keep this public issue metadata-only and will not post code, IDs, credentials, feeds, private links or customer data.
+          required: true
+        - label: I understand this fixed sample is source-only and includes no live account access, registration, API calls, catalog upload or production cutover.
+          required: true
+        - label: I understand written scope, payer, payment protection, acceptance, cancellation and rights must be confirmed privately before work begins.
+          required: true
+        - label: I confirm the buyer, payer, project and intended use are entirely private and not government, finance, payments, crypto, health, identity, surveillance or another regulated use.
+          required: true
